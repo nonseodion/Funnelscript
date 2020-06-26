@@ -11,7 +11,15 @@ function showSmallMenu(){
     document.querySelector(".header--right .arrow-right").classList.toggle("small-menu");
     document.querySelector(".header--left .big-menu").classList.toggle("small-menu");
     document.querySelector(".dashboard--menu--farleft").classList.toggle("small-menu");
-    document.querySelector(".dashboard--view--welcome").classList.toggle("small-menu");
+    try{
+        document.querySelector(".editor-section").classList.toggle("small-menu");
+    }
+    catch(e){console.log(e.message)}
+    try{
+        document.querySelector(".dashboard--view--welcome").classList.toggle("small-menu");
+    }
+    catch(e){console.log(e.message) }
+    
     menuItemViews = document.querySelectorAll(".menu-item-view");
     menuItemViews.forEach(item => { item.classList.toggle("small-menu")});
 };
@@ -59,3 +67,20 @@ function showContent(e){
 
     selectedItem = index;
 }
+
+//Editor-section
+//Initialize Quill editor
+  var quill = new Quill('#editor', {
+    theme: 'snow',
+    modules: {
+    toolbar: [
+      [{ header: [1, 2, 3, 4, false] }],
+      ['bold', 'italic', 'underline', 'link'],
+      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      [{ 'script': 'sub'}, { 'script': 'super' }],
+      [{'align': 'right'},'align', {'align': 'center'}, {'align': 'justify'}],
+      ['image'],
+      ['code-block']
+    ]
+  },
+  });

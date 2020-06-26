@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 body{
     margin: 0;
     min-height: 100vh;
@@ -250,6 +254,9 @@ a{
     gap: 2rem;
 }
 
+.editor-section.small-menu{
+    padding-left: 5rem;
+}
 
 /*menu-item-view*/
 .menu-item-view{
@@ -339,4 +346,163 @@ h2.menu-item-view--heading{
 
 .dashboard--view::after.no-display{
     display: none;
+}
+
+/*editor page*/
+.editor-section{
+    background-color: #E5E5E5;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1.5rem;
+}
+
+.editor-section--description h2{
+    color: #4834D4;;
+    font-size: 28px;
+    margin-bottom: 0;
+}
+
+.editor-section--description p{
+    color: #191847;
+    font-size: 18px;
+    white-space: pre-line;
+    margin-top: 0.6rem;
+}
+
+.editor-section--control-top{
+    margin-bottom: 2rem;
+}
+
+.editor-section--control-top input,
+.editor-section--control-top a,
+.editor-section--control-bottom a{
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+.editor-section--control-top input::placeholder{
+    color: #4834D4;
+    opacity: 0.5;
+}
+
+.editor-section--control-top a{
+    float: right;
+}
+
+.editor-section--control-top a.first,
+.editor-section--control-bottom a.first,
+.editor-section--control-bottom a.second{
+    background-color: #4834D4;
+    color: #FEFEFE;
+    border-radius: 4px;
+    margin-right: 1.5rem;
+    letter-spacing: 0.0125em;
+    font-family: Karla;
+}
+
+.editor-section--control-bottom{
+    margin-top: 2rem;
+}
+
+.editor-section--control-top a.second{
+    background-color: #F29401;
+    border-radius: 4px;
+    letter-spacing: 0.0125em;
+    font-family: Karla;
+}
+
+.editor{
+    clear: both;
+    height: 30%;
+    background-color: #ffffff;
+    border-radius: 0 0 10px 10px;
+}
+
+/*quill editor menu*/
+.ql-toolbar.ql-snow {
+    background-color: #ffffff;
+}
+/*float code block to the right*/
+.ql-toolbar.ql-snow .ql-formats:last-child{
+    float: right;
+    margin-right: 20px;
+}
+
+.editor-section--control-bottom a.second{
+    color: #4834D4;
+    border: 1px solid #4834D4;
+    background-color: #ffffff;
+}
+
+/*add section*/
+.editor-section-overlay{
+    grid-column: 1/ span 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(25, 24, 71, 0.2);
+}
+
+.editor-section-overlay--add-section{
+    background-color: #ffffff;
+    position: absolute;
+    right: 1rem;
+    top: 3rem;
+    width: 35%;
+    padding: 0 0 0 2rem;
+}
+
+.editor-section-overlay--add-section .heading{
+    height: 3rem;   
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.editor-section-overlay--add-section .heading span{
+    font-size: 20px;
+    color: #4834D4;
+    font-weight: 600;   
+}
+
+.editor-section-overlay--add-section .close{
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 4rem;
+    background: linear-gradient(90deg, #4776E6 13.04%, #8E54E9 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section{
+    padding-right: 2rem;
+}
+
+.section--name{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.section--name .section-open{
+    position: absolute;
+    right: 0;
+}
+
+.section-templates{
+    display: none;
+    transition: height 3s ease-in;
+    height: 0;
+}
+
+.open{
+    display: block;
+    height: auto;
 }
