@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital@1&display=swap');
+
+* *::before *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    font-family: poppins;
+    overflow-x: hidden;
+}
+
+a{
+    cursor: pointer;
+}
+
+.header--right, 
+.header--left,
+.header--right--notification{
+    display: inline-block;
+}
+
+.header{
+    color: #F5F6F9;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+}
+
+.header--left{
+    justify-content: center;
+    height: 100%;
+    width: 19.4%;
+    display: flex;
+    border-bottom: solid #2d2b80;
+    align-items: center;
+    background-color: #191847;
+    font-size: 13px;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.header--right{
+    position: relative;
+    background-color: white;
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2rem;
+    height: 100%;
+}
+
+.header--right .arrow-right{
+    position: absolute;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.header--right--notification{
+    position: relative;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header--right--notification .bell{
+    width: 15px;
+}
+
+.header--right--notification::after{
+    content: "4";
+    color: white;
+    position: absolute;
+    right: 0;
+    background-color: #EB5757;
+    top: -5px;
+    right: -3px;
+    height: 30%;
+    font-size: 8px;
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.header--right .profile-picture{
+    width: 25px;
+    padding-right: 20px;
+}
+
+.dashboard{
+    display: grid;
+    grid-template-columns: 5% 14% 81%;
+    min-height: 94vh;
+    max-height: 100%;
+}
+
+.dashboard--menu--farleft,
+.dashboard--menu--closeleft{
+    background-color: #191847;
+    height: 100%;
+}
+
+.dashboard--menu--farleft ul,
+.dashboard--menu--closeleft ul{
+    list-style-type: none;
+    padding-left: 0;
+    text-align: right;
+    margin-top: 3.8rem;
+}
+
+.dashboard--menu--farleft li,
+.dashboard--menu--farleft li a,
+.dashboard--menu--closeleft li{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 2.5rem;
+}
+
+.dashboard--menu--farleft li:first-child{
+    border-left: solid 2px #F5F6F9;
+    background-color: #100F38;
+}
+
+.dashboard--menu--closeleft li:first-child{
+    background-color: #100F38;
+}
+
+.dashboard--menu--farleft li svg{
+    width: 15px;
+    height: 15px;
+}
+
+.dashboard--menu--closeleft ul{
+    text-align: center;
+    font-size: 13px;
+}
+
+.dashboard--menu--closeleft li{
+    justify-content: flex-start;
+    padding-left: 1rem;
+}
+
+.dashboard--menu--closeleft li a{
+    color: #F5F6F9;
+    text-decoration: none;
+}
+
+.dashboard--view{
+    background-color: #E5E5E5;
+    position: relative;
+}
+
+.dashboard--view.sitting-human::after{
+    content: "";
+    position: absolute;
+    top: 3rem;
+    right: -3rem;
+    width: 40rem;
+    height: 25rem;
+    background-image: url(assets/sitting\ human.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.dashboard--view--welcome{
+    margin-top: 8rem;
+    padding-left: 3rem;
+}
+
+.dashboard--view h2{
+    color: #4834D4;
+    position: relative;
+    z-index: 1;
+    font-size: 32px;
+}
+
+.dashboard--view h2::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    z-index: -1;
+    width: 8%;
+    height: 25%;
+    background-color: #4834D4;
+    opacity: 0.3;
+}
+
+.dashboard--view p{
+    margin: 0;
+}
+
+.dashboard--view a{
+    display: inline-block;
+    margin-top: 3rem;
+    background-color:#4834D4;
+    text-decoration: none;
+    color: #FEFEFE;
+    width: 10rem;
+    text-align: center;
+    padding: 10px 0;
+    letter-spacing: 0.01rem;
+    font-size: 18px;
+    border-radius: 4px;
+    font-family: karla;
+}
+
+/*For Small Menu*/
+.header--left.small-menu{
+    width: 6.2%;
+}
+
+
+
+.header--left .big-menu.small-menu{
+    display: none;
+}
+
+.header--right.small-menu{
+    width: 94%
+}
+
+.header--right .arrow-right.small-menu{
+    display: none;
+}
+
+.dashboard.small-menu{
+    grid-template-columns: 6% 0 94%;
+}
+
+.dashboard--menu--farleft.small-menu li {
+    justify-content: center;
+}
+
+.dashboard--view--welcome.small-menu,
+.menu-item-view.small-menu{
+    padding-left: 5rem;
+}
+
+.menu-item-view.small-menu{
+    gap: 2rem;
+}
+
+
+/*menu-item-view*/
+.menu-item-view{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 5fr 5fr;
+    padding: 3rem;
+    gap: 1.5rem;
+}
+
+.menu-item-view--heading{
+    grid-column: 1/ span 3;
+    margin: 0;
+    
+}
+
+h2.menu-item-view--heading{
+    font-size: 28px;
+}
+
+.menu-item-view--heading::before{
+    display: none;  
+}
+
+.menu-item-view--card{
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border: 1px solid #EDEEF0
+}
+
+.menu-item-view--card:hover{
+    border-color: #4834D4;
+}
+
+.menu-item-view .circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/*colors*/
+.light-pink{
+    background-color: rgba(235, 87, 87, 0.3);
+}
+
+.light-green{
+    background-color: rgba(111, 207, 151, 0.3);
+}
+
+.light-yellow{
+    background-color: rgba(242, 201, 76, 0.3);;
+}
+
+.light-purple{
+    background-color: rgba(155, 81, 224, 0.3);
+}
+
+.light-peach{
+    background: rgba(242, 153, 74, 0.3);
+}
+
+.dashboard--menu--closeleft li a.purple{
+    fill: #4834D4;
+    color: #4834D4;
+}
+
+.menu-item-view--card-heading{
+    font-size: 18px;
+}
+
+.menu-item-view--card-heading{
+    font-size: 18px;
+    font-weight: 900;
+    padding-top: 0.75rem;
+    padding-bottom: 1rem;
+}
+
+.menu-item-view--card-description{
+    font-size: 14px;
+    line-height: 21px;
+}
+
+/*switching menu-items*/
+.no-display{
+    display: none;
+}
+
+.dashboard--view::after.no-display{
+    display: none;
+}
