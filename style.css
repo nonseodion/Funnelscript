@@ -259,7 +259,7 @@ a{
 .menu-item-view{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 5fr 5fr;
+    grid-template-rows: 1fr 5fr 5fr 5fr;
     padding: 3rem;
     gap: 1.5rem;
 }
@@ -336,7 +336,9 @@ h2.menu-item-view--heading{
     line-height: 21px;
 }
 
-/*switching menu-items*/
+
+
+/*switching menu-items(now deprecated, lol)*/
 .no-display{
     display: none;
 }
@@ -500,7 +502,7 @@ h2.menu-item-view--heading{
 }
 
 .section{
-    padding-right: 2rem;
+    padding-right: 7%;
     position: relative;
     font-size: 10px;
 }
@@ -526,10 +528,10 @@ h2.menu-item-view--heading{
     display: none;
     position: absolute;
     background-color: #ffffff;
-    left: -2rem;
+    left: -7%;
     z-index: 100;
     font-size: 14px;
-    padding: 0 2rem 0 2rem;
+    padding: 0 7% 0 7%;
     overflow-y: visible;
 }
 
