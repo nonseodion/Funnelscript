@@ -11,13 +11,17 @@ html{
 
 body{
     margin: 0;
-    min-height: 100vh;
     font-family: poppins;
     overflow-x: hidden;
 }
 
+body>section{
+    min-height: 100vh;
+}
+
 a{
     cursor: pointer;
+    display: inline-block;
 }
 
 .header--right, 
@@ -27,20 +31,19 @@ a{
 }
 
 .header{
-    color: #F5F6F9;
-    display: flex;
-    align-items: center;
-    height: 3rem;
+    display: grid;
+    grid-template-columns: 6% 94%;
+    height: 2.5rem;
 }
 
 .header--left{
     justify-content: center;
     height: 100%;
-    width: 19.4%;
     display: flex;
-    border-bottom: solid #2d2b80;
+    border-bottom: 1px solid #2d2b80;
     align-items: center;
     background-color: #191847;
+    color: #ffffff;
     font-size: 13px;
     font-weight: 900;
     font-size: 18px;
@@ -49,7 +52,6 @@ a{
 .header--right{
     position: relative;
     background-color: white;
-    width: 80%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -101,14 +103,11 @@ a{
 .dashboard{
     display: grid;
     grid-template-columns: 5% 14% 81%;
-    min-height: 94vh;
-    max-height: 100%;
 }
 
 .dashboard--menu--farleft,
 .dashboard--menu--closeleft{
     background-color: #191847;
-    height: 100%;
 }
 
 .dashboard--menu--farleft ul,
@@ -160,6 +159,7 @@ a{
 .dashboard--view{
     background-color: #E5E5E5;
     position: relative;
+    z-index: 10;
 }
 
 .dashboard--view.sitting-human::after{
@@ -167,8 +167,8 @@ a{
     position: absolute;
     top: 3rem;
     right: -3rem;
-    width: 40rem;
-    height: 25rem;
+    width: 60%;
+    height: 80%;
     background-image: url(assets/sitting\ human.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -219,22 +219,19 @@ a{
 }
 
 /*For Small Menu*/
-.header--left.small-menu{
-    width: 6.2%;
-}
 
+.header.small-menu{
+    display: grid;
+    grid-template-columns: 19% 81%;
+}
 
 
 .header--left .big-menu.small-menu{
     display: none;
 }
 
-.header--right.small-menu{
-    width: 94%
-}
-
 .header--right .arrow-right.small-menu{
-    display: none;
+    transform: rotate(180deg);
 }
 
 .dashboard.small-menu{
@@ -354,6 +351,7 @@ h2.menu-item-view--heading{
     padding-left: 3rem;
     padding-right: 3rem;
     padding-top: 1.5rem;
+    z-index: 10;
 }
 
 .editor-section--description h2{
@@ -376,8 +374,12 @@ h2.menu-item-view--heading{
 .editor-section--control-top input,
 .editor-section--control-top a,
 .editor-section--control-bottom a{
-    padding: 10px 15px;
+    padding: 0.7rem 0.9rem;
     font-size: 18px;
+}
+
+.editor-section--control-top input{
+    border: 1px solid #CDC6FF;
 }
 
 .editor-section--control-top input::placeholder{
@@ -402,6 +404,7 @@ h2.menu-item-view--heading{
 
 .editor-section--control-bottom{
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .editor-section--control-top a.second{
@@ -409,24 +412,33 @@ h2.menu-item-view--heading{
     border-radius: 4px;
     letter-spacing: 0.0125em;
     font-family: Karla;
+    color: #FEFEFE;
 }
 
 .editor{
-    clear: both;
-    height: 30%;
+    height: 10rem;
     background-color: #ffffff;
     border-radius: 0 0 10px 10px;
+    padding: 12px 15px;
+}
+
+.ql-editor{
+    padding: 0;
+    white-space: pre-line;
 }
 
 /*quill editor menu*/
 .ql-toolbar.ql-snow {
     background-color: #ffffff;
+    border: 1px solid #CDC6FF;
 }
 /*float code block to the right*/
 .ql-toolbar.ql-snow .ql-formats:last-child{
     float: right;
     margin-right: 20px;
 }
+
+
 
 .editor-section--control-bottom a.second{
     color: #4834D4;
@@ -436,38 +448,46 @@ h2.menu-item-view--heading{
 
 /*add section*/
 .editor-section-overlay{
-    grid-column: 1/ span 2;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: rgba(25, 24, 71, 0.2);
+    display: none;
+    z-index: 20;
 }
 
-.editor-section-overlay--add-section{
+.editor-section-overlay--add-section,
+.editor-section-overlay--add-template{
     background-color: #ffffff;
     position: absolute;
     right: 1rem;
-    top: 3rem;
+    top: 2rem;
     width: 35%;
     padding: 0 0 0 2rem;
+    transition: transform 0.5s ease-out;
+    transform: translateX(120%);
 }
 
-.editor-section-overlay--add-section .heading{
-    height: 3rem;   
+
+.editor-section-overlay--add-section .heading,
+.editor-section-overlay--add-template .heading{
+    height: 2.5rem;   
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.editor-section-overlay--add-section .heading span{
-    font-size: 20px;
+.editor-section-overlay--add-section .heading span,
+.editor-section-overlay--add-template .heading span{
+    font-size: 15px;
     color: #4834D4;
     font-weight: 600;   
 }
 
-.editor-section-overlay--add-section .close{
+.editor-section-overlay--add-section .close,
+.editor-section-overlay--add-template .close{
     display: inline-block;
     height: 100%;
     position: absolute;
@@ -481,28 +501,84 @@ h2.menu-item-view--heading{
 
 .section{
     padding-right: 2rem;
+    position: relative;
+    font-size: 10px;
 }
 
 .section--name{
     display: flex;
+    color: #191847;
     align-items: center;
     position: relative;
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+    z-index: 50;
+    font-size: 15px;
 }
 
-.section--name .section-open{
+.section--name .arrow{
     position: absolute;
     right: 0;
 }
 
-.section-templates{
+/*for clicks*/
+.section--templates{
     display: none;
-    transition: height 3s ease-in;
-    height: 0;
+    position: absolute;
+    background-color: #ffffff;
+    left: -2rem;
+    z-index: 100;
+    font-size: 14px;
+    padding: 0 2rem 0 2rem;
+    overflow-y: visible;
 }
 
 .open{
     display: block;
-    height: auto;
+}
+
+.add-border-bottom{
+    border-bottom: 1px solid #4834D4;
+}
+
+.rotate-90deg{
+    transform: rotate(90deg);
+}
+
+.slide-in{
+    transform: translateX(0);
+}
+
+.display{
+    display: block;
+}
+
+/*Clearfloats*/
+.clearfix::after{
+    content: "";
+    visibility: hidden;
+    height: 0;
+    clear: both;
+    display: block;
+}
+
+.section--templates--control-bottom{
+    margin: 4rem 0 3rem;
+}
+
+.section--templates--control-bottom a{
+    border-radius: 4px;
+    padding: 0.8rem 2rem;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+.section--templates--control-bottom .templates-back{
+    background-color: #F29401;
+    color: #ffffff;
+}
+
+.section--templates--control-bottom .templates-close{
+    border: 1px solid #4834D4;
+    color: #4834D4;
 }

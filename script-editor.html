@@ -11,9 +11,9 @@
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
     <!--css stylesheet-->
     <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="templateStyle.css" >
 </head>
 <body>
-    <section>
     <header class="header">
         <div class="header--left small-menu">S<span class="big-menu small-menu">OCISTREAM</span>.</div>
         <div class="header--right small-menu">
@@ -38,9 +38,11 @@
                 <path d="M0 24V2.25C0 1.00734 1.2312 0 2.75 0H19.25C20.7688 0 22 1.00734 22 2.25V24L11 18.75L0 24Z" fill="#4834D4"/>
                 </svg></a>
                 </li>  
-              <li data-target="Sales letter"><a><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.2143 18H0.785714C0.57733 18 0.37748 18.079 0.23013 18.2197C0.0827804 18.3603 0 18.5511 0 18.75L0 20.25C0 20.4489 0.0827804 20.6397 0.23013 20.7803C0.37748 20.921 0.57733 21 0.785714 21H21.2143C21.4227 21 21.6225 20.921 21.7699 20.7803C21.9172 20.6397 22 20.4489 22 20.25V18.75C22 18.5511 21.9172 18.3603 21.7699 18.2197C21.6225 18.079 21.4227 18 21.2143 18ZM21.2143 12H0.785714C0.57733 12 0.37748 12.079 0.23013 12.2197C0.0827804 12.3603 0 12.5511 0 12.75L0 14.25C0 14.4489 0.0827804 14.6397 0.23013 14.7803C0.37748 14.921 0.57733 15 0.785714 15H21.2143C21.4227 15 21.6225 14.921 21.7699 14.7803C21.9172 14.6397 22 14.4489 22 14.25V12.75C22 12.5511 21.9172 12.3603 21.7699 12.2197C21.6225 12.079 21.4227 12 21.2143 12ZM21.2143 6H0.785714C0.57733 6 0.37748 6.07902 0.23013 6.21967C0.0827804 6.36032 0 6.55109 0 6.75L0 8.25C0 8.44891 0.0827804 8.63968 0.23013 8.78033C0.37748 8.92098 0.57733 9 0.785714 9H21.2143C21.4227 9 21.6225 8.92098 21.7699 8.78033C21.9172 8.63968 22 8.44891 22 8.25V6.75C22 6.55109 21.9172 6.36032 21.7699 6.21967C21.6225 6.07902 21.4227 6 21.2143 6ZM21.2143 0H0.785714C0.57733 0 0.37748 0.0790176 0.23013 0.21967C0.0827804 0.360322 0 0.551088 0 0.75L0 2.25C0 2.44891 0.0827804 2.63968 0.23013 2.78033C0.37748 2.92098 0.57733 3 0.785714 3H21.2143C21.4227 3 21.6225 2.92098 21.7699 2.78033C21.9172 2.63968 22 2.44891 22 2.25V0.75C22 0.551088 21.9172 0.360322 21.7699 0.21967C21.6225 0.0790176 21.4227 0 21.2143 0Z" fill="#F5F6F9"/>
-                </svg></a>
+              <li data-target="Sales letter">
+                <a href="index.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.2143 18H0.785714C0.57733 18 0.37748 18.079 0.23013 18.2197C0.0827804 18.3603 0 18.5511 0 18.75L0 20.25C0 20.4489 0.0827804 20.6397 0.23013 20.7803C0.37748 20.921 0.57733 21 0.785714 21H21.2143C21.4227 21 21.6225 20.921 21.7699 20.7803C21.9172 20.6397 22 20.4489 22 20.25V18.75C22 18.5511 21.9172 18.3603 21.7699 18.2197C21.6225 18.079 21.4227 18 21.2143 18ZM21.2143 12H0.785714C0.57733 12 0.37748 12.079 0.23013 12.2197C0.0827804 12.3603 0 12.5511 0 12.75L0 14.25C0 14.4489 0.0827804 14.6397 0.23013 14.7803C0.37748 14.921 0.57733 15 0.785714 15H21.2143C21.4227 15 21.6225 14.921 21.7699 14.7803C21.9172 14.6397 22 14.4489 22 14.25V12.75C22 12.5511 21.9172 12.3603 21.7699 12.2197C21.6225 12.079 21.4227 12 21.2143 12ZM21.2143 6H0.785714C0.57733 6 0.37748 6.07902 0.23013 6.21967C0.0827804 6.36032 0 6.55109 0 6.75L0 8.25C0 8.44891 0.0827804 8.63968 0.23013 8.78033C0.37748 8.92098 0.57733 9 0.785714 9H21.2143C21.4227 9 21.6225 8.92098 21.7699 8.78033C21.9172 8.63968 22 8.44891 22 8.25V6.75C22 6.55109 21.9172 6.36032 21.7699 6.21967C21.6225 6.07902 21.4227 6 21.2143 6ZM21.2143 0H0.785714C0.57733 0 0.37748 0.0790176 0.23013 0.21967C0.0827804 0.360322 0 0.551088 0 0.75L0 2.25C0 2.44891 0.0827804 2.63968 0.23013 2.78033C0.37748 2.92098 0.57733 3 0.785714 3H21.2143C21.4227 3 21.6225 2.92098 21.7699 2.78033C21.9172 2.63968 22 2.44891 22 2.25V0.75C22 0.551088 21.9172 0.360322 21.7699 0.21967C21.6225 0.0790176 21.4227 0 21.2143 0Z" fill="#F5F6F9"/>
+                  </svg>
+                </a>
                 </li>  
               <li data-target="Video sales letter"><a ><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21.6399 7.03636L21.9907 5.16136C22.0551 4.81659 21.7774 4.5 21.4106 4.5H17.7369L18.4549 0.661359C18.5194 0.316594 18.2417 0 17.8748 0H15.8795C15.7412 2.39844e-06 15.6073 0.0464528 15.5012 0.131218C15.3952 0.215982 15.3237 0.333659 15.2994 0.463641L14.5443 4.5H9.70062L10.4187 0.661359C10.4832 0.316594 10.2055 0 9.83861 0H7.84329C7.70497 2.39844e-06 7.57105 0.0464528 7.465 0.131218C7.35894 0.215982 7.2875 0.333659 7.26319 0.463641L6.50807 4.5H2.6239C2.48557 4.5 2.35166 4.54645 2.2456 4.63122C2.13954 4.71598 2.0681 4.83366 2.04379 4.96364L1.69302 6.83864C1.62854 7.18341 1.90624 7.5 2.27312 7.5H5.94683L4.82438 13.5H0.94021C0.801885 13.5 0.66797 13.5465 0.561913 13.6312C0.455857 13.716 0.384418 13.8337 0.360108 13.9636L0.00933576 15.8386C-0.0551419 16.1834 0.222559 16.5 0.589438 16.5H4.26314L3.54505 20.3386C3.48057 20.6834 3.75827 21 4.12515 21H6.12047C6.25879 21 6.39271 20.9535 6.49877 20.8688C6.60482 20.784 6.67626 20.6663 6.70057 20.5364L7.45574 16.5H12.2994L11.5813 20.3386C11.5168 20.6834 11.7944 21 12.1614 21H14.1567C14.295 21 14.4289 20.9535 14.535 20.8688C14.6411 20.784 14.7125 20.6663 14.7368 20.5364L15.4919 16.5H19.3761C19.5144 16.5 19.6483 16.4535 19.7544 16.3688C19.8605 16.284 19.9319 16.1663 19.9562 16.0364L20.307 14.1614C20.3714 13.8166 20.0937 13.5 19.7269 13.5H16.0532L17.1756 7.5H21.0598C21.1981 7.5 21.332 7.45355 21.4381 7.36878C21.5441 7.28402 21.6156 7.16634 21.6399 7.03636ZM12.8606 13.5H8.01698L9.13943 7.5H13.9831L12.8606 13.5Z" fill="#F5F6F9"/>
@@ -75,7 +77,7 @@
         <div class="dashboard--menu--closeleft small-menu">
             <ul>
                 <li data-target="Dashboard"><a href="index.html" class="purple">Dashboard</a></li>  
-                <li data-target="Sales letter"><a >Sales letter</a></li>  
+                <li data-target="Sales letter"><a href="index.html">Sales letter</a></li>  
                 <li data-target="Video sales letter"><a >Video sales letter</a></li>  
                 <li data-target="Email copy"><a >Email copy</a></li>  
                 <li data-target="Saved scripts"><a >Saved scripts</a></li>  
@@ -91,12 +93,13 @@
                 <p>Create your sales letter script using preformatted sections done 
                     for you templates.</p>
             </div>
-            <div class="editor-section--control-top">
+            <div class="editor-section--control-top  clearfix">
                 <input type="text" placeholder="Type script name">
                 <a class="second">Use Template</a>
                 <a class="first">Add Section</a>
             </div>
-            <div class="editor" id="editor"></div>
+            <div class="editor" id="editor">
+            </div>
             <div class="editor-section--control-bottom">
                 <a class="first">Save Script</a>
                 <a class="second">Export Script</a>
@@ -116,24 +119,364 @@
               </svg> 
           </div>
         </div>
-        <div class="section">
-            <div class="section--name">Pre headlines               
-              <svg class= "section-open" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="section-templates">
-              <p class="section-template">In fact, most [%industry%]'s struggle with the of this [%end_result%].</p>
-              <p class="section-template">In fact, most [%industry%]'s struggle with the of this [%end_result%].</p>
-              <p class="section-template">In fact, most [%industry%]'s struggle with the of this [%end_result%].</p>
-              <p class="section-template">In fact, most [%industry%]'s struggle with the of this [%end_result%].</p>
-              <p class="section-template">In fact, most [%industry%]'s struggle with the of this [%end_result%].</p>
+        <div class="section" id="Pre-headlines">
+          <div class="section--name">Pre headlines               
+            <svg class= "arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="section--templates">
+            <p class="section--template template-paragraph">
+              <span></span>
+              In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+              <span></span>
+            </p>
+            <p class="section--template template-paragraph">              
+              <span></span>
+              In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+              <span></span>
+            </p>
+            <p class="section--template template-paragraph">              
+              <span></span>
+              In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+              <span></span>
+            </p>
+        </div>
+      </div>
+      <div class="section" id="Headlines">
+        <div class="section--name">Headlines               
+          <svg class= "arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="section--templates">
+          <p class="section--template template-paragraph">
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+          <p class="section--template template-paragraph">              
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+          <p class="section--template template-paragraph">              
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="section" id="Bullet-Points">
+        <div class="section--name">Bullet Points               
+          <svg class= "arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="section--templates">
+          <p class="section--template template-paragraph">
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+          <p class="section--template template-paragraph">              
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+          <p class="section--template template-paragraph">              
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="section" id="Problem-framework">
+        <div class="section--name">Problem framework
+          <svg class= "arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="section--templates">
+          <p class="section--template template-paragraph">
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+          <p class="section--template template-paragraph">              
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+          <p class="section--template template-paragraph">              
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="section" id="Solution-framework">
+        <div class="section--name">Solution framework              
+          <svg class= "arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="section--templates">
+          <p class="section--template template-paragraph">
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+          <p class="section--template template-paragraph">              
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+          <p class="section--template template-paragraph">              
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="section" id="Benefits">
+        <div class="section--name">Benefits             
+          <svg class= "arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="section--templates">
+          <p class="section--template template-paragraph">
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+          <p class="section--template template-paragraph">              
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+          <p class="section--template template-paragraph">              
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="section" id="Product-summary">
+        <div class="section--name">Product summary               
+          <svg class= "arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="section--templates">
+          <p class="section--template template-paragraph">
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+          <p class="section--template template-paragraph">              
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+          <p class="section--template template-paragraph">              
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="section" id="Testimonial-statement">
+        <div class="section--name">Testimonial statement              
+          <svg class= "arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="section--templates">
+          <p class="section--template template-paragraph">
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+          <p class="section--template template-paragraph">              
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+          <p class="section--template template-paragraph">              
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="section" id="Scarcity">
+        <div class="section--name">Scarcity
+          <svg class= "arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="section--templates">
+          <p class="section--template template-paragraph">
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+          <p class="section--template template-paragraph">              
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="section" id="Call-to-action">
+        <div class="section--name">Call to action
+          <svg class= "arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="section--templates">
+          <p class="section--template template-paragraph">
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+          <p class="section--template template-paragraph">              
+            <span></span>
+            In fact, most <span contenteditable="true">[%industry%]</span>'s struggle with the of this <span contenteditable="true">[%end_result%]</span>.
+            <span></span>
+          </p>
+  
+        </div>
+      </div>
+
+      </div>
+      <div class="editor-section-overlay--add-template">
+        <div class="heading">
+          <span>Use Preformatted templates</span>
+          <div class="close">
+            <svg width="45" height="20" viewBox="0 0 45 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.8335 10L40.8335 10" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 7V13" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M35.0002 4.16661L40.8335 9.99995L35.0002 15.8333" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg> 
           </div>
         </div>
-        
+        <div class="section" id="Health-Product">
+          <div class="section--name">Health Product Letter
+            <svg class= "arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="section--templates section--template">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi orci, posuere in risus at, luctus vestibulum libero. Fusce congue efficitur 
+            ante, sit amet volutpat nibh porttitor non. Suspendisse potenti. Cras ac sapien libero. Pellentesque habitant morbi tristique senectus et netus 
+            et malesuada fames ac turpis egestas. Phasellus pulvinar bibendum fermentum. Orci varius natoque penatibus et magnis dis parturient montes, </p>
+          </div>
+        </div>
+      
+        <div class="section" id="Online-course-sales-letter">
+          <div class="section--name">Online course sales letter
+            <svg class= "arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="section--templates  section--template">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi orci, posuere in risus at, luctus vestibulum libero. Fusce congue efficitur 
+            ante, sit amet volutpat nibh porttitor non. Suspendisse potenti. Cras ac sapien libero. Pellentesque habitant morbi tristique senectus et netus 
+            et malesuada fames ac turpis egestas. Phasellus pulvinar bibendum fermentum. Orci varius natoque penatibus et magnis dis parturient montes, </p>
+          </div>
+        </div>
+
+        <div class="section" id="Dropshipping-sales-letter">
+          <div class="section--name">Dropshipping sales letter
+            <svg class= "arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="section--templates  section--template">
+            
+            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi orci, posuere in risus at, luctus vestibulum libero. Fusce congue efficitur 
+            ante, sit amet volutpat nibh porttitor non. Suspendisse potenti. Cras ac sapien libero. Pellentesque habitant morbi tristique senectus et netus 
+            et malesuada fames ac turpis egestas. Phasellus pulvinar bibendum fermentum. Orci varius natoque penatibus et magnis dis parturient montes, </p>
+          </div>
+        </div><div class="section" id="Copywriting-sales-letter">
+          <div class="section--name">Copywriting sales letter
+            <svg class= "arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="section--templates  section--template">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi orci, posuere in risus at, luctus vestibulum libero. Fusce congue efficitur 
+            ante, sit amet volutpat nibh porttitor non. Suspendisse potenti. Cras ac sapien libero. Pellentesque habitant morbi tristique senectus et netus 
+            et malesuada fames ac turpis egestas. Phasellus pulvinar bibendum fermentum. Orci varius natoque penatibus et magnis dis parturient montes, </p>
+          </div>
+        </div><div class="section" id="Church-sales-letter">
+          <div class="section--name">Church sales letter
+            <svg class= "arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="section--templates  section--template">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi orci, posuere in risus at, luctus vestibulum libero. Fusce congue efficitur 
+            ante, sit amet volutpat nibh porttitor non. Suspendisse potenti. Cras ac sapien libero. Pellentesque habitant morbi tristique senectus et netus 
+            et malesuada fames ac turpis egestas. Phasellus pulvinar bibendum fermentum. Orci varius natoque penatibus et magnis dis parturient montes, </p>
+          </div>
+        </div><div class="section" id="Saas-sales-letter">
+          <div class="section--name">Saas sales letter
+            <svg class= "arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="section--templates  section--template">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi orci, posuere in risus at, luctus vestibulum libero. Fusce congue efficitur 
+            ante, sit amet volutpat nibh porttitor non. Suspendisse potenti. Cras ac sapien libero. Pellentesque habitant morbi tristique senectus et netus 
+            et malesuada fames ac turpis egestas. Phasellus pulvinar bibendum fermentum. Orci varius natoque penatibus et magnis dis parturient montes, </p>
+          </div>
+        </div><div class="section" id="HR-process-sales-letter">
+          <div class="section--name">HR process sales letter
+            <svg class= "arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="section--templates  section--template">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi orci, posuere in risus at, luctus vestibulum libero. Fusce congue efficitur 
+            ante, sit amet volutpat nibh porttitor non. Suspendisse potenti. Cras ac sapien libero. Pellentesque habitant morbi tristique senectus et netus 
+            et malesuada fames ac turpis egestas. Phasellus pulvinar bibendum fermentum. Orci varius natoque penatibus et magnis dis parturient montes, </p>
+          </div>
+        </div>
+
+        <div class="section--templates--control-bottom">
+          <a class="templates-back">Back</a>
+          <a class="templates-close">Close</a>
+        </div>
       </div>
-    </div>
     <script src="app.js"></script>
 </body>
 </html>
