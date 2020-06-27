@@ -21,7 +21,8 @@ body>section{
 
 a{
     cursor: pointer;
-    display: inline-block;
+    
+    text-decoration: none;
 }
 
 .header--right, 
@@ -124,7 +125,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: 2.5rem;
+    height: 3rem;
 }
 
 .dashboard--menu--farleft li:first-child{
@@ -137,13 +138,13 @@ a{
 }
 
 .dashboard--menu--farleft li svg{
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
 }
 
 .dashboard--menu--closeleft ul{
     text-align: center;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .dashboard--menu--closeleft li{
@@ -203,7 +204,7 @@ a{
     margin: 0;
 }
 
-.dashboard--view a{
+#Dashboard a{
     display: inline-block;
     margin-top: 3rem;
     background-color:#4834D4;
@@ -281,7 +282,8 @@ h2.menu-item-view--heading{
 .menu-item-view--card{
     background-color: #ffffff;
     padding: 1.5rem;
-    border: 1px solid #EDEEF0
+    border: 1px solid #EDEEF0;
+    height: 77%;
 }
 
 .menu-item-view--card:hover{
@@ -329,11 +331,13 @@ h2.menu-item-view--heading{
     font-weight: 900;
     padding-top: 0.75rem;
     padding-bottom: 1rem;
+    color: #000000;
 }
 
 .menu-item-view--card-description{
     font-size: 14px;
     line-height: 21px;
+    color: #000000;
 }
 
 
@@ -354,6 +358,10 @@ h2.menu-item-view--heading{
     padding-right: 3rem;
     padding-top: 1.5rem;
     z-index: 10;
+}
+
+.editor-section a{
+    display: inline-block;
 }
 
 .editor-section--description h2{
