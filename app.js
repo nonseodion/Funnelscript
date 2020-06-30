@@ -25,58 +25,6 @@ function showSmallMenu(){
     menuItemViews.forEach(item => { item.classList.toggle("small-menu")});
 };
 
-// //show menu-item-view
-// const farLeftMenuitems =  Array.from(document.querySelectorAll(".dashboard--menu--farleft li"));
-// const closeLeftMenuitems =  Array.from(document.querySelectorAll(".dashboard--menu--closeleft li"));
-
-// farLeftMenuitems.forEach(item => item.addEventListener("click", showContent));
-// closeLeftMenuitems.forEach(item => item.addEventListener("click", showContent));
-
-// farLeftMenuitems.forEach(item => item.addEventListener("click", checkIfInDashboard));
-// closeLeftMenuitems.forEach(item => item.addEventListener("click", checkIfInDashboard));
-
-// let selectedItem = 0;
-
-// function checkIfInDashboard(){
-// if(!document.querySelector(".dashboard--view")){
-//   setTimeout( ()=> console.log("working"), 3000)
-//   }
-// }
-
-// function showContent(e){
-//     //show color
-//     let index = farLeftMenuitems.indexOf(this)==-1 
-//                     ?closeLeftMenuitems.indexOf(this)
-//                     :farLeftMenuitems.indexOf(this);
-    
-//     if(selectedItem == index) return;
-    
-
-//     let closeLeftMenuitem1 = closeLeftMenuitems[selectedItem];
-//     let closeLeftMenuitem2 = closeLeftMenuitems[index];
-    
-
-//     link1 = closeLeftMenuitem1.querySelector("a");
-//     link2 = closeLeftMenuitem2.querySelector("a");
-    
-//     link1.classList.toggle("purple")
-//     link2.classList.toggle("purple");
-
-//     //show Content
-//     target1 = closeLeftMenuitem1.dataset.target;
-//     target2 = closeLeftMenuitem2.dataset.target;
-    
-//     view1 = document.getElementById(target1);
-//     view2 = document.getElementById(target2);
-
-//     view1.classList.toggle("no-display");
-//     view2.classList.toggle("no-display");
-//     if(index == 0 || selectedItem == 0) document.querySelector(".dashboard--view").classList.toggle("sitting-human");
-    
-
-//     selectedItem = index;
-// }
-
 
 //Editor-section
 const sectionTemplates = document.querySelectorAll(".section--template");
@@ -134,6 +82,7 @@ document.querySelector(".templates-close").addEventListener("click", hideModal);
 //shows modal
 document.querySelector(".editor-section--control-top .first").addEventListener("click", showModal);
 document.querySelector(".editor-section--control-top .second").addEventListener("click", showModal);
+
 //stopPropagation when modal is clicked
 document.querySelector(".editor-section-overlay--add-section")
   .addEventListener("click", (e)=> {
@@ -174,8 +123,6 @@ function hideModal(e){
 for (let i = 0; i < templateSpans.length; i++){
   templateSpans[i].tabIndex = `${i+1}`;
 }
-
-
 sectionTemplates.forEach(sectionTemplate =>{
   const spans = sectionTemplate.querySelectorAll("span");
   for(let i = 0; i<spans.length; i++){
@@ -195,13 +142,27 @@ sectionTemplates.forEach(sectionTemplate =>{
 
 //add Enter event to sectionTemplates, so they appear in editor
 sectionTemplates.forEach(
-  sectionTemplate => sectionTemplate.addEventListener("keydown", (e) =>{
+  sectionTemplate => sectionTemplate.addEventListener("keydown", enterEditor)
+)
+  
+  function enterEditor(e){
     if(e.keyCode == 13) {
       e.preventDefault();
-      paragraph = document.createTextNode("p");
-      paragraph.textContent = sectionTemplate.textContent.trim();
-      let qlEditor = document.querySelector(".ql-editor");
-      qlEditor.appendChild(paragraph);
+      node = document.createElement(`${this.tagName}`);
+      console.log(node);
+      node.textContent = e.target.parentNode.textContent.trim();
+      const qlEditor = document.querySelector(".ql-editor");
+      qlEditor.appendChild(node);
     }
   }
-))
+
+//display logout boutton
+const profileArrow = document.querySelector(".header--right .profile-arrow");
+const logoutButton = document.querySelector(".header--right .log-out");
+profileArrow.addEventListener("click", showLogout);
+
+function showLogout(e){  
+  this.querySelector("svg")
+    .classList.toggle("log-out-open");
+  logoutButton.classList.toggle("log-out-open");
+}
