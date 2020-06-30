@@ -116,11 +116,11 @@ a{
 }
 
 .header--right .profile-arrow svg{
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
 }
 
 .header--right .profile-arrow svg.log-out-open{
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
 }
 
 .header--right .log-out{
@@ -134,7 +134,7 @@ a{
     margin-right: 1.5rem;
     letter-spacing: 0.0125em;
     font-family: Karla;
-    display: inline-block;
+    display: none;
     right: -40%;
     left: -60%;
     margin: 0;
@@ -144,7 +144,7 @@ a{
 }
 
 .header--right .log-out.log-out-open{
-    display: none;
+    display: inline-block;
 }
 
 .dashboard{
