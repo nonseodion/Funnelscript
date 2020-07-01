@@ -7,6 +7,7 @@ const sectionList = document.querySelector(" .editor-section-overlay--add-sectio
 const templateList = document.querySelector(" .editor-section-overlay--add-template");
 const templateSpans = document.querySelectorAll(".section--template span");
 const editor = document.getElementById("editor"); 
+const downloadOptions = document.querySelector(".editor-section-overlay--download-option");
 
 //Initialize Quill editor
   var quill = new Quill('#editor', {
@@ -56,28 +57,30 @@ document.querySelector(".templates-close").addEventListener("click", hideModal);
 //shows modal
 document.querySelector(".editor-section--control-top .first").addEventListener("click", showModal);
 document.querySelector(".editor-section--control-top .second").addEventListener("click", showModal);
+document.querySelector(".editor-section--control-bottom a.second").addEventListener("click", showModal);
 
 //stopPropagation when modal is clicked
 document.querySelector(".editor-section-overlay--add-section")
-  .addEventListener("click", (e)=> {
-    e.stopPropagation();
-  });
+  .addEventListener("click", myStopPropagation);
 
-  document.querySelector(".editor-section-overlay--add-template")
-  .addEventListener("click", (e)=> {
-    e.stopPropagation();
-  });
+document.querySelector(".editor-section-overlay--add-template")
+.addEventListener("click", myStopPropagation);
 
-  document.querySelectorAll(".section--template").forEach( text =>
-    text.addEventListener("click",
-      (e) => e.stopPropagation()
-    ))
+document.querySelectorAll(".section--template").forEach( text =>
+  text.addEventListener("click", myStopPropagation));
+downloadOptions.addEventListener("click", myStopPropagation);
 
+function myStopPropagation(e){
+  e.stopPropagation();
+}
 
 function showModal(e){
   editorOverlay.classList.add("display");
   if(this.textContent === "Add Section"){
     setTimeout(() => sectionList.classList.add("slide-in"), 100);
+  }
+  else if(this.textContent === "Export Script"){
+    setTimeout(() => downloadOptions.classList.add("slide-in"), 100);
   }
   else{
     setTimeout(() => templateList.classList.add("slide-in"), 100);
@@ -87,6 +90,7 @@ function showModal(e){
 function hideModal(e){
   templateList.classList.remove("slide-in");
   sectionList.classList.remove("slide-in");
+  downloadOptions.classList.remove("slide-in");
   setTimeout(() => editorOverlay.classList.remove("display"), 500);
   openSection(e, true);
   e.stopPropagation();

@@ -203,7 +203,8 @@ a{
     text-decoration: none;
 }
 
-.dashboard--view{
+.dashboard--view,
+.saved-scripts{
     background-color: #E5E5E5;
     position: relative;
     z-index: 10;
@@ -227,7 +228,8 @@ a{
     padding-left: 3rem;
 }
 
-.dashboard--view h2{
+.dashboard--view h2,
+.saved-scripts-heading{
     color: #4834D4;
     position: relative;
     z-index: 1;
@@ -317,7 +319,8 @@ a{
     
 }
 
-h2.menu-item-view--heading{
+h2.menu-item-view--heading,
+.saved-scripts-heading{
     font-size: 28px;
 }
 
@@ -611,7 +614,7 @@ h2.menu-item-view--heading{
     display: block;
 }
 
-/*Clearfloats*/
+/*Clearfloat*/
 .clearfix::after{
     content: "";
     visibility: hidden;
@@ -639,4 +642,91 @@ h2.menu-item-view--heading{
 .section--templates--control-bottom .templates-close{
     border: 1px solid #4834D4;
     color: #4834D4;
+}
+
+.editor-section-overlay--download-option{
+    position: absolute;
+    top: 50%;
+    left: 120%;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 20%;
+    padding: 0 1rem;
+    transition: left 0.5s ease-out;
+    height: 20%;
+}
+
+.editor-section-overlay--download-option.slide-in{
+    left: 50%;
+}
+
+.editor-section-overlay--download-option h4{
+    color: #4834D4;
+    display: inline-block;
+}
+
+.editor-section-overlay--download-option .close{
+    background: linear-gradient(90deg, #4776E6 13.04%, #8E54E9 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    height: 30%;
+}
+
+
+.editor-section-overlay--download-option a{
+    display: inline-flex;
+    width: auto;
+    font-weight: bold;
+    font-family: Karla;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin: 0 10px;
+}
+
+.editor-section-overlay--download-option a.word{
+    background-color: #2B579A;
+}
+
+.editor-section-overlay--download-option a.pdf{
+    background-color: #EC1C24;
+}
+
+.editor-section-overlay--download-option a svg{
+    width: 18px;
+    fill: #ffffff;
+    padding: 0 3px;
+}
+
+/*saved-scripts*/
+.saved-scripts{
+    padding: 3% 8% 3%;
+}
+
+.saved-scripts .script{
+    background: #FFFFFF;
+    border-radius: 30px;
+    padding: 2% 4%;
+}
+
+.saved-scripts .script--title{
+    font-size: 18px;
+}
+
+.saved-scripts .script--body{
+    font-size: 14px;
+}
+
+.saved-scripts a{
+    font-size: 22px;
+    margin-left: 1%;
+    color: #4834D4;
+}
+
+.saved-scripts svg:hover{
+    transform: scale(2,2);
 }
