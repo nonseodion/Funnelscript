@@ -652,9 +652,8 @@ h2.menu-item-view--heading,
     transform: translate(-50%, -50%);
     text-align: center;
     width: 20%;
-    padding: 0 1rem;
+    padding: 1rem;
     transition: left 0.5s ease-out;
-    height: 20%;
 }
 
 .editor-section-overlay--download-option.slide-in{
@@ -664,6 +663,7 @@ h2.menu-item-view--heading,
 .editor-section-overlay--download-option h4{
     color: #4834D4;
     display: inline-block;
+    margin-top: 0;
 }
 
 .editor-section-overlay--download-option .close{
