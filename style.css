@@ -401,7 +401,8 @@ h2.menu-item-view--heading,
 }
 
 /*editor page*/
-.editor-section{
+.editor-section,
+.video-script-section{
     background-color: #E5E5E5;
     padding-left: 3rem;
     padding-right: 3rem;
@@ -414,13 +415,15 @@ h2.menu-item-view--heading,
     display: inline-block;
 }
 
-.editor-section--description h2{
+.editor-section--description h2,
+.video-script-section h2{
     color: #4834D4;;
     font-size: 28px;
     margin-bottom: 0;
 }
 
-.editor-section--description p{
+.editor-section--description p,
+.video-script-section p{
     color: #191847;
     font-size: 18px;
     white-space: pre-line;
@@ -433,16 +436,25 @@ h2.menu-item-view--heading,
 
 .editor-section--control-top input,
 .editor-section--control-top a,
-.editor-section--control-bottom a{
+.editor-section--control-bottom a,
+.video-script-section textarea,
+.video-script-section .use-template-btn,
+.video-script-section input,
+.video-script-section .bottom-control{
     padding: 0.7rem 0.9rem;
     font-size: 18px;
+    display: inline-block;
 }
 
-.editor-section--control-top input{
+.editor-section--control-top input,
+.video-script-section textarea,
+.video-script-section input{
     border: 1px solid #CDC6FF;
 }
 
-.editor-section--control-top input::placeholder{
+.editor-section--control-top input::placeholder,
+.video-script-section textarea::placeholder,
+.video-script-section input::placeholder{
     color: #4834D4;
     opacity: 0.5;
 }
@@ -453,7 +465,8 @@ h2.menu-item-view--heading,
 
 .editor-section--control-top a.first,
 .editor-section--control-bottom a.first,
-.editor-section--control-bottom a.second{
+.editor-section--control-bottom a.second,
+.video-script-section .bottom-control{
     background-color: #4834D4;
     color: #FEFEFE;
     border-radius: 4px;
@@ -467,7 +480,8 @@ h2.menu-item-view--heading,
     margin-bottom: 2rem;
 }
 
-.editor-section--control-top a.second{
+.editor-section--control-top a.second,
+.video-script-section .use-template-btn{
     background-color: #F29401;
     border-radius: 4px;
     letter-spacing: 0.0125em;
@@ -504,14 +518,16 @@ h2.menu-item-view--heading,
 
 
 
-.editor-section--control-bottom a.second{
+.editor-section--control-bottom a.second,
+.video-script-section .bottom-control{
     color: #4834D4;
     border: 1px solid #4834D4;
     background-color: #ffffff;
 }
 
 /*add section*/
-.editor-section-overlay{
+.editor-section-overlay,
+.video-script-section-overlay{
     position: fixed;
     top: 0;
     left: 0;
@@ -525,7 +541,8 @@ h2.menu-item-view--heading,
 }
 
 .editor-section-overlay--add-section,
-.editor-section-overlay--add-template{
+.editor-section-overlay--add-template,
+.video-script-templates{
     background-color: #ffffff;
     position: absolute;
     right: 1rem;
@@ -538,7 +555,8 @@ h2.menu-item-view--heading,
 
 
 .editor-section-overlay--add-section .heading,
-.editor-section-overlay--add-template .heading{
+.editor-section-overlay--add-template .heading,
+.video-script-templates .heading{
     height: 2.5rem;   
     display: flex;
     align-items: center;
@@ -546,14 +564,16 @@ h2.menu-item-view--heading,
 }
 
 .editor-section-overlay--add-section .heading span,
-.editor-section-overlay--add-template .heading span{
+.editor-section-overlay--add-template .heading span,
+.video-script-templates .heading span{
     font-size: 15px;
     color: #4834D4;
     font-weight: 600;   
 }
 
 .editor-section-overlay--add-section .close,
-.editor-section-overlay--add-template .close{
+.editor-section-overlay--add-template .close,
+.video-script-templates .close{
     display: inline-block;
     height: 100%;
     position: absolute;
@@ -565,13 +585,15 @@ h2.menu-item-view--heading,
     align-items: center;
 }
 
-.section{
+.section,
+.video-script-template{
     padding-right: 7%;
     position: relative;
-    font-size: 10px;
 }
 
-.section--name{
+.section--name,
+.video-script-template .heading,
+.video-script-template .heading{
     display: flex;
     color: #191847;
     align-items: center;
@@ -582,13 +604,15 @@ h2.menu-item-view--heading,
     font-size: 15px;
 }
 
-.section--name .arrow{
+.section--name .arrow,
+.video-script-template .arrow{
     position: absolute;
     right: 0;
 }
 
 /*for clicks*/
-.section--templates{
+.section--templates,
+.video-script-template--body{
     display: none;
     position: absolute;
     background-color: #ffffff;
@@ -734,4 +758,48 @@ h2.menu-item-view--heading,
 
 .saved-scripts svg:hover{
     transform: scale(2,2);
+}
+
+/*Video script Editor*/
+.video-script-section{
+    padding-bottom: 2rem;
+}
+.video-script-section .use-template-btn{
+    float: right;
+}
+
+.video-script-section label{
+    display: block;
+    margin-top: 1rem;
+}
+
+.video-script-section textarea{
+    width: 80%;
+    margin: 0 0 1rem;
+}
+
+.video-script-template--body{
+    padding-top: 1rem;
+    display: none;
+    right: 0;
+    padding-bottom: 1rem;
+}
+
+.video-script-template--body.open{
+    display: block;
+}
+
+.video-script-template--body p{
+    margin: 0;
+    font-size: 16px;
+}
+
+.video-script-template--body p{
+    font-size: 17px;
+    color: #000000;
+}
+.video-script-template--body span{
+    display: inline-block;
+    margin-top: rem;
+    margin-bottom: 1.5rem;
 }

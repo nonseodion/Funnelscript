@@ -70,6 +70,8 @@ document.querySelectorAll(".section--template").forEach( text =>
   text.addEventListener("click", myStopPropagation));
 downloadOptions.addEventListener("click", myStopPropagation);
 
+
+
 function myStopPropagation(e){
   e.stopPropagation();
 }
@@ -85,6 +87,7 @@ function showModal(e){
   else{
     setTimeout(() => templateList.classList.add("slide-in"), 100);
   }
+  console.log(this.nextSibling);
 }
 
 function hideModal(e){
@@ -118,19 +121,30 @@ sectionTemplates.forEach(sectionTemplate =>{
   }
 });
 
-//add Enter event to sectionTemplates, so they appear in editor
+//add Enter event to sections, so they appear in editor
+//add click event to Templates, so they appear in editor
+
+const templates = document.querySelectorAll(".section--templates p");
+templates.forEach(template => template.addEventListener("click", enterEditor));
+
 sectionTemplates.forEach(
   sectionTemplate => sectionTemplate.addEventListener("keydown", enterEditor)
 )
   
   function enterEditor(e){
-    if(e.keyCode == 13) {
+    if(e.keyCode === 13) {
       e.preventDefault();
-      node = document.createElement(`${this.tagName}`);
+      showInEditor(this, e);
+    }
+    else if(e.type === "click"){
+      showInEditor(e.target, e);
+    }
+  }
+
+  function showInEditor(sectionType, e){
+      node = document.createElement(`${sectionType.tagName}`);
       console.log(node);
       node.textContent = e.target.parentNode.textContent.trim();
       const qlEditor = document.querySelector(".ql-editor");
       qlEditor.appendChild(node);
-    }
   }
-
