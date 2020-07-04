@@ -13,6 +13,8 @@ body{
     margin: 0;
     font-family: poppins;
     overflow-x: hidden;
+    max-width: 1800px;
+    margin: auto;
 }
 
 body>section{
@@ -366,10 +368,11 @@ h2.menu-item-view--heading,
     background: rgba(242, 153, 74, 0.3);
 }
 
-.dashboard--menu--closeleft li a.purple{
+.dashboard--menu--closeleft li a.purple, .offer .purple{
     fill: #4834D4;
     color: #4834D4;
 }
+
 
 .menu-item-view--card-heading{
     font-size: 18px;
@@ -402,7 +405,9 @@ h2.menu-item-view--heading,
 
 /*editor page*/
 .editor-section,
-.video-script-section{
+.video-script-section,
+.webinar-writer-section,
+.offer-generator-section{
     background-color: #E5E5E5;
     padding-left: 3rem;
     padding-right: 3rem;
@@ -416,7 +421,8 @@ h2.menu-item-view--heading,
 }
 
 .editor-section--description h2,
-.video-script-section h2{
+.video-script-section h2,
+.offer-generator-section h2{
     color: #4834D4;;
     font-size: 28px;
     margin-bottom: 0;
@@ -440,7 +446,9 @@ h2.menu-item-view--heading,
 .video-script-section textarea,
 .video-script-section .use-template-btn,
 .video-script-section input,
-.video-script-section .bottom-control{
+.video-script-section .bottom-control,
+.offer .cancel,
+.offer .next{
     padding: 0.7rem 0.9rem;
     font-size: 18px;
     display: inline-block;
@@ -454,7 +462,9 @@ h2.menu-item-view--heading,
 
 .editor-section--control-top input::placeholder,
 .video-script-section textarea::placeholder,
-.video-script-section input::placeholder{
+.video-script-section input::placeholder,
+.offer .tab-body input::placeholder,
+.offer .tab-body textarea::placeholder{
     color: #4834D4;
     opacity: 0.5;
 }
@@ -466,7 +476,8 @@ h2.menu-item-view--heading,
 .editor-section--control-top a.first,
 .editor-section--control-bottom a.first,
 .editor-section--control-bottom a.second,
-.video-script-section .bottom-control{
+.video-script-section .bottom-control,
+.offer .next{
     background-color: #4834D4;
     color: #FEFEFE;
     border-radius: 4px;
@@ -481,7 +492,8 @@ h2.menu-item-view--heading,
 }
 
 .editor-section--control-top a.second,
-.video-script-section .use-template-btn{
+.video-script-section .use-template-btn, 
+.offer .cancel{
     background-color: #F29401;
     border-radius: 4px;
     letter-spacing: 0.0125em;
@@ -573,11 +585,13 @@ h2.menu-item-view--heading,
 
 .editor-section-overlay--add-section .close,
 .editor-section-overlay--add-template .close,
-.video-script-templates .close{
+.video-script-templates .close
+{
     display: inline-block;
     height: 100%;
     position: absolute;
     right: 0;
+    top: 0;
     width: 4rem;
     background: linear-gradient(90deg, #4776E6 13.04%, #8E54E9 100%);
     display: flex;
@@ -802,4 +816,390 @@ h2.menu-item-view--heading,
     display: inline-block;
     margin-top: rem;
     margin-bottom: 1.5rem;
+}
+
+
+/*Offer Generator*/
+.offer-generator-section .status-create-offer{
+    position: relative;
+    padding-top: 1rem;
+}
+
+.offer-generator-section .status{
+    display: inline-grid;
+    grid-template-columns: 0.6fr 1fr 1fr 1fr;
+    width: 50%;
+    height: 7rem;
+}
+
+.offer-generator-section .status{
+    background: #3B4567;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.02);
+    border-radius: 20px
+}
+
+.offer-generator-section .status>div:nth-child(1){
+    background: linear-gradient(90deg, #4776E6 13.04%, #8E54E9 100%);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.02);
+    border-radius: 20px 0px 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer-generator-section .status>div:nth-child(2),
+.offer-generator-section .status>div:nth-child(3){
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1rem;
+    position: relative;
+
+}
+
+.offer-generator-section .status>div:nth-child(4){
+    overflow: hidden;
+    position: relative;
+}
+
+.offer-generator-section .status div:nth-child(2) p,
+.offer-generator-section .status div:nth-child(3) p{
+    margin: 5px 0 5px;
+    color: #F5F6F9;
+}
+
+.offer-generator-section .status div:nth-child(2) p:nth-child(2),
+.offer-generator-section .status div:nth-child(3) p:nth-child(2){
+    color: #4834D4;
+}
+
+.offer-generator-section hr{
+    position: absolute;
+    right: 0;
+    top: 40%;
+    width: 20%;
+    transform: rotate(90deg);
+    border: 1px solid #F5F6F9;
+    opacity: 0.2;
+}
+
+.offer-generator-section .status>div:nth-child(4) .stated-status{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F5F6F9;
+    padding-top: 10%;
+}
+
+.offer-generator-section .create{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #4834D4;
+    border-radius: 4px;
+    padding: 10px 30px;
+    font-family: Karla;
+    color: #FEFEFE;
+    letter-spacing: 0.0125em;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.offer-generator-section .status>div:nth-child(4) .stated-status svg{
+    margin-left: 10%;
+}
+
+.Weak path:nth-child(1){
+    fill: #F2C94C;
+    opacity: 0.3;
+}
+
+.Poor path:nth-child(1){
+    fill: #FF5C00;
+    opacity: 0.3;
+}
+
+.Empty path:nth-child(1){
+    fill: rgba(72, 52, 212, 0.3)
+}
+
+.Empty >svg{
+    padding-top: 25%;
+}
+
+
+.offer{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.02);
+    position: relative;
+    padding: 0 6%;
+    margin: 2rem 0;
+    transition: left 1s ease-in;
+    left: -120%;
+}
+
+.offer .heading{
+    height: 3rem;
+    font-size: 18px;
+    display: flex;
+    align-items: flex-end;
+    white-space: pre;
+    font-weight: 700;
+}
+
+.offer .close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 3rem;
+    background: linear-gradient(90deg, #4776E6 13.04%, #8E54E9 100%);
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer .tab-heading{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #F5F6F9;
+    margin: 1rem 0;
+    border-top: 0.5px solid #CDC6FF;
+    border-bottom: 0.5px solid #CDC6FF;
+    padding: 1rem 0;
+}
+
+.offer .tab-heading .purple{
+    opacity: 1;
+    color: #4834D4;
+}
+
+.offer .tab-heading>div{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #828282;
+    opacity: 0.4;
+}
+
+.drop-cap{
+    font-size: 50px;
+    float: left;
+    padding-right: 8px;
+}
+
+.offer .tab-body{
+    background: #F5F6F9;
+    padding: 2% 5%;
+}
+
+.offer .tab-body input,
+.offer .tab-body textarea{
+    display: block;
+    width: 50%;
+    height: 2rem;
+    font-size: 18px;
+    border: 1px solid #CDC6FF;
+    margin: 0.5rem 0;
+    padding: 5px 3%;
+}
+
+.offer .tab-body textarea{
+    height: 10rem;
+}
+
+.offer .error-message{
+    color: #EB5757;
+    visibility: hidden;
+}
+
+.offer .cancel,
+.offer .next{
+    float: right;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    padding: 10px 30px;
+    font-weight: bold;
+}
+
+.offer .next{
+    margin-right: 0;
+}
+
+.offer .step3 .tab-body{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.offer .step3 .tab-body{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    padding-right: 0;
+    padding-bottom: 2rem;
+}
+
+.offer .step3 .offerings-list{
+    background: #FFFFFF;
+    border: 1px solid #CDC6FF;
+    border-right: 0;
+    padding: 1rem 0;
+    height: 30rem;
+    overflow-y: auto;
+}
+
+.offer .step3 p{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.offer .step3 .offerings-list input{
+    visibility: hidden;
+    width: 6%;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    position: relative;
+}
+
+.offer .step3 .offerings-list input::after{
+    content: url(assets/checkbox.png);
+    position: absolute;
+    top:18%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+}
+
+.offer .step3 input{
+    display: inline-block;
+}
+
+.offer .step3 .offerings-list-cover{
+    display: grid;
+    margin-top: 3rem;
+    grid-template-columns: 97% 3%;
+}
+
+.offer .step3 .offerings-list::-webkit-scrollbar,
+.offer .step3 .chosen-offerings::-webkit-scrollbar,
+.offer .step4 .tab-body::-webkit-scrollbar {
+    width: 5px;
+    margin-right: 100px;
+  }
+  
+  /* Track */
+.offer .step3 .offerings-list::-webkit-scrollbar-track,
+.offer .step3 .chosen-offerings::-webkit-scrollbar-track,
+.offer .step4 .tab-body::-webkit-scrollbar-track{
+    background: transparent;
+  }
+  
+  /* Handle */
+.offer .step3 .offerings-list::-webkit-scrollbar-thumb,
+.offer .step3 .chosen-offerings::-webkit-scrollbar-thumb,
+.offer .step4 .tab-body::-webkit-scrollbar-thumb{
+    background: #E5E9EE;
+    border-radius: 30px;
+}
+
+.offer .step3 .offerings-list-cover .scroll-push{
+    background-color: #ffffff;
+    border: 1px solid #CDC6FF;
+    border-left: 0;
+}
+
+.offer .step3 .chosen-offerings-cover{
+    display: grid;
+    grid-template-columns: 98% 2%;
+    margin-left: 8%;
+    margin-top: 0.5rem;
+}
+
+.offer .step3 .chosen-offerings{
+    padding-top: 2.5rem;
+}
+
+.offer .step3 .chosen-offerings{
+    height: 32rem;
+    overflow-y: auto;
+}
+
+
+
+.offer .step3 .chosen-offerings label{
+    display: block;
+}
+
+.offer .step3 .chosen-offerings input[type=number]{
+    width: 15%;
+    margin-left: 5%;
+}
+
+
+.offer .step4 .tab-body{
+    padding-right: 6px;    
+}
+
+.offer .step4 input{
+    display: inline-block;
+    width: unset;
+}
+
+.offer .step4 input[type=number]{
+    width: 3.5rem;
+    margin-left: 2rem;
+    margin-right: 10px;
+}
+
+.offer .step4 input[type=text]{
+    width: 14rem;
+}
+
+.offer .step4 .add-bonus{
+    display: flex;
+    align-items: center;
+}
+
+.offer .step4 .add-bonus span,
+.offer .step4 .remove-bonus span{
+    background: linear-gradient(90deg, #4776E6 13.04%, #8E54E9 100%);
+    border-radius: 5px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 30px;
+    text-align: center;
+    padding: 0;
+    line-height: 30px;
+    width: 2rem;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.offer .step4 .remove-bonus{
+    display: inline-block;
+}
+
+.offer .step4 .remove-bonus span{
+    line-height: 1.5rem;
+    width: 1.5rem;
+    padding-left: 3px;
+}
+
+/*offer-generator dynamic classes*/ 
+.offer.slide-in{
+    left: 0;
+}
+
+.offer .error-message.visible{
+    visibility: visible;
+}
+
+#step3 .visible{
+    visibility: visible;
 }

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funnelscript</title>
+    <!-- Include stylesheet -->
+    <!--css stylesheet-->
+    <link rel="stylesheet" href="style.css" >
+  
+</head>
+<body>
+    <header class="header">
+        <div class="header--left small-menu">S<span class="big-menu small-menu">OCISTREAM</span>.</div>
+        <div class="header--right small-menu">
+            <a class="arrow-right" >
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+            <div class="header--right--notification">
+                <img src="assets/notification bell.svg" alt="bell" class="bell">
+                
+            </div>
+            <div class="profile">
+              <img src="assets/profile pic.png" alt="profile picture" class="profile-picture">
+              <span class="profile-arrow">
+                <svg  width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.00016 1.16661L6.8335 6.99995L1.00016 12.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  
+              </span>
+              <div class="log-out">
+                Log out
+              </div>
+            </div>
+    </header>
+    <section class="dashboard small-menu">
+        <div class="dashboard--menu--farleft small-menu">
+                        <ul>
+              <li ><a href="index.html"><svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 24V2.25C0 1.00734 1.2312 0 2.75 0H19.25C20.7688 0 22 1.00734 22 2.25V24L11 18.75L0 24Z" fill="#4834D4"/>
+                </svg></a>
+                </li>  
+              <li ><a href="sales-letter.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.2143 18H0.785714C0.57733 18 0.37748 18.079 0.23013 18.2197C0.0827804 18.3603 0 18.5511 0 18.75L0 20.25C0 20.4489 0.0827804 20.6397 0.23013 20.7803C0.37748 20.921 0.57733 21 0.785714 21H21.2143C21.4227 21 21.6225 20.921 21.7699 20.7803C21.9172 20.6397 22 20.4489 22 20.25V18.75C22 18.5511 21.9172 18.3603 21.7699 18.2197C21.6225 18.079 21.4227 18 21.2143 18ZM21.2143 12H0.785714C0.57733 12 0.37748 12.079 0.23013 12.2197C0.0827804 12.3603 0 12.5511 0 12.75L0 14.25C0 14.4489 0.0827804 14.6397 0.23013 14.7803C0.37748 14.921 0.57733 15 0.785714 15H21.2143C21.4227 15 21.6225 14.921 21.7699 14.7803C21.9172 14.6397 22 14.4489 22 14.25V12.75C22 12.5511 21.9172 12.3603 21.7699 12.2197C21.6225 12.079 21.4227 12 21.2143 12ZM21.2143 6H0.785714C0.57733 6 0.37748 6.07902 0.23013 6.21967C0.0827804 6.36032 0 6.55109 0 6.75L0 8.25C0 8.44891 0.0827804 8.63968 0.23013 8.78033C0.37748 8.92098 0.57733 9 0.785714 9H21.2143C21.4227 9 21.6225 8.92098 21.7699 8.78033C21.9172 8.63968 22 8.44891 22 8.25V6.75C22 6.55109 21.9172 6.36032 21.7699 6.21967C21.6225 6.07902 21.4227 6 21.2143 6ZM21.2143 0H0.785714C0.57733 0 0.37748 0.0790176 0.23013 0.21967C0.0827804 0.360322 0 0.551088 0 0.75L0 2.25C0 2.44891 0.0827804 2.63968 0.23013 2.78033C0.37748 2.92098 0.57733 3 0.785714 3H21.2143C21.4227 3 21.6225 2.92098 21.7699 2.78033C21.9172 2.63968 22 2.44891 22 2.25V0.75C22 0.551088 21.9172 0.360322 21.7699 0.21967C21.6225 0.0790176 21.4227 0 21.2143 0Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="video-sales-letter.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6399 7.03636L21.9907 5.16136C22.0551 4.81659 21.7774 4.5 21.4106 4.5H17.7369L18.4549 0.661359C18.5194 0.316594 18.2417 0 17.8748 0H15.8795C15.7412 2.39844e-06 15.6073 0.0464528 15.5012 0.131218C15.3952 0.215982 15.3237 0.333659 15.2994 0.463641L14.5443 4.5H9.70062L10.4187 0.661359C10.4832 0.316594 10.2055 0 9.83861 0H7.84329C7.70497 2.39844e-06 7.57105 0.0464528 7.465 0.131218C7.35894 0.215982 7.2875 0.333659 7.26319 0.463641L6.50807 4.5H2.6239C2.48557 4.5 2.35166 4.54645 2.2456 4.63122C2.13954 4.71598 2.0681 4.83366 2.04379 4.96364L1.69302 6.83864C1.62854 7.18341 1.90624 7.5 2.27312 7.5H5.94683L4.82438 13.5H0.94021C0.801885 13.5 0.66797 13.5465 0.561913 13.6312C0.455857 13.716 0.384418 13.8337 0.360108 13.9636L0.00933576 15.8386C-0.0551419 16.1834 0.222559 16.5 0.589438 16.5H4.26314L3.54505 20.3386C3.48057 20.6834 3.75827 21 4.12515 21H6.12047C6.25879 21 6.39271 20.9535 6.49877 20.8688C6.60482 20.784 6.67626 20.6663 6.70057 20.5364L7.45574 16.5H12.2994L11.5813 20.3386C11.5168 20.6834 11.7944 21 12.1614 21H14.1567C14.295 21 14.4289 20.9535 14.535 20.8688C14.6411 20.784 14.7125 20.6663 14.7368 20.5364L15.4919 16.5H19.3761C19.5144 16.5 19.6483 16.4535 19.7544 16.3688C19.8605 16.284 19.9319 16.1663 19.9562 16.0364L20.307 14.1614C20.3714 13.8166 20.0937 13.5 19.7269 13.5H16.0532L17.1756 7.5H21.0598C21.1981 7.5 21.332 7.45355 21.4381 7.36878C21.5441 7.28402 21.6156 7.16634 21.6399 7.03636ZM12.8606 13.5H8.01698L9.13943 7.5H13.9831L12.8606 13.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="email-copy.html"><svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3333 0H7.33333L0 6V21C0 22.6547 1.64427 24 3.66667 24H18.3333C20.3557 24 22 22.6547 22 21V3C22 1.34531 20.3557 0 18.3333 0ZM9.16667 7.5H6.41667V3H9.16667V7.5ZM13.75 7.5H11V3H13.75V7.5ZM18.3333 7.5H15.5833V3H18.3333V7.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="offer-generator.html"><svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3333 0H7.33333L0 6V21C0 22.6547 1.64427 24 3.66667 24H18.3333C20.3557 24 22 22.6547 22 21V3C22 1.34531 20.3557 0 18.3333 0ZM9.16667 7.5H6.41667V3H9.16667V7.5ZM13.75 7.5H11V3H13.75V7.5ZM18.3333 7.5H15.5833V3H18.3333V7.5Z" fill="#F5F6F9"/>
+                </svg></a>
+              </li>
+              <li ><a href="webinar-writer.html"><svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3333 0H7.33333L0 6V21C0 22.6547 1.64427 24 3.66667 24H18.3333C20.3557 24 22 22.6547 22 21V3C22 1.34531 20.3557 0 18.3333 0ZM9.16667 7.5H6.41667V3H9.16667V7.5ZM13.75 7.5H11V3H13.75V7.5ZM18.3333 7.5H15.5833V3H18.3333V7.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>    
+              <li ><a href="saved-scripts.html"><svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3333 0H7.33333L0 6V21C0 22.6547 1.64427 24 3.66667 24H18.3333C20.3557 24 22 22.6547 22 21V3C22 1.34531 20.3557 0 18.3333 0ZM9.16667 7.5H6.41667V3H9.16667V7.5ZM13.75 7.5H11V3H13.75V7.5ZM18.3333 7.5H15.5833V3H18.3333V7.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="my-video-scripts.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6399 7.03636L21.9907 5.16136C22.0551 4.81659 21.7774 4.5 21.4106 4.5H17.7369L18.4549 0.661359C18.5194 0.316594 18.2417 0 17.8748 0H15.8795C15.7412 2.39844e-06 15.6073 0.0464528 15.5012 0.131218C15.3952 0.215982 15.3237 0.333659 15.2994 0.463641L14.5443 4.5H9.70062L10.4187 0.661359C10.4832 0.316594 10.2055 0 9.83861 0H7.84329C7.70497 2.39844e-06 7.57105 0.0464528 7.465 0.131218C7.35894 0.215982 7.2875 0.333659 7.26319 0.463641L6.50807 4.5H2.6239C2.48557 4.5 2.35166 4.54645 2.2456 4.63122C2.13954 4.71598 2.0681 4.83366 2.04379 4.96364L1.69302 6.83864C1.62854 7.18341 1.90624 7.5 2.27312 7.5H5.94683L4.82438 13.5H0.94021C0.801885 13.5 0.66797 13.5465 0.561913 13.6312C0.455857 13.716 0.384418 13.8337 0.360108 13.9636L0.00933576 15.8386C-0.0551419 16.1834 0.222559 16.5 0.589438 16.5H4.26314L3.54505 20.3386C3.48057 20.6834 3.75827 21 4.12515 21H6.12047C6.25879 21 6.39271 20.9535 6.49877 20.8688C6.60482 20.784 6.67626 20.6663 6.70057 20.5364L7.45574 16.5H12.2994L11.5813 20.3386C11.5168 20.6834 11.7944 21 12.1614 21H14.1567C14.295 21 14.4289 20.9535 14.535 20.8688C14.6411 20.784 14.7125 20.6663 14.7368 20.5364L15.4919 16.5H19.3761C19.5144 16.5 19.6483 16.4535 19.7544 16.3688C19.8605 16.284 19.9319 16.1663 19.9562 16.0364L20.307 14.1614C20.3714 13.8166 20.0937 13.5 19.7269 13.5H16.0532L17.1756 7.5H21.0598C21.1981 7.5 21.332 7.45355 21.4381 7.36878C21.5441 7.28402 21.6156 7.16634 21.6399 7.03636ZM12.8606 13.5H8.01698L9.13943 7.5H13.9831L12.8606 13.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="training.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6399 7.03636L21.9907 5.16136C22.0551 4.81659 21.7774 4.5 21.4106 4.5H17.7369L18.4549 0.661359C18.5194 0.316594 18.2417 0 17.8748 0H15.8795C15.7412 2.39844e-06 15.6073 0.0464528 15.5012 0.131218C15.3952 0.215982 15.3237 0.333659 15.2994 0.463641L14.5443 4.5H9.70062L10.4187 0.661359C10.4832 0.316594 10.2055 0 9.83861 0H7.84329C7.70497 2.39844e-06 7.57105 0.0464528 7.465 0.131218C7.35894 0.215982 7.2875 0.333659 7.26319 0.463641L6.50807 4.5H2.6239C2.48557 4.5 2.35166 4.54645 2.2456 4.63122C2.13954 4.71598 2.0681 4.83366 2.04379 4.96364L1.69302 6.83864C1.62854 7.18341 1.90624 7.5 2.27312 7.5H5.94683L4.82438 13.5H0.94021C0.801885 13.5 0.66797 13.5465 0.561913 13.6312C0.455857 13.716 0.384418 13.8337 0.360108 13.9636L0.00933576 15.8386C-0.0551419 16.1834 0.222559 16.5 0.589438 16.5H4.26314L3.54505 20.3386C3.48057 20.6834 3.75827 21 4.12515 21H6.12047C6.25879 21 6.39271 20.9535 6.49877 20.8688C6.60482 20.784 6.67626 20.6663 6.70057 20.5364L7.45574 16.5H12.2994L11.5813 20.3386C11.5168 20.6834 11.7944 21 12.1614 21H14.1567C14.295 21 14.4289 20.9535 14.535 20.8688C14.6411 20.784 14.7125 20.6663 14.7368 20.5364L15.4919 16.5H19.3761C19.5144 16.5 19.6483 16.4535 19.7544 16.3688C19.8605 16.284 19.9319 16.1663 19.9562 16.0364L20.307 14.1614C20.3714 13.8166 20.0937 13.5 19.7269 13.5H16.0532L17.1756 7.5H21.0598C21.1981 7.5 21.332 7.45355 21.4381 7.36878C21.5441 7.28402 21.6156 7.16634 21.6399 7.03636ZM12.8606 13.5H8.01698L9.13943 7.5H13.9831L12.8606 13.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="support.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6399 7.03636L21.9907 5.16136C22.0551 4.81659 21.7774 4.5 21.4106 4.5H17.7369L18.4549 0.661359C18.5194 0.316594 18.2417 0 17.8748 0H15.8795C15.7412 2.39844e-06 15.6073 0.0464528 15.5012 0.131218C15.3952 0.215982 15.3237 0.333659 15.2994 0.463641L14.5443 4.5H9.70062L10.4187 0.661359C10.4832 0.316594 10.2055 0 9.83861 0H7.84329C7.70497 2.39844e-06 7.57105 0.0464528 7.465 0.131218C7.35894 0.215982 7.2875 0.333659 7.26319 0.463641L6.50807 4.5H2.6239C2.48557 4.5 2.35166 4.54645 2.2456 4.63122C2.13954 4.71598 2.0681 4.83366 2.04379 4.96364L1.69302 6.83864C1.62854 7.18341 1.90624 7.5 2.27312 7.5H5.94683L4.82438 13.5H0.94021C0.801885 13.5 0.66797 13.5465 0.561913 13.6312C0.455857 13.716 0.384418 13.8337 0.360108 13.9636L0.00933576 15.8386C-0.0551419 16.1834 0.222559 16.5 0.589438 16.5H4.26314L3.54505 20.3386C3.48057 20.6834 3.75827 21 4.12515 21H6.12047C6.25879 21 6.39271 20.9535 6.49877 20.8688C6.60482 20.784 6.67626 20.6663 6.70057 20.5364L7.45574 16.5H12.2994L11.5813 20.3386C11.5168 20.6834 11.7944 21 12.1614 21H14.1567C14.295 21 14.4289 20.9535 14.535 20.8688C14.6411 20.784 14.7125 20.6663 14.7368 20.5364L15.4919 16.5H19.3761C19.5144 16.5 19.6483 16.4535 19.7544 16.3688C19.8605 16.284 19.9319 16.1663 19.9562 16.0364L20.307 14.1614C20.3714 13.8166 20.0937 13.5 19.7269 13.5H16.0532L17.1756 7.5H21.0598C21.1981 7.5 21.332 7.45355 21.4381 7.36878C21.5441 7.28402 21.6156 7.16634 21.6399 7.03636ZM12.8606 13.5H8.01698L9.13943 7.5H13.9831L12.8606 13.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="settings.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6399 7.03636L21.9907 5.16136C22.0551 4.81659 21.7774 4.5 21.4106 4.5H17.7369L18.4549 0.661359C18.5194 0.316594 18.2417 0 17.8748 0H15.8795C15.7412 2.39844e-06 15.6073 0.0464528 15.5012 0.131218C15.3952 0.215982 15.3237 0.333659 15.2994 0.463641L14.5443 4.5H9.70062L10.4187 0.661359C10.4832 0.316594 10.2055 0 9.83861 0H7.84329C7.70497 2.39844e-06 7.57105 0.0464528 7.465 0.131218C7.35894 0.215982 7.2875 0.333659 7.26319 0.463641L6.50807 4.5H2.6239C2.48557 4.5 2.35166 4.54645 2.2456 4.63122C2.13954 4.71598 2.0681 4.83366 2.04379 4.96364L1.69302 6.83864C1.62854 7.18341 1.90624 7.5 2.27312 7.5H5.94683L4.82438 13.5H0.94021C0.801885 13.5 0.66797 13.5465 0.561913 13.6312C0.455857 13.716 0.384418 13.8337 0.360108 13.9636L0.00933576 15.8386C-0.0551419 16.1834 0.222559 16.5 0.589438 16.5H4.26314L3.54505 20.3386C3.48057 20.6834 3.75827 21 4.12515 21H6.12047C6.25879 21 6.39271 20.9535 6.49877 20.8688C6.60482 20.784 6.67626 20.6663 6.70057 20.5364L7.45574 16.5H12.2994L11.5813 20.3386C11.5168 20.6834 11.7944 21 12.1614 21H14.1567C14.295 21 14.4289 20.9535 14.535 20.8688C14.6411 20.784 14.7125 20.6663 14.7368 20.5364L15.4919 16.5H19.3761C19.5144 16.5 19.6483 16.4535 19.7544 16.3688C19.8605 16.284 19.9319 16.1663 19.9562 16.0364L20.307 14.1614C20.3714 13.8166 20.0937 13.5 19.7269 13.5H16.0532L17.1756 7.5H21.0598C21.1981 7.5 21.332 7.45355 21.4381 7.36878C21.5441 7.28402 21.6156 7.16634 21.6399 7.03636ZM12.8606 13.5H8.01698L9.13943 7.5H13.9831L12.8606 13.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>
+            </ul>
+        </div>
+        <div class="dashboard--menu--closeleft small-menu">
+            <ul>
+                <li ><a href="index.html">Dashboard</a></li>  
+                <li ><a href="sales-letter.html">Sales letter</a></li>  
+                <li ><a href="video-sales-letter.html">Video sales letter</a></li>  
+                <li ><a href="email-copy.html" >Email copy</a></li>  
+                <li ><a href="offer-generator.html" class="purple">Offer generator</a></li>  
+                <li ><a href="webinar-writer.html">Webinar writer</a></li>  
+                <li ><a href="saved-scripts.html">Saved scripts</a></li>  
+                <li ><a href="my-video-scripts.html">My video scripts</a></li>  
+                <li ><a href="training.html">Training</a></li>  
+                <li ><a href="support.html">Support</a></li>  
+                <li ><a href="settings.html">Settings</a></li>
+            </ul>
+        </div>
+        <section class="offer-generator-section">
+          <h2 class=" heading">Generate your sales offer in minutes</h2>
+
+            <div class="status-create-offer">
+                <div class="status">
+                  <div>
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.5457 19.0192C17.5457 18.3453 18.0345 17.7083 18.7529 17.7083C19.4121 17.7083 20.0416 18.1823 20.0416 18.9007C20.0416 19.5747 19.5676 20.2117 18.8492 20.2117C18.1826 20.2117 17.5457 19.7154 17.5457 19.0192ZM37.3278 18.96C37.3278 29.1066 29.1068 37.3275 18.9603 37.3275C8.81371 37.3275 0.592773 29.1066 0.592773 18.96C0.592773 8.81344 8.81371 0.592499 18.9603 0.592499C29.1068 0.592499 37.3278 8.81344 37.3278 18.96ZM35.3577 18.96C35.3577 9.90215 28.0181 2.56256 18.9603 2.56256C9.90243 2.56256 2.56284 9.90215 2.56284 18.96C2.56284 28.0178 9.90243 35.3574 18.9603 35.3574C28.0181 35.3574 35.3577 28.0178 35.3577 18.96ZM29.9882 26.1144C29.9882 26.3811 30.951 26.8699 31.1954 27.018C29.1661 30.0916 26.0258 32.3061 22.4634 33.1874L22.1376 31.8173C22.1153 31.6321 21.9968 31.6099 21.8265 31.6099C21.6858 31.6099 21.6043 31.8173 21.6191 31.9209L21.945 33.3133C20.96 33.5207 19.9601 33.6244 18.9529 33.6244C16.2644 33.6244 13.6204 32.8689 11.3244 31.4692C11.4503 31.2618 12.228 30.136 12.228 29.9731C12.228 29.8324 12.1021 29.7065 11.9614 29.7065C11.6725 29.7065 11.0578 30.9359 10.8726 31.1803C7.77684 29.1288 5.54015 25.9515 4.68102 22.3224L6.09562 22.0114C6.25856 21.9669 6.30299 21.8484 6.30299 21.7003C6.30299 21.5596 6.09562 21.4781 5.97712 21.4929L4.59215 21.8114C4.40699 20.8708 4.3033 19.9228 4.3033 18.96C4.3033 16.2123 5.08096 13.509 6.53999 11.1908C6.74737 11.3167 7.7324 11.9907 7.89534 11.9907C8.03606 11.9907 8.16196 11.887 8.16196 11.7463C8.16196 11.4575 7.07324 10.9094 6.82884 10.7391C8.9174 7.68769 12.0947 5.48803 15.7015 4.67334L16.0126 6.0435C16.057 6.20644 16.1755 6.25087 16.3236 6.25087C16.4718 6.25087 16.5458 6.0435 16.531 5.925L16.22 4.56966C17.1235 4.40672 18.0419 4.30303 18.9677 4.30303C21.7154 4.30303 24.3965 5.08069 26.7368 6.53972C26.5961 6.74709 25.937 7.70991 25.937 7.87284C25.937 8.01356 26.0406 8.13947 26.1814 8.13947C26.4702 8.13947 27.0183 7.07297 27.1664 6.82856C30.203 8.88009 32.373 12.0129 33.2173 15.5827L32.0693 15.8272C31.8842 15.8716 31.862 15.9901 31.862 16.153C31.862 16.2937 32.0693 16.3752 32.173 16.3604L33.3432 16.0938C33.5284 17.0344 33.6321 17.9972 33.6321 18.96C33.6321 21.6485 32.8914 24.2925 31.4991 26.5662C31.2917 26.4625 30.4326 25.8478 30.2696 25.8478C30.1141 25.8478 29.9882 25.9737 29.9882 26.1144ZM27.5293 8.1765C26.5665 9.08006 17.5901 17.338 17.3383 17.7676L10.1839 29.6546C11.1245 28.7733 20.1231 20.4709 20.3526 20.0783L27.5293 8.1765Z" fill="white"/>
+                    </svg>                      
+                  </div>
+                  <div class="no-of-offers">
+                      <p>No of offers</p>
+                      <p>0</p>
+                      <hr>
+                  </div>
+                  <div class="price">
+                      <p>Price</p>
+                      <p>&#36; 0.00</p>
+                  </div>
+
+                  <div class="status-list">
+                    <div class="Excellent no-display">
+                    <div class="stated-status"> 
+                      <span>Excellent</span>
+                      <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.70711 0.292892C8.31658 -0.0976315 7.68342 -0.0976315 7.29289 0.292892L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292892ZM9 21L9 1H7L7 21H9Z" fill="#35EC81"/>
+                      </svg>                        
+                    </div>
+                    <svg width="193" height="149" viewBox="0 0 193 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.49017 46.6906H0.145508V148.381H193V0.62561L178.165 20.6161L165.184 7.57882H154.058L144.786 0.62561L136.442 20.6161H120.679L116.044 43.214H106.772L93.7911 49.298L74.3203 46.6906L61.3397 33.6533L42.796 49.298L40.9416 57.9896L16.8348 43.214L8.49017 46.6906Z" fill="url(#paint0_linear)" fill-opacity="0.3"/>
+                      <path d="M1.07227 46.6906H8.48974L16.8344 43.214L40.9412 58.8587L42.7956 50.1672L61.3393 34.5225L74.3198 46.6906L92.8635 50.1672L105.844 43.214H115.116L120.679 21.4852H135.514L144.786 1.49475L154.058 7.57881H163.33L178.164 21.4852L192.072 1.49475" stroke="#35EC81"/>
+                      <defs>
+                      <linearGradient id="paint0_linear" x1="214.325" y1="183.147" x2="-65.8019" y2="-35.443" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#35EC81"/>
+                      <stop offset="1" stop-color="#039F44"/>
+                      </linearGradient>
+                      </defs>
+                      </svg>
+                          
+                    </div> 
+
+                    <div class="Weak no-display">
+                      <div class="stated-status"> 
+                        <span>Weak</span>
+                        <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.70711 0.292892C8.31658 -0.0976315 7.68342 -0.0976315 7.29289 0.292892L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292892ZM9 21L9 1H7L7 21H9Z" fill="#F2C94C"/>
+                          </svg>                                                  
+                      </div>
+                      <svg width="193" height="149" viewBox="0 0 193 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.49017 46.6906H0.145508V148.381H193V0.62561L178.165 20.6161L165.184 7.57882H154.058L144.786 0.62561L136.442 20.6161H120.679L116.044 43.214H106.772L93.7911 49.298L74.3203 46.6906L61.3397 33.6533L42.796 49.298L40.9416 57.9896L16.8348 43.214L8.49017 46.6906Z" fill="url(#paint0_linear)" fill-opacity="0.3"/>
+                        <path d="M1.07227 46.6906H8.48974L16.8344 43.214L40.9412 58.8587L42.7956 50.1672L61.3393 34.5225L74.3198 46.6906L92.8635 50.1672L105.844 43.214H115.116L120.679 21.4852H135.514L144.786 1.49475L154.058 7.57881H163.33L178.164 21.4852L192.072 1.49475" stroke="#F2C94C"/>
+                        <defs>
+                        <linearGradient id="paint0_linear" x1="214.325" y1="183.147" x2="-65.8019" y2="-35.443" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FFD600"/>
+                        <stop offset="1" stop-color="#FFE040" stop-opacity="0.83"/>
+                        </linearGradient>
+                        </defs>
+                      </svg> 
+                    </div>
+
+                    <div class="Poor no-display">
+                      <div class="stated-status"> 
+                        <span>Poor</span>
+                        <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.29289 20.7071C7.68342 21.0976 8.31658 21.0976 8.70711 20.7071L15.0711 14.3431C15.4616 13.9526 15.4616 13.3195 15.0711 12.9289C14.6805 12.5384 14.0474 12.5384 13.6569 12.9289L8 18.5858L2.34315 12.9289C1.95262 12.5384 1.31946 12.5384 0.928932 12.9289C0.538408 13.3195 0.538408 13.9526 0.928932 14.3431L7.29289 20.7071ZM7 0L7 20H9L9 0L7 0Z" fill="#FF5C00"/>
+                          </svg>                          
+                      </div>
+                      <svg width="193" height="149" viewBox="0 0 193 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.49017 46.6906H0.145508V148.381H193V0.62561L178.165 20.6161L165.184 7.57882H154.058L144.786 0.62561L136.442 20.6161H120.679L116.044 43.214H106.772L93.7911 49.298L74.3203 46.6906L61.3397 33.6533L42.796 49.298L40.9416 57.9896L16.8348 43.214L8.49017 46.6906Z" fill="url(#paint0_linear)" fill-opacity="0.3"/>
+                        <path d="M1.07227 46.6906H8.48974L16.8344 43.214L40.9412 58.8587L42.7956 50.1672L61.3393 34.5225L74.3198 46.6906L92.8635 50.1672L105.844 43.214H115.116L120.679 21.4852H135.514L144.786 1.49475L154.058 7.57881H163.33L178.164 21.4852L192.072 1.49475" stroke="#FF5C00"/>
+                        <defs>
+                        <linearGradient id="paint0_linear" x1="214.325" y1="183.147" x2="-65.8019" y2="-35.443" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF5C00"/>
+                        <stop offset="1" stop-color="#FFB992"/>
+                        </linearGradient>
+                        </defs>
+                        </svg>
+                        
+                    </div>
+
+                    <div class="Empty">
+                      <div class="stated-status">
+                        <span>Empty</span>
+                        <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.70711 0.292892C8.31658 -0.0976315 7.68342 -0.0976315 7.29289 0.292892L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292892ZM9 21L9 1H7L7 21H9Z" fill="url(#paint0_linear)"/>
+                          <defs>
+                          <linearGradient id="paint0_linear" x1="8.5" y1="18.3913" x2="8.5" y2="0.999999" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#4776E6"/>
+                          <stop offset="1" stop-color="#8E54E9"/>
+                          </linearGradient>
+                          </defs>
+                          </svg>
+                                                   
+                      </div>
+                      <svg width="193" height="109" viewBox="0 0 193 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 1.5L0.145508 6.69061V108.381H193V1.5L186.5 4L179.5 6.69061H174H161.5H148H125.5H116L106 1.5L93.5 6.69061H74.3203H64.5H43.5L37 14.5L17 8.5L9 1.5Z" fill="url(#paint0_linear)" fill-opacity="0.3"/>
+                        <path d="M1.07227 6.69058L9 1L15.5 6.69058L37.5 15L43.5 6.69058H60H74.3198H93.5L105.5 1L115 6.69058H128.5H139H151H166H171.5H178.5L192 1" stroke="white"/>
+                        <defs>
+                        <linearGradient id="paint0_linear" x1="214.325" y1="143.147" x2="-65.8019" y2="-75.443" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="white"/>
+                        <stop offset="1" stop-color="#4834D4"/>
+                        </linearGradient>
+                        </defs>
+                        </svg>
+                        
+                                              
+                    </div>
+                  </div>
+                </div>
+                <a class="create">Create new offer</a>
+            </div>
+          <article class="offer clearfix">
+            <form class="step1" method="POST" id="step1">
+                <div class="heading">Create your <span class="purple"> offer</span></div>
+                <div class="close">
+                  <svg width="38" height="14" viewBox="0 0 38 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M36.167 7L1.16699 7" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M37 10V4" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.00033 12.8334L1.16699 7.00005L7.00033 1.16672" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
+                    
+                </div>
+                
+              <div class="tab-heading">
+                <div class="clearfix purple"><span class="drop-cap">1</span>Product <br>Tagline</div>
+                <div class="clearfix"><span class="drop-cap">2</span>The Product <br>Problem</div>
+                <div class="clearfix"><span class="drop-cap">3</span>Features &amp; <br>Benefit</div>
+                <div class="clearfix"><span class="drop-cap">4</span>Offer <br>Bonuses</div>
+              </div>
+              <div class="tab-body">
+                <label for="product-name">Product name</label>
+                <input type="text" placeholder="Type script name" id="product-name">
+                <label for="detailed-description">Detailed description</label>
+                <textarea placeholder="Type script name" id="detailed-description"></textarea>
+                <label for="benefit">One line Benefit</label>
+                <input type="text" placeholder="Type script name" id="benefit">
+              </div>
+              <p class="error-message">Complete the step before proceeding</p>
+              <div class="clearfix">
+                <a class="next">Next</a>
+                <a class="cancel">Cancel</a>
+              </div>
+            </form>
+
+            <form class="step2 no-display" method="POST" id="step2">
+            <div class="heading">Add product problem</span></div>
+              <div class="close">
+                <svg width="38" height="14" viewBox="0 0 38 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M36.167 7L1.16699 7" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M37 10V4" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M7.00033 12.8334L1.16699 7.00005L7.00033 1.16672" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  
+                  
+              </div>
+
+            
+            <div class="tab-heading">
+              <div class="clearfix"><span class="drop-cap">1</span>Product <br>Tagline</div>
+              <div class="clearfix purple"><span class="drop-cap">2</span>The Product <br>Problem</div>
+              <div class="clearfix"><span class="drop-cap">3</span>Features &amp; <br>Benefit</div>
+              <div class="clearfix"><span class="drop-cap">4</span>Offer <br>Bonuses</div>
+            </div>
+            <div class="tab-body">
+              <label for="product-name">Product name</label>
+              <input type="text" placeholder="Type script name" id="product-name">
+              <label for="detailed-description">Detailed description</label>
+              <textarea placeholder="Type script name" id="detailed-description"></textarea>
+              <label for="benefit">One line Benefit</label>
+              <input type="text" placeholder="Type script name" id="benefit">
+            </div>
+            <p class="error-message">Complete the step before proceeding</p>
+            <div class="clearfix">
+              <a class="next">Next</a>
+              <a class="cancel">Cancel</a>
+            </div>
+          </form>
+
+          <form class="step3 no-display" method="POST" id="step3">
+            <div class="heading purple">Add your offerings</div>
+            <div class="close">
+              <svg width="38" height="14" viewBox="0 0 38 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M36.167 7L1.16699 7" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M37 10V4" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.00033 12.8334L1.16699 7.00005L7.00033 1.16672" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
+                
+            </div>
+            <div class="tab-heading">
+              <div class="clearfix"><span class="drop-cap">1</span>Product <br>Tagline</div>
+              <div class="clearfix"><span class="drop-cap">2</span>The Product <br>Problem</div>
+              <div class="clearfix purple"><span class="drop-cap">3</span>Features &amp; <br>Benefit</div>
+              <div class="clearfix"><span class="drop-cap">4</span>Offer <br>Bonuses</div>
+            </div>
+            <div class="tab-body">
+              <div class="offerings-list-cover">
+              <div class="offerings-list">
+                <p>
+                  <input type="checkbox" id="ebook" value="Ebook" class="no-display"> 
+                  <label for="ebook">Ebook</label>
+                </p>
+
+                <p>
+                  <input type="checkbox" id="white-report" value="White Report"> 
+                  <label for="white-report">White Report</labelno-display>
+                </p>
+
+                <p>
+                  <input type="checkbox" id="audio-file" value="Audio file"> 
+                  <label for="audio-file">Audio File</label>
+                </p>
+
+                <p>
+                  <input type="checkbox" id="binder-notes" value="Binder notes"> 
+                  <label for="binder-notes">Binder Notes</label>
+                </p>
+
+                <p>
+                  <input type="checkbox" id="interview-series" value="Interview Series"> 
+                  <label for="interview-series">Interview Series</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="mini-course" value="Mini Course">
+                  <label for="mini-course">Mini Course</label>
+                </p>
+
+                <p>
+                  <input type="checkbox" id="masterclass" value="Masterclass">
+                  <label for="masterclass">Masterclass</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="challenge" value="Challenge">
+                  <label for="challenge">Challenge</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="bootcamp" value="Bootcamp">
+                  <label for="bootcamp">Bootcamp</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="certification-program" value="Certification Program">
+                  <label for="certification-program">Certification Program</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="coachina" value="Coachina">
+                  <label for="coachina">Coachina</label>
+                </p>
+              </div>
+              <div class="scroll-push"></div>
+              </div>
+              
+              <div class="chosen-offerings-cover">
+                <div class="chosen-offerings">
+                  <div class="offering no-display">
+                    <label>White report</label>
+                    <input type="text" placeholder="Add title">  
+                    <input type="number" placeholder="Price">
+                  </div>
+                </div>
+                <div class="scroll-push"></div>
+              </div>
+
+            </div>
+            <p class="error-message">Complete the step before proceeding</p>
+            <div class="clearfix">
+              <a class="next">Next</a>
+              <a class="cancel">Cancel</a>
+            </div>
+          </form>
+
+          <form class="step4 no-display" method="POST" id="step4">
+            <div class="heading purple">Add your bonuses</div>
+            <div class="close">
+              <svg width="38" height="14" viewBox="0 0 38 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M36.167 7L1.16699 7" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M37 10V4" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.00033 12.8334L1.16699 7.00005L7.00033 1.16672" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="tab-heading">
+              <div class="clearfix"><span class="drop-cap">1</span>Product <br>Tagline</div>
+              <div class="clearfix"><span class="drop-cap">2</span>The Product <br>Problem</div>
+              <div class="clearfix"><span class="drop-cap">3</span>Features &amp; <br>Benefit</div>
+              <div class="clearfix purple"><span class="drop-cap">4</span>Offer <br>Bonuses</div>
+            </div>
+            <div class="tab-body">
+              <div class="bonuses">
+                <div class="bonus no-display">
+                  <input type="text" placeholder="Bonus title">
+                  <input type="number" placeholder="Price">
+                  <span class="remove-bonus"><span>-</span></span>
+                </div>
+              </div>
+              <p class="add-bonus"><span>+</span> Add bonus</p>  
+            </div>
+            
+            <p class="error-message">Complete the step before proceeding</p>
+            <div class="clearfix">
+              <a class="next">Next</a>
+              <a class="cancel">Cancel</a>
+            </div>
+          </form>
+          </article>          
+        </section>     
+
+    <script src="app.js"></script>
+    <script src="offer-generator.js"></script>
+</body>
+</html>
