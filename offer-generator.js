@@ -1,6 +1,8 @@
 const createOffer = document.querySelector(".offer-generator-section .create");
 const offerGenerator = document.querySelector(".offer");
+const offerScript = document.querySelector(".offer-script");
 const arrowClose = document.querySelectorAll(".offer .close");
+const arrowClose2 = document.querySelector(".offer-script .close");
 const next = document.querySelectorAll(".offer .next");
 const cancel = document.querySelectorAll(".offer .cancel");
 const forms = Array.from(document.querySelectorAll(".offer form"));
@@ -21,6 +23,7 @@ function showGenerator(){
 }
 //close offer generator
 arrowClose.forEach(arrow => arrow.addEventListener("click", closeGenerator));
+arrowClose2.addEventListener("click", closeGenerator);
 function closeGenerator(){
     offerGenerator.classList.remove("slide-in");
 }
@@ -36,20 +39,22 @@ next.forEach(n => n.addEventListener("click", nextStep));
 function nextStep(){
     grandParent = this.parentNode.parentNode;
     const index = forms.indexOf(grandParent);
-    if(index < 2){
+    if(index < 3){
         const inputs = Array.from(grandParent.querySelectorAll("input"));    
-        if(inputs.some(input => input.value === "")){
+
+        if(inputs.some(input => input.value === "") && index < 2){
             showError(grandParent);
             return;
         }
+        forms[index].classList.add("no-display");
+        forms[index+1].classList.remove("no-display");
     }
     else{
-        
+        forms[index].classList.add("no-display");
+        offerScript.classList.remove("no-display");
     }
     
     if(index < forms.length-1){
-        forms[index].classList.add("no-display");
-        forms[index+1].classList.remove("no-display");
     }
 }
 
@@ -57,10 +62,13 @@ function nextStep(){
 cancel.forEach(n => n.addEventListener("click", previousStep));
 function previousStep(){
     grandParent = this.parentNode.parentNode;
-    const index = forms.indexOf(grandParent);
-    if (index == 0) return;
-    forms[index].classList.add("no-display");
-    forms[index-1].classList.remove("no-display");
+    grandParent.reset();
+    
+    
+    // const index = forms.indexOf(grandParent);
+    // if (index == 0) return;
+    // forms[index].classList.add("no-display");
+    // forms[index-1].classList.remove("no-display");
 }
 
 
