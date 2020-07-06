@@ -1396,4 +1396,5 @@ td{
     text-decoration: none;
     background-color: #191847;
     border-radius: 4px;
+    background-size: contain;
 }
