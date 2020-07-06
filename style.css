@@ -1220,6 +1220,7 @@ h2.menu-item-view--heading,
     padding-left: 6%;
     color: #ffffff;
     position: relative;
+    overflow-y: auto;
 }
 
 .offer-script .tagline p{
