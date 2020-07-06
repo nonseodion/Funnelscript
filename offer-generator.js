@@ -104,7 +104,8 @@ function toggleCheckbox(){
 function updateStatus(){
     let prices = Array.from(chosenOfferings.querySelectorAll("input[type=number]")).map(price => Number(price.value));
     let totalPrice = prices.reduce((total, price) => total + price);
-    let offers = chosenOfferings.querySelectorAll("input[type=text]").length;
+    let offers = chosenOfferings.querySelectorAll("input[type=text]").length - 
+                    chosenOfferings.querySelectorAll(".no-display").length;
     let noOfOffers = document.querySelector(".status .no-of-offers p:nth-child(2)");
     let price = document.querySelector(".status .price p:nth-child(2)");
     noOfOffers.textContent = offers;
