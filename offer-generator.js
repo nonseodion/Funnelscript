@@ -7,7 +7,6 @@ const next = document.querySelectorAll(".offer .next");
 const cancel = document.querySelectorAll(".offer .cancel");
 const forms = Array.from(document.querySelectorAll(".offer form"));
 const checkboxes = document.querySelectorAll("#step3 input[type=checkbox]");
-const offerTemplate = document.querySelector(".chosen-offerings .offering");
 const chosenOfferings = document.querySelector(".chosen-offerings");
 let removeBonus = document.querySelector(".offer .step4 .remove-bonus");
 const addBonus = document.querySelector(".offer .step4 .add-bonus");
@@ -77,10 +76,10 @@ checkboxes.forEach(box => box.addEventListener("click", toggleCheckbox));
 function toggleCheckbox(){
     if(this.checked){
         this.classList.add("visible");   
-        let offer = offerTemplate.cloneNode(true);
+        
+        let offer = chosenOfferings.querySelector(`#${this.id}`);
         offer.classList.remove("no-display");
-        offer.classList.add(`${this.id}`);
-        offer.querySelector("label").textContent = this.nextElementSibling.textContent;
+
         let inputs = offer.querySelectorAll("input");
         inputs.forEach(input => {
             input.name = this.value;
@@ -88,12 +87,14 @@ function toggleCheckbox(){
         })
 
         chosenOfferings.appendChild(offer);
+        updateStatus();
     }
     else{
         this.classList.remove("visible");
-        let offer = chosenOfferings.querySelector(`.${this.id}`);
-        console.log(offer);
-        chosenOfferings.removeChild(offer);
+        let offer = chosenOfferings.querySelector(`#${this.id}`);
+        offerInputs = offer.querySelectorAll("input");
+        offerInputs.forEach(offerInput => offerInput.value = "");
+        offer.classList.add("no-display");
         updateStatus();
     }
 }
@@ -101,9 +102,9 @@ function toggleCheckbox(){
 //update status with change in entered prices of offers
 
 function updateStatus(){
-    let prices = Array.from(document.querySelectorAll(".chosen-offerings input[type=number]")).map(price => Number(price.value));
+    let prices = Array.from(chosenOfferings.querySelectorAll("input[type=number]")).map(price => Number(price.value));
     let totalPrice = prices.reduce((total, price) => total + price);
-    let offers = document.querySelectorAll(".chosen-offerings input[type=text]").length-1;
+    let offers = chosenOfferings.querySelectorAll("input[type=text]").length;
     let noOfOffers = document.querySelector(".status .no-of-offers p:nth-child(2)");
     let price = document.querySelector(".status .price p:nth-child(2)");
     noOfOffers.textContent = offers;
