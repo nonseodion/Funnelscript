@@ -109,8 +109,7 @@ function updateStatus(){
     let noOfOffers = document.querySelector(".status .no-of-offers p:nth-child(2)");
     let price = document.querySelector(".status .price p:nth-child(2)");
     noOfOffers.textContent = offers;
-    price.textContent = "$ "+ totalPrice
-    console.log(totalPrice, offers-1);
+    price.textContent = "$ "+ totalPrice;
 
     const statusList = document.querySelectorAll(".status-list>div");
     statusList.forEach(status => status.classList.add("no-display"));
