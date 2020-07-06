@@ -22,7 +22,6 @@ function showGenerator(){
 }
 //close offer generator
 arrowClose.forEach(arrow => arrow.addEventListener("click", closeGenerator));
-arrowClose2.addEventListener("click", closeGenerator);
 function closeGenerator(){
     offerGenerator.classList.remove("slide-in");
 }

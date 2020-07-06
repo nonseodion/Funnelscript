@@ -1196,7 +1196,8 @@ h2.menu-item-view--heading,
 }
 
 /*offer-generator dynamic classes*/ 
-.offer.slide-in{
+.offer.slide-in,
+.offer.script-view{
     left: 0;
 }
 
