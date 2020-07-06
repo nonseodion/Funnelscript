@@ -407,7 +407,8 @@ h2.menu-item-view--heading,
 .editor-section,
 .video-script-section,
 .webinar-writer-section,
-.offer-generator-section{
+.offer-generator-section,
+.success-message-section{
     background-color: #E5E5E5;
     padding-left: 3rem;
     padding-right: 3rem;
@@ -630,12 +631,10 @@ h2.menu-item-view--heading,
 .section--templates,
 .video-script-template--body{
     display: none;
-    position: absolute;
     background-color: #ffffff;
     left: -7.9%;
     z-index: 100;
     font-size: 14px;
-    padding: 0 7% 0 7%;
     overflow-y: visible;
 }
 
@@ -1364,4 +1363,37 @@ td{
     border: 1px solid;
     padding: 10px 30px;
     display: inline-block;
+}
+
+.success-message-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/sitting\ human.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.success-section{
+    text-align: center;
+    transform: translateY(-30%);
+}
+
+.success-section svg{
+    fill:#191847;
+    width: 10rem;
+    height: 10rem;
+}
+
+.success-message{
+    color: #008000;
+}
+
+.success-message-section .view{
+    display: inline-block;
+    color: #ffffff;
+    padding: 10px 30px;
+    text-decoration: none;
+    background-color: #191847;
+    border-radius: 4px;
 }

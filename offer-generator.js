@@ -57,7 +57,7 @@ function nextStep(){
     }
 }
 
-//go to previous step or clear
+//clear form
 cancel.forEach(n => n.addEventListener("click", previousStep));
 function previousStep(){
     grandParent = this.parentNode.parentNode;

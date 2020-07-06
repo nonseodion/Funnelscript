@@ -124,27 +124,28 @@ sectionTemplates.forEach(sectionTemplate =>{
 //add Enter event to sections, so they appear in editor
 //add click event to Templates, so they appear in editor
 
-const templates = document.querySelectorAll(".section--templates p");
-templates.forEach(template => template.addEventListener("click", enterEditor));
+const templates = document.querySelectorAll(".section--templates");
+templates.forEach(template => template.addEventListener("click", templateClick));
 
 sectionTemplates.forEach(
   sectionTemplate => sectionTemplate.addEventListener("keydown", enterEditor)
-)
+);
   
-  function enterEditor(e){
-    if(e.keyCode === 13) {
-      e.preventDefault();
-      showInEditor(this, e);
-    }
-    else if(e.type === "click"){
-      showInEditor(e.target, e);
-    }
-  }
+function templateClick(e){
+  showInEditor(e.target, e);
+}
 
-  function showInEditor(sectionType, e){
-      node = document.createElement(`${sectionType.tagName}`);
-      console.log(node);
-      node.textContent = e.target.parentNode.textContent.trim();
-      const qlEditor = document.querySelector(".ql-editor");
-      qlEditor.appendChild(node);
+function enterEditor(e){
+  if(e.keyCode === 13) {
+    e.preventDefault();
+    showInEditor(this, e);
   }
+}
+
+function showInEditor(sectionType, e){
+    node = document.createElement(`${sectionType.tagName}`);
+    console.log(node);
+    node.textContent = e.target.parentNode.textContent.trim();
+    const qlEditor = document.querySelector(".ql-editor");
+    qlEditor.appendChild(node);
+}
