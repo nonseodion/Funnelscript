@@ -85,7 +85,6 @@ function toggleCheckbox(){
             input.addEventListener("change", updateStatus);
         })
 
-        chosenOfferings.appendChild(offer);
         updateStatus();
     }
     else{
