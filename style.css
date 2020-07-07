@@ -395,6 +395,7 @@ h2.menu-item-view--heading,
 
 
 /*switching menu-items(now deprecated, lol)*/
+.offer .step4 .add-bonus.no-display,
 .no-display{
     display: none;
 }
