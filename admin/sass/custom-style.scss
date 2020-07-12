@@ -1,0 +1,258 @@
+$primary-color: #3c4451;
+//$secondary-color:
+
+$primary-text-color: #686868;
+$secondary-text-color: #54667a;
+
+
+
+.sidebar{
+  background-color: #ffffff;
+
+  .sidebar-head{
+    h3{
+      color: $primary-text-color;
+    }
+  }
+  
+  #side-menu li a {
+    color: $secondary-text-color;
+  }
+
+}
+
+.cards{
+  padding: 3rem;
+}
+
+.card-group{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-gap: 2rem;
+
+  &__heading{
+    grid-column: 1/-1;
+    margin: 0;
+  }
+}
+
+.card{
+  background-image: linear-gradient(#ffffff 50%,
+                                    $primary-color 50%, 
+                                    $primary-color 100%);
+  padding: 2rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+
+  &:hover{
+    transform: scale(1.03);
+    transition: transform 0.2s;
+    border: 1px;
+    border-style: solid;
+    border-color: #54667a;
+    box-shadow: 3px 3px 10px #fefefe;
+  }
+
+  &__heading{
+    text-align: center;
+    font-weight: 400;
+    color: $secondary-text-color;
+  }
+
+  &__description{
+    text-align: right;
+    color: #ffffff;
+    font-weight: 500;
+  }
+
+}
+
+@mixin  section-heading {
+  color: $secondary-text-color;
+  font-weight: 400;
+  margin-top: 0;
+  text-align: center;
+}
+
+@mixin btn($btn-color){
+  padding: 8px 15px;
+  border: none;
+  color: #ffffff;
+  border-radius: 4px;
+  background-color: $btn-color;
+}
+
+@mixin sub-heading{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@mixin delete-btn{
+  &__delete-btn{
+    display: none;
+    fill: #000000;
+    transition: transform 1s;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+
+  &:hover &__delete-btn{
+    display: inline;
+    transform: scale(1.5);;
+  }
+}
+
+.sections-editor{
+  margin: auto;
+  width: 80%;
+  padding: 1rem;
+
+  &__heading{
+    @include section-heading;
+  }
+}
+
+.sections-form{
+  &__add-btn{
+    @include btn(green);
+    
+    margin-left: 40px;
+  }
+}
+
+.section-template{
+  margin-bottom: 2rem;
+  list-style: none;
+
+  &__label{
+    font-size: 18px;
+  }
+
+  &__input{
+    width: 100%;
+    border: none;
+    margin-right: 1.5rem;
+    height: 4rem;
+    transition: all 0.2s;
+    padding: 0 1rem;
+  }
+
+}
+
+.template-editor{
+  padding: 2rem;
+
+
+  &__heading{
+    @include section-heading;
+  }
+
+}
+
+.editor-form{
+  &__title{
+    height: 3rem;
+    padding: 1rem;
+  }
+
+  &__add-btn{
+    @include btn(green);
+  }
+
+
+  //a little summer note styling
+  .note-placeholder{
+    display: none !important;
+  }
+
+  .note-editor{
+    background-color: #ffffff;
+    margin: 2rem 0;
+  }
+}
+
+
+.current-sections{
+  padding: 2rem !important;
+
+  &__heading{
+    @include section-heading;
+  }
+
+  &__sub-heading{
+    @include sub-heading;
+    margin-bottom: 1rem;
+  }
+}
+
+.section-item{
+  font-size: 15px;
+  margin: 1rem 0;
+
+  @include delete-btn;
+}
+
+.current-templates{
+  &__heading{
+    @include section-heading;
+  }
+}
+
+.template{
+  &__heading{
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  @include delete-btn;
+}
+
+//Video Presentation 
+.presentation-editor{
+  padding: 3rem;
+
+  &__heading{
+    @include section-heading;
+  }
+}
+
+.presentation-form{
+  &__title{
+    height: 3rem;
+    padding: 1rem;
+  }
+
+  &__sub-heading{
+    display: block;
+    margin-top: 1rem;
+    @include sub-heading;
+  }
+
+  &__input{
+    display: block;
+    width: 100%;
+  }
+
+  &__add-btn{
+    margin-top: 3rem;
+    @include btn(green);
+  }
+}
+
+//current presentations
+.presentation-templates{
+  &__heading{
+    @include section-heading;
+  }
+}
+
+.presentation-template{
+  margin: 3rem 0;
+
+  &__sub-heading{
+    margin: 0;
+    font-size: 18px;
+  }
+
+  @include delete-btn;
+}

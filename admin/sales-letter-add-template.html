@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Funnelscript Admin</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--Summernote-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom-style.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-default navbar-static-top m-b-0">
+        <div class="navbar-header">
+        
+            <ul class="nav navbar-top-links navbar-right pull-right">
+                <li>
+                    <a class="nav-toggler open-close waves-effect waves-light hidden-md hidden-lg"
+                        href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+                </li>
+                <li>
+                    <form role="search" class="app-search hidden-sm hidden-xs m-r-10">
+                        <input type="text" placeholder="Search..." class="form-control"> <a href=""><i
+                                class="fa fa-search"></i></a> </form>
+                </li>
+                <li>
+                    <a class="profile-pic" href="/logout"> <img src="plugins/images/users/varun.jpg" alt="user-img"
+                            width="36" class="img-circle"><b class="hidden-xs">LogOut</b></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-header -->
+        <!-- /.navbar-top-links -->
+        <!-- /.navbar-static-side -->
+    </nav>
+    
+      <!-- ============================================================== -->
+            <!-- Left Sidebar - style you can find in sidebar.scss  -->
+            <!-- ============================================================== -->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav slimscrollsidebar">
+                    <div class="sidebar-head">
+                        <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Admin</span></h3>
+                    </div>
+                    <ul class="nav" id="side-menu">
+                        <li style="padding: 70px 0 0;">
+                            <a href="dashboard.html" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="sales-letter.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Sales Letter</a>
+                        </li>
+                        <li>
+                            <a href="video-sales.html" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Video Sales Letter</a>
+                        </li>
+                        <li>
+                            <a href="" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i>Webinar Script</a>
+                        </li>
+                        <li>
+                            <a href="" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Settings script</a>
+                        </li>
+    
+                    </ul>
+    
+                </div>
+    
+            </div>
+
+    <div id="page-wrapper">
+      <section class="template-editor">
+        <h1 class="template-editor__heading">Add a user template</h1>
+        <form method="post" class="template-editor__form editor-form">
+          <input type="text" placeholder="Enter title" name="title" class="editor-form__title">
+          <textarea id="summernote" name="summernote" class="editor-form__text-area"></textarea>
+          <button class="editor-form__add-btn">Add template</button>
+        </form>
+      </section>
+    </div>
+    
+</div>
+  <script>
+      $('#summernote').summernote({
+        placeholder: 'Hello stand alone ui',
+        tabsize: 2,
+        height: 120,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+      });
+  </script>
+</body>
+</html>

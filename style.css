@@ -119,6 +119,7 @@ a{
 
 .header--right .profile-arrow svg{
     transform: rotate(90deg);
+    cursor: pointer;
 }
 
 .header--right .profile-arrow svg.log-out-open{
@@ -151,7 +152,7 @@ a{
 
 .dashboard{
     display: grid;
-    grid-template-columns: 5% 14% 81%;
+    grid-template-columns: 5% 15% 80%;
 }
 
 .dashboard--menu--farleft,
@@ -206,7 +207,8 @@ a{
 }
 
 .dashboard--view,
-.saved-scripts{
+.saved-scripts,
+.menu-item-view-container{
     background-color: #E5E5E5;
     position: relative;
     z-index: 10;
@@ -231,6 +233,7 @@ a{
 }
 
 .dashboard--view h2,
+.menu-item-view-container h2,
 .saved-scripts-heading{
     color: #4834D4;
     position: relative;
@@ -250,7 +253,8 @@ a{
     opacity: 0.3;
 }
 
-.dashboard--view p{
+.dashboard--view p,
+.menu-item-view-container p{
     margin: 0;
 }
 
@@ -273,7 +277,7 @@ a{
 
 .header.small-menu{
     display: grid;
-    grid-template-columns: 19% 81%;
+    grid-template-columns: 20% 80%;
 }
 
 
@@ -293,13 +297,14 @@ a{
     justify-content: center;
 }
 
-.dashboard--view--welcome.small-menu,
-.menu-item-view.small-menu{
+.dashboard--view--welcome.small-menu
+{
     padding-left: 5rem;
 }
 
 .menu-item-view.small-menu{
     gap: 2rem;
+    overflow-x: auto;
 }
 
 .editor-section.small-menu{
@@ -309,14 +314,13 @@ a{
 /*menu-item-view*/
 .menu-item-view{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 5fr 5fr 5fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     padding: 3rem;
     gap: 1.5rem;
 }
 
 .menu-item-view--heading{
-    grid-column: 1/ span 3;
+    grid-column: 1/ -1;
     margin: 0;
     
 }
@@ -334,7 +338,6 @@ h2.menu-item-view--heading,
     background-color: #ffffff;
     padding: 1.5rem;
     border: 1px solid #EDEEF0;
-    height: 77%;
 }
 
 .menu-item-view--card:hover{
@@ -407,7 +410,6 @@ h2.menu-item-view--heading,
 /*editor page*/
 .editor-section,
 .video-script-section,
-.webinar-writer-section,
 .offer-generator-section,
 .success-message-section{
     background-color: #E5E5E5;
@@ -416,6 +418,7 @@ h2.menu-item-view--heading,
     padding-top: 1.5rem;
     z-index: 10;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .editor-section a{
@@ -509,12 +512,16 @@ h2.menu-item-view--heading,
     min-height: 30%;
     background-color: #ffffff;
     border-radius: 0 0 10px 10px;
-    padding: 12px 15px;
+    position: relative;
 }
 
 .ql-editor{
-    padding: 0;
     white-space: pre-line;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 .ql-container{

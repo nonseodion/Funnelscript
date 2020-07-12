@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Funnelscript Admin</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom-style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-default navbar-static-top m-b-0">
+        <div class="navbar-header">
+        
+            <ul class="nav navbar-top-links navbar-right pull-right">
+                <li>
+                    <a class="nav-toggler open-close waves-effect waves-light hidden-md hidden-lg"
+                        href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+                </li>
+                <li>
+                    <form role="search" class="app-search hidden-sm hidden-xs m-r-10">
+                        <input type="text" placeholder="Search..." class="form-control"> <a href=""><i
+                                class="fa fa-search"></i></a> </form>
+                </li>
+                <li>
+                    <a class="profile-pic" href="/logout"> <img src="plugins/images/users/varun.jpg" alt="user-img"
+                            width="36" class="img-circle"><b class="hidden-xs">LogOut</b></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-header -->
+        <!-- /.navbar-top-links -->
+        <!-- /.navbar-static-side -->
+    </nav>
+    
+      <!-- ============================================================== -->
+            <!-- Left Sidebar - style you can find in sidebar.scss  -->
+            <!-- ============================================================== -->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav slimscrollsidebar">
+                    <div class="sidebar-head">
+                        <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Admin</span></h3>
+                    </div>
+                    <ul class="nav" id="side-menu">
+                        <li style="padding: 70px 0 0;">
+                            <a href="dashboard.html" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="sales-letter.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Sales Letter</a>
+                        </li>
+                        <li>
+                            <a href="video-sales.html" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Video Sales Letter</a>
+                        </li>
+                        <li>
+                            <a href="" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i>Webinar Script</a>
+                        </li>
+                        <li>
+                            <a href="" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Settings script</a>
+                        </li>
+    
+                    </ul>
+    
+                </div>
+    
+            </div>
+
+    <section id="page-wrapper">
+      <section class="cards">
+        <div class="cards__card-group card-group">
+        	<h2 class="card-group__heading">Sections</h2>
+					<a href="sections-add-section.html" class="card">
+						<h3 class="card__heading">New Sections</h3>
+						<p class="card__description">Add</p>
+					</a>
+					<a href="sales-letter-current-sections.html" class="card">
+						<h3 class="card__heading">Current Sections</h3>
+						<p class="card__description">View/Delete</p>
+					</a>
+        </div>
+
+				<div class="cards__card-group card-group">
+					<h2 class="card-group__heading">Templates</h2>
+					<a href="sales-letter-add-template.html" class="card">
+						<h3 class="card__heading">New Templates</h3>
+						<p class="card__description">Add</p>
+					</a>
+		
+					<a href="sales-letter-current-templates.html" class="card">
+						<h3 class="card__heading">Current Templates</h3>
+						<p class="card__description">View/Delete</p>
+					</a>
+				</div>
+
+      </section>
+    </section>
+    
+</div>
+</body>
+</html>
