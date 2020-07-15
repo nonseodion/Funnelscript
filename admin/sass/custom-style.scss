@@ -5,7 +5,7 @@ $primary-text-color: #686868;
 $secondary-text-color: #54667a;
 
 
-
+//styles to override already written styles
 .sidebar{
   background-color: #ffffff;
 
@@ -17,46 +17,56 @@ $secondary-text-color: #54667a;
   
   #side-menu li a {
     color: $secondary-text-color;
+    font-weight: 400; 
   }
 
 }
 
+#page-wrapper{
+  min-height: 100vh;
+}
+
+// new styles
 .cards{
   padding: 3rem;
 }
 
 .card-group{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
   grid-gap: 2rem;
 
   &__heading{
     grid-column: 1/-1;
     margin: 0;
+    font-weight: 500;
   }
 }
 
 .card{
-  background-image: linear-gradient(#ffffff 50%,
-                                    $primary-color 50%, 
-                                    $primary-color 100%);
-  padding: 2rem;
-  display: inline-block;
+  background-image: linear-gradient(135deg, $primary-color 0%, #111111 100%);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 1rem;
+  height: 16rem;
 
   &:hover{
     transform: scale(1.03);
     transition: transform 0.2s;
     border: 1px;
     border-style: solid;
-    border-color: #54667a;
+    border-color: #c3af0e;
     box-shadow: 3px 3px 10px #fefefe;
   }
 
   &__heading{
     text-align: center;
     font-weight: 400;
-    color: $secondary-text-color;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 500;
   }
 
   &__description{
@@ -69,7 +79,7 @@ $secondary-text-color: #54667a;
 
 @mixin  section-heading {
   color: $secondary-text-color;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 0;
   text-align: center;
 }
@@ -249,9 +259,18 @@ $secondary-text-color: #54667a;
 .presentation-template{
   margin: 3rem 0;
 
+  &__heading{
+    font-weight: 500;
+  }
+
   &__sub-heading{
     margin: 0;
     font-size: 18px;
+    font-weight: 400;
+  }
+
+  &__description{
+    font-size: 16px;
   }
 
   @include delete-btn;

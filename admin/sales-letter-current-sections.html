@@ -254,17 +254,5 @@
     </section>
     
 </div>
-
-	<script>
-		const deleteButtons = document.querySelectorAll(".section-item__delete-btn");
-
-		function deleteSectionTemplate(){
-			this.parentNode.remove();
-		}
-
-		deleteButtons.forEach( 
-			deleteButton => deleteButton.addEventListener("click", deleteSectionTemplate)
-		);
-	</script>
 </body>
 </html>
