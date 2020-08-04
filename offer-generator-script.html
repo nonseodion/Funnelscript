@@ -348,6 +348,15 @@
         </section>     
 
     <script src="app.js"></script>
+    <script>
+      document.querySelector(".Empty").classList.add("no-display");
+      const [num, price, offerStrength] = sessionStorage.getItem("status").split(",");
+
+
+      document.querySelector(".status .no-of-offers p:nth-child(2)").textContent = num;
+      document.querySelector(".status .price p:nth-child(2)").textContent = price;
+      document.querySelector(`.${offerStrength}`).classList.remove("no-display");
+    </script>
     
 </body>
 </html>
