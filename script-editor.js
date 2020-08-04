@@ -87,7 +87,6 @@ function showModal(e){
   else{
     setTimeout(() => templateList.classList.add("slide-in"), 100);
   }
-  console.log(this.nextSibling);
 }
 
 function hideModal(e){
@@ -143,9 +142,7 @@ function enterEditor(e){
 }
 
 function showInEditor(sectionType, e){
-    node = document.createElement(`${sectionType.tagName}`);
-    console.log(node);
-    node.textContent = e.target.parentNode.textContent.trim();
-    const qlEditor = document.querySelector(".ql-editor");
-    qlEditor.appendChild(node);
+  const qlEditor = document.querySelector(".ql-editor");
+  console.log(sectionType.outerHTML, sectionType)
+  qlEditor.innerHTML += sectionType.outerHTML;
 }
