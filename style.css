@@ -436,8 +436,8 @@ h2.menu-item-view--heading,
 .editor-section--description p,
 .video-script-section p{
     color: #191847;
-    font-size: 18px;
     white-space: pre-line;
+    font-size: 18px;
     margin-top: 0.6rem;
 }
 
@@ -464,6 +464,14 @@ h2.menu-item-view--heading,
 .video-script-section textarea,
 .video-script-section input{
     border: 1px solid #CDC6FF;
+}
+
+.editor-section--control-top input:focus,
+.video-script-section textarea:focus,
+.video-script-section input:focus,
+.offer .tab-body input:focus, 
+.offer .tab-body textarea:focus {
+    outline: 1px solid #4834D4;
 }
 
 .editor-section--control-top input::placeholder,
@@ -516,7 +524,7 @@ h2.menu-item-view--heading,
 }
 
 .ql-editor{
-    white-space: pre-line;
+    white-space: normal;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -830,21 +838,26 @@ h2.menu-item-view--heading,
 
 /*Offer Generator*/
 .offer-generator-section .status-create-offer{
-    position: relative;
     padding-top: 1rem;
 }
 
 .offer-generator-section .status{
     display: inline-grid;
     grid-template-columns: 0.6fr 1fr 1fr 1fr;
-    width: 50%;
     height: 7rem;
 }
 
 .offer-generator-section .status{
     background: #3B4567;
+    width: 30rem;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.02);
     border-radius: 20px
+}
+
+.offer-generator-section .status.status--fixed{
+    position: fixed;
+    z-index: 10;
+    top: 3px;
 }
 
 .offer-generator-section .status>div:nth-child(1){
@@ -959,7 +972,6 @@ h2.menu-item-view--heading,
     font-size: 18px;
     display: flex;
     align-items: flex-end;
-    white-space: pre;
     font-weight: 700;
 }
 

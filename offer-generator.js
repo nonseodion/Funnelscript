@@ -11,22 +11,30 @@ const chosenOfferings = document.querySelector(".chosen-offerings");
 let removeBonus = document.querySelectorAll(".offer .step4 .remove-bonus");
 const addBonus = document.querySelector(".offer .step4 .add-bonus");
 const bonusTemplate = document.querySelector(".offer .bonus");
-let noOfOffers = document.querySelector(".status .no-of-offers p:nth-child(2)");
+const noOfOffers = document.querySelector(".status .no-of-offers p:nth-child(2)");
+const status = document.querySelector(".status");
 let offerStrength = "Empty";
+const price = document.querySelector(".status .price p:nth-child(2)");
 
 
 let prices = document.querySelectorAll(".chosen-offerings input[placeholder=Price]");
 
 
 //show offer generator
-createOffer.addEventListener("click", showGenerator);
+window.addEventListener("load", showGenerator);
 function showGenerator(){
     offerGenerator.classList.add("slide-in");
 }
+
 //close offer generator
-arrowClose.forEach(arrow => arrow.addEventListener("click", closeGenerator));
-function closeGenerator(){
-    offerGenerator.classList.remove("slide-in");
+arrowClose.forEach(arrow => arrow.addEventListener("click", previousStep));
+function previousStep(){
+    grandParent = this.parentNode;
+    console.log(grandParent);
+    const index = forms.indexOf(grandParent);
+    forms[index].classList.add("no-display");
+    forms[index-1].classList.remove("no-display");
+    
 }
 
 //show error message
@@ -60,8 +68,8 @@ function nextStep(){
 }
 
 //clear form
-cancel.forEach(n => n.addEventListener("click", previousStep));
-function previousStep(){
+cancel.forEach(n => n.addEventListener("click", clearForm));
+function clearForm(){
     grandParent = this.parentNode.parentNode;
     grandParent.reset();
 }
@@ -102,7 +110,7 @@ function updateStatus(){
     let offers = chosenOfferings.querySelectorAll("input[type=text]").length - 
                     chosenOfferings.querySelectorAll(".no-display").length;
     
-    let price = document.querySelector(".status .price p:nth-child(2)");
+    
     noOfOffers.textContent = offers;
     price.textContent = "$ "+ totalPrice;
 
@@ -155,3 +163,41 @@ function checkDisplayedBonuses(hiddenBonusArray){
     let bonusArray = document.querySelectorAll(".step4 .tab-body .bonuses .bonus");
     return bonusArray.length - hiddenBonusArray.length;
 }
+
+//fix status bar
+window.addEventListener("scroll", fixStatus());
+
+function fixStatus(){
+    offerGeneratorTop = getComputedStyle(offerGenerator).marginTop;
+    const statusTop = status.offsetTop;  
+    let delayed = true;
+    let delay;
+    
+    
+    function fix() {
+        if(delayed) {
+            clearTimeout(delay);
+            delay = setTimeout(() => {
+                delayed = false;
+                fix();
+                console.log("me")
+                }, 50);
+            return;
+        }
+    
+        const height = status.offsetHeight;
+        if(scrollY >= statusTop){
+            status.classList.add("status--fixed");
+            offerGenerator.style.marginTop = parseInt(offerGeneratorTop) + parseInt(height) + "px";
+        }else{
+            status.classList.remove("status--fixed");
+            offerGenerator.style.marginTop = parseInt(offerGeneratorTop) + "px";
+        }
+        delayed = true;
+    }
+
+    return fix;
+}
+
+//saveStatus
+window.addEventListener("beforeunload", () => sessionStorage.setItem("status", [noOfOffers.textContent, price.textContent, offerStrength]));
