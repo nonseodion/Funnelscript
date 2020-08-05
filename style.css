@@ -470,9 +470,12 @@ h2.menu-item-view--heading,
 .video-script-section textarea:focus,
 .video-script-section input:focus,
 .offer .tab-body input:focus, 
-.offer .tab-body textarea:focus {
+.offer .tab-body textarea:focus,
+.section--template [contenteditable = true]:focus{
     outline: 1px solid #4834D4;
 }
+
+
 
 .editor-section--control-top input::placeholder,
 .video-script-section textarea::placeholder,
@@ -653,6 +656,35 @@ h2.menu-item-view--heading,
     font-size: 14px;
     overflow-y: visible;
 }
+
+.section--template 
+[contenteditable = true]{
+    min-width: 50px;
+    display: inline-block;
+    height: 30px;
+    background-color: yellow;
+}
+
+.section--template 
+[contenteditable = true].yellow{
+    background-color: yellow;
+    min-width: 50px;
+}
+
+.section--template 
+[contenteditable = true].white{
+    background-color: transparent;
+}
+
+
+/* .section--template 
+[contenteditable = true]:empty:not(:focus)::before{
+    background-color: yellow;
+    content: ".......";
+    z-index: 50;
+    padding: 0 9px;
+    pointer-events: none;
+} */
 
 .open{
     display: block;

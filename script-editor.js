@@ -34,6 +34,13 @@ sections.forEach(section => section.addEventListener("click", openSection));
 function openSection(e, ignoreThis){
   if(openedSection){
     document.querySelector(`#${openedSection} .section--templates`).classList.toggle("open");
+    document.querySelectorAll(`#${openedSection} .section--templates [contenteditable=true]`).forEach(
+      editable => {
+        editable.textContent= placeholder;
+        editable.classList.remove("white");
+        editable.classList.add("yellow");
+      }
+    );
     document.querySelector(`#${openedSection} .section--name`).classList.toggle("add-border-bottom");
     document.querySelector(`#${openedSection} .arrow`).classList.toggle("rotate-90deg");
   }
@@ -47,7 +54,6 @@ function openSection(e, ignoreThis){
   }
   else{ openedSection = null};
 }
-
 
 //hide/show editor-overlay
 document.querySelector(".editor-section-overlay").addEventListener("click", hideModal);
@@ -68,6 +74,10 @@ document.querySelector(".editor-section-overlay--add-template")
 
 document.querySelectorAll(".section--template").forEach( text =>
   text.addEventListener("click", myStopPropagation));
+
+document.querySelectorAll(".section--templates").forEach( text =>
+  text.addEventListener("click", myStopPropagation));
+
 downloadOptions.addEventListener("click", myStopPropagation);
 
 
@@ -129,20 +139,64 @@ templates.forEach(template => template.addEventListener("click", templateClick))
 sectionTemplates.forEach(
   sectionTemplate => sectionTemplate.addEventListener("keydown", enterEditor)
 );
-  
+
+sectionTemplates.forEach(
+  sectionTemplate => sectionTemplate.addEventListener("click", enterEditor)
+)
+
+sectionTemplates.forEach(
+  sectionTemplate => sectionTemplate.querySelectorAll("[contenteditable = true]").forEach(
+    editable => editable.addEventListener("click", myStopPropagation)
+  )
+)
+
+
+const placeholder = document.querySelector(`.section--templates [contenteditable=true]`).textContent;
+const placeholderWidth = document.querySelector(`.section--templates [contenteditable=true]`).minWidth;
+//remove template string when focused
+sectionTemplates.forEach(
+  sectionTemplate => sectionTemplate.querySelectorAll("[contenteditable = true]").forEach(
+    editable => editable.addEventListener("focus", function () {
+      if(this.textContent !== placeholder) return;
+      this.textContent = ""
+      this.classList.remove("yellow");
+      this.classList.add("white");
+    })
+  )
+)
+
+//add template string when blurred
+sectionTemplates.forEach(
+  sectionTemplate => sectionTemplate.querySelectorAll("[contenteditable = true]").forEach(
+    editable => editable.addEventListener("blur", function () {
+      if(this.textContent !== "") {
+        this.style.minWidth = "5px";
+        return;
+      };
+      this.textContent = placeholder;
+      this.classList.add("yellow");
+      this.classList.remove("white");
+      this.style.backgroundColor = placeholderWidth + "px";
+      this.style.minWidth = "50px";
+    })
+  )
+)
+
+
 function templateClick(e){
   showInEditor(e.target, e);
 }
 
 function enterEditor(e){
-  if(e.keyCode === 13) {
+  if( e.keyCode === 13 || e.type == "click") {
     e.preventDefault();
+    e.stopPropagation();
     showInEditor(this, e);
   }
 }
 
 function showInEditor(sectionType, e){
+  console.log(e.target);
   const qlEditor = document.querySelector(".ql-editor");
-  console.log(sectionType.outerHTML, sectionType)
-  qlEditor.innerHTML += sectionType.outerHTML;
+  qlEditor.appendChild(sectionType.cloneNode(true));
 }
