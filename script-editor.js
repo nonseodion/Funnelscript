@@ -39,6 +39,8 @@ function openSection(e, ignoreThis){
         editable.textContent= placeholder;
         editable.classList.remove("white");
         editable.classList.add("yellow");
+        editable.style.minWidth = "50px";
+        setTimeout(() => editable.style.minWidth = "50px", 201);
       }
     );
     document.querySelector(`#${openedSection} .section--name`).classList.toggle("add-border-bottom");
@@ -153,7 +155,9 @@ sectionTemplates.forEach(
 
 const placeholder = document.querySelector(`.section--templates [contenteditable=true]`).textContent;
 const placeholderWidth = document.querySelector(`.section--templates [contenteditable=true]`).minWidth;
+
 //remove template string when focused
+let ele;
 sectionTemplates.forEach(
   sectionTemplate => sectionTemplate.querySelectorAll("[contenteditable = true]").forEach(
     editable => editable.addEventListener("focus", function () {
@@ -161,18 +165,27 @@ sectionTemplates.forEach(
       this.textContent = ""
       this.classList.remove("yellow");
       this.classList.add("white");
+      
     })
   )
+  
 )
 
 //add template string when blurred
+
 sectionTemplates.forEach(
   sectionTemplate => sectionTemplate.querySelectorAll("[contenteditable = true]").forEach(
     editable => editable.addEventListener("blur", function () {
+      ele = this;
+      function wait(){
+        ele.style.minWidth = "5px";
+      }
+
       if(this.textContent !== "") {
-        this.style.minWidth = "5px";
+        setTimeout( wait, 200);
         return;
       };
+
       this.textContent = placeholder;
       this.classList.add("yellow");
       this.classList.remove("white");
@@ -196,7 +209,6 @@ function enterEditor(e){
 }
 
 function showInEditor(sectionType, e){
-  console.log(e.target);
   const qlEditor = document.querySelector(".ql-editor");
   qlEditor.appendChild(sectionType.cloneNode(true));
 }
