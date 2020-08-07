@@ -1,6 +1,5 @@
 const createOffer = document.querySelector(".offer-generator-section .create");
 const offerGenerator = document.querySelector(".offer");
-const offerScript = document.querySelector(".offer-script");
 const arrowClose = document.querySelectorAll(".offer .close");
 const arrowClose2 = document.querySelector(".offer-script .close");
 const next = document.querySelectorAll(".offer .next");
@@ -30,7 +29,6 @@ function showGenerator(){
 arrowClose.forEach(arrow => arrow.addEventListener("click", previousStep));
 function previousStep(){
     grandParent = this.parentNode;
-    console.log(grandParent);
     const index = forms.indexOf(grandParent);
     forms[index].classList.add("no-display");
     forms[index-1].classList.remove("no-display");
@@ -48,6 +46,7 @@ next.forEach(n => n.addEventListener("click", nextStep));
 function nextStep(){
     grandParent = this.parentNode.parentNode;
     const index = forms.indexOf(grandParent);
+    console.log(index);
     if(index < 3){
         const inputs = Array.from(grandParent.querySelectorAll("input"));    
 
@@ -57,13 +56,15 @@ function nextStep(){
         }
         forms[index].classList.add("no-display");
         forms[index+1].classList.remove("no-display");
-    }
-    else{
-        forms[index].classList.add("no-display");
-        offerScript.classList.remove("no-display");
-    }
-    
-    if(index < forms.length-1){
+        
+        //removes addBonus if no offer is selected
+        if(index ==2 ){
+            let hiddenBonusArray = document.querySelectorAll(".step4 .tab-body .bonuses .bonus.no-display");
+            let displayedBonuses = checkDisplayedBonuses(hiddenBonusArray);
+            (!parseInt(noOfOffers.textContent))? 
+            addBonus.classList.add("no-display") :
+            addBonus.classList.remove("no-display");
+        }
     }
 }
 
@@ -86,7 +87,6 @@ function toggleCheckbox(){
 
         let inputs = offer.querySelectorAll("input");
         inputs.forEach(input => {
-            input.name = this.value;
             input.addEventListener("change", updateStatus);
         })
 
@@ -143,7 +143,7 @@ function add_bonus(){
     let displayedBonuses = checkDisplayedBonuses(hiddenBonusArray);
 
     //hide addBonus button
-    if(Number(noOfOffers.textContent) <= displayedBonuses+1) addBonus.classList.add("no-display");
+    if(parseInt(noOfOffers.textContent) <= displayedBonuses+1) addBonus.classList.add("no-display");
     hiddenBonusArray[0].classList.remove("no-display");
 }
 
@@ -156,7 +156,7 @@ function remove_bonus(){
     //show addBonus button
     let hiddenBonusArray = document.querySelectorAll(".step4 .tab-body .bonuses .bonus.no-display");
     let displayedBonuses = checkDisplayedBonuses(hiddenBonusArray);
-    if(Number(noOfOffers.textContent) > displayedBonuses) addBonus.classList.remove("no-display");
+    if(parseInt(noOfOffers.textContent) > displayedBonuses) addBonus.classList.remove("no-display");
 }
 
 function checkDisplayedBonuses(hiddenBonusArray){
@@ -180,7 +180,6 @@ function fixStatus(){
             delay = setTimeout(() => {
                 delayed = false;
                 fix();
-                console.log("me")
                 }, 50);
             return;
         }
@@ -200,4 +199,7 @@ function fixStatus(){
 }
 
 //saveStatus
-window.addEventListener("beforeunload", () => sessionStorage.setItem("status", [noOfOffers.textContent, price.textContent, offerStrength]));
+window.addEventListener("beforeunload", () => {
+    document.cookie = `status=${JSON.stringify({no: noOfOffers.textContent, price:price.textContent, strength:offerStrength})}`
+    }
+)

@@ -350,8 +350,7 @@
     <script src="app.js"></script>
     <script>
       document.querySelector(".Empty").classList.add("no-display");
-      const [num, price, offerStrength] = sessionStorage.getItem("status").split(",");
-
+       let {no:num, price, strength:offerStrength} = JSON.parse(document.cookie.split("=")[1]);
 
       document.querySelector(".status .no-of-offers p:nth-child(2)").textContent = num;
       document.querySelector(".status .price p:nth-child(2)").textContent = price;
