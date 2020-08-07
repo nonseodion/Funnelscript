@@ -105,6 +105,7 @@ function toggleCheckbox(){
 //update status with change in entered prices of offers
 
 function updateStatus(){
+    //clear offer prices if just loading pages
     let prices = Array.from(chosenOfferings.querySelectorAll("input[type=number]")).map(price => Number(price.value));
     let totalPrice = prices.reduce((total, price) => total + price);
     let offers = chosenOfferings.querySelectorAll("input[type=text]").length - 
@@ -198,8 +199,13 @@ function fixStatus(){
     return fix;
 }
 
+
+
 //saveStatus
 window.addEventListener("beforeunload", () => {
-    document.cookie = `status=${JSON.stringify({no: noOfOffers.textContent, price:price.textContent, strength:offerStrength})}`
+    document.cookie = `status=${noOfOffers.textContent}, ${price.textContent}, ${offerStrength}`;
+    Array.from(chosenOfferings.querySelectorAll("input[type=number]")).forEach(ele => ele.value="");
+    Array.from(document.querySelectorAll(".offerings-list input[type=checkbox]")).forEach(ele => ele.checked = false);
     }
+
 )

@@ -349,12 +349,14 @@
 
     <script src="app.js"></script>
     <script>
-      document.querySelector(".Empty").classList.add("no-display");
-       let {no:num, price, strength:offerStrength} = JSON.parse(document.cookie.split("=")[1]);
+      if(document.cookie){
+        document.querySelector(".Empty").classList.add("no-display");
+        let [num, price, offerStrength] = document.cookie.split("=")[1].split(", ");
 
-      document.querySelector(".status .no-of-offers p:nth-child(2)").textContent = num;
-      document.querySelector(".status .price p:nth-child(2)").textContent = price;
-      document.querySelector(`.${offerStrength}`).classList.remove("no-display");
+        document.querySelector(".status .no-of-offers p:nth-child(2)").textContent = num;
+        document.querySelector(".status .price p:nth-child(2)").textContent = price;
+        document.querySelector(`.${offerStrength}`).classList.remove("no-display");
+      }
     </script>
     
 </body>
