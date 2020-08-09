@@ -46,7 +46,6 @@ next.forEach(n => n.addEventListener("click", nextStep));
 function nextStep(){
     grandParent = this.parentNode.parentNode;
     const index = forms.indexOf(grandParent);
-    console.log(index);
     if(index < 3){
         const inputs = Array.from(grandParent.querySelectorAll("input"));    
 
@@ -110,7 +109,6 @@ function updateStatus(){
     let totalPrice = prices.reduce((total, price) => total + price);
     let offers = chosenOfferings.querySelectorAll("input[type=text]").length - 
                     chosenOfferings.querySelectorAll(".no-display").length;
-    
     
     noOfOffers.textContent = offers;
     price.textContent = "$ "+ totalPrice;
@@ -203,9 +201,20 @@ function fixStatus(){
 
 //saveStatus
 window.addEventListener("beforeunload", () => {
-    document.cookie = `status=${noOfOffers.textContent}, ${price.textContent}, ${offerStrength}`;
-    Array.from(chosenOfferings.querySelectorAll("input[type=number]")).forEach(ele => ele.value="");
-    Array.from(document.querySelectorAll(".offerings-list input[type=checkbox]")).forEach(ele => ele.checked = false);
-    }
+    document.cookie = `status=${noOfOffers.textContent}, ${price.textContent}, ${offerStrength}; path=/offer-generator-script.html`;
 
+    //clear selected offers
+    Array.from(chosenOfferings.querySelectorAll("input[type=number]")).forEach(ele => ele.value = "");
+    Array.from(document.querySelectorAll(".offerings-list input[type=checkbox]")).forEach(ele => ele.checked = false);
+
+    //save bonuses
+    const bonuses = {};
+    let hiddenBonusArray = document.querySelectorAll(".step4 .tab-body .bonuses .bonus:not(.no-display)");
+    hiddenBonusArray.forEach(bonus => {
+        bonuses[bonus.querySelector("input[type=text]").value] = bonus.querySelector("input[type=number]").value
+        console.log(bonuses);
+    })
+    document.cookie = `bonuses=${JSON.stringify(bonuses)}`
+    }
+    
 )

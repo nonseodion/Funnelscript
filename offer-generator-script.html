@@ -7,7 +7,8 @@
     <title>Funnelscript</title>
     <!--css stylesheet-->
     <link rel="stylesheet" href="style.css" >
-    <script src="js/prefixfree.min.js"></script>
+    <script src="admin/js/prefixfree.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> 
 </head>
 <body>
     <header class="header">
@@ -201,7 +202,7 @@
                         
                     </div>
 
-                    <div class="Empty">
+                    <div class="Empty no-display">
                       <div class="stated-status">
                         <span>Empty</span>
                         <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -346,17 +347,18 @@
           
 
         </section>     
+      </section>
 
     <script src="app.js"></script>
     <script>
-      if(document.cookie){
-        document.querySelector(".Empty").classList.add("no-display");
-        let [num, price, offerStrength] = document.cookie.split("=")[1].split(", ");
+        let [num, price, offerStrength] = document.cookie.split(";")
+          .find(row => row.startsWith("status"))
+          .split("=")[1]
+          .split(", ");
 
         document.querySelector(".status .no-of-offers p:nth-child(2)").textContent = num;
         document.querySelector(".status .price p:nth-child(2)").textContent = price;
         document.querySelector(`.${offerStrength}`).classList.remove("no-display");
-      }
     </script>
     
 </body>
