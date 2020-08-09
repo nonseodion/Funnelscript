@@ -7,7 +7,8 @@
     <title>Funnelscript</title>
     <!--css stylesheet-->
     <link rel="stylesheet" href="style.css" >
-    <script src="js/prefixfree.min.js"></script>
+    <script src="admin/js/prefixfree.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> 
 </head>
 <body>
     <header class="header">
@@ -231,7 +232,7 @@
                   </div>
                 </div>
             </div>
-          <article class="offer clearfix">
+          <article class="offer clearfix slide-in">
             <form class="step1" method="POST" id="step1">
                 <div class="heading">Create your&nbsp;<span class="purple">offer</span></div>
                 
@@ -516,9 +517,9 @@
           </form>
           
           </article> 
-          
+        </section>       
 
-        </section>     
+    </section>    
 
     <script src="app.js"></script>
     <script src="offer-generator.js"></script>
