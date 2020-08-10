@@ -201,19 +201,22 @@ function fixStatus(){
 
 //saveStatus
 window.addEventListener("beforeunload", () => {
-    document.cookie = `status=${noOfOffers.textContent}, ${price.textContent}, ${offerStrength}`;
+
+    //save status
+    Cookies.set("status", `${noOfOffers.textContent}, ${price.textContent}, ${offerStrength}`);
     //clear selected offers
     Array.from(chosenOfferings.querySelectorAll("input[type=number]")).forEach(ele => ele.value = "");
     Array.from(document.querySelectorAll(".offerings-list input[type=checkbox]")).forEach(ele => ele.checked = false);
-
     //save bonuses
-    const bonuses = {};
+    let bonuses = {};
     let hiddenBonusArray = document.querySelectorAll(".step4 .tab-body .bonuses .bonus:not(.no-display)");
     hiddenBonusArray.forEach(bonus => {
         bonuses[bonus.querySelector("input[type=text]").value] = bonus.querySelector("input[type=number]").value
         console.log(bonuses);
     })
-    document.cookie = `bonuses=${JSON.stringify(bonuses)}`
+    bonuses = JSON.stringify(bonuses);
+
+    Cookies.set("bonuses", `${bonuses}`);
     }
     
 )
