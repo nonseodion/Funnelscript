@@ -351,7 +351,7 @@
 
     <script src="app.js"></script>
     <script>
-        let [num, price, offerStrength] = document.cookie.split(";")
+        let [num, price, offerStrength] = document.cookie.split("; ")
           .find(row => row.startsWith("status"))
           .split("=")[1]
           .split(", ");

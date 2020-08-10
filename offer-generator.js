@@ -201,8 +201,7 @@ function fixStatus(){
 
 //saveStatus
 window.addEventListener("beforeunload", () => {
-    document.cookie = `status=${noOfOffers.textContent}, ${price.textContent}, ${offerStrength}; path=/offer-generator-script.html`;
-
+    document.cookie = `status=${noOfOffers.textContent}, ${price.textContent}, ${offerStrength}`;
     //clear selected offers
     Array.from(chosenOfferings.querySelectorAll("input[type=number]")).forEach(ele => ele.value = "");
     Array.from(document.querySelectorAll(".offerings-list input[type=checkbox]")).forEach(ele => ele.checked = false);
