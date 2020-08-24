@@ -1,0 +1,73 @@
+ @use 'base';
+
+*{
+  box-sizing: border-box;
+  font-family: poppins;
+  scroll-behavior: smooth;
+}
+
+.email-copy-content{
+  @include base.menu-item-body;
+
+  &__heading{
+    @include base.heading;
+  }
+}
+
+.email-copy-content__body:not(:target) {
+  display: none;
+}
+
+.email-sub-heading{
+  @include base.sub-heading;
+  @include base.flex-display(center, stretch)
+}
+
+.email-content{
+  @include base.main-content;
+
+  .email-detail{
+    margin-bottom: 1.7rem;
+
+    &__heading{
+      margin: 1.5rem 0;
+      color: base.$primary-text-color;
+    }
+    &__heading:nth-child(1){
+      margin: 0;
+    }
+    &__heading:nth-child(2){
+      margin-top: 0;
+    }
+
+    &__input{
+      @include base.input;
+    }
+    &__heading + input{ margin: 0}
+
+    &__add{
+      @include base.flex-display(center, center);
+      @include base.add;
+    }
+
+    ::placeholder{
+      color: #4834D4;
+      opacity: 0.5;
+    }
+  }
+
+  .email-btns{
+    @include base.flex-display(center, flex-end);
+    
+    &__btn{
+      @include base.btn;
+
+      &--next{
+        background: #4834D4;
+      }
+      &--back{
+        background: #F29401;
+      }
+    }
+  }
+}

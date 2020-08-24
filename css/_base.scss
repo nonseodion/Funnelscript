@@ -1,0 +1,112 @@
+$primary-color: #4834D4;
+$primary-text-color: #191847;
+
+@mixin root{
+    *{
+      box-sizing: border-box;
+      font-family: poppins;
+    }
+}
+
+@mixin menu-item-body {
+  background-color: #E5E5E5;
+  position: relative;
+  z-index: 10;
+  padding: 3rem;
+}
+
+@mixin heading {
+  color: $primary-color;
+  margin-top: 0;
+  font-size: 28px;
+}
+
+@mixin sub-heading{
+  background: linear-gradient(90deg, #4776E6 13.04%, #8E54E9 100%);
+  border-radius: 10px 10px 0 0;
+  height: 3.8rem;
+  padding: 0 1.5rem; 
+  color: #F5F6F9;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+@mixin main-content {
+  padding: 2rem 3rem 2rem;
+  background-color: white;
+}
+
+@mixin input{
+  border: 1px solid #CDC6FF;
+  height: 2.7rem;
+  padding: 0 1.5rem;
+  font-size: 20px;
+  width: 100%;
+  outline-color: #8a7aff;
+  margin-top: 1.5rem;
+}
+
+@mixin add{
+  display: inline-flex;
+  font-size: 30px;
+  color: white;
+  font-weight: 500;
+  background: linear-gradient(90deg, #4776E6 13.04%, #8E54E9 100%);
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  transform: translateY(15%);
+  border: none;
+  cursor: pointer;
+}
+
+@mixin btn{
+  margin-left: 1rem;
+  padding: 10px 23px;
+  font-weight: 500;
+  color: #F5F6F9;
+  border: none;
+  border-radius: 3px;
+  font-family: Karla;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@mixin btn-like{
+  cursor: pointer;
+  min-width: 15px;
+  border: none;
+  background-color: transparent;
+  @include flex-display(center, center);
+}
+
+%clearfix::after, %clearfix::before{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@mixin header-with-image{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+
+  &__heading{
+    @include heading;
+    margin: 0;
+  }
+
+  &__image{
+    position: relative;
+    left: 10%;
+  }
+}
+
+@mixin flex-display($align, $justify){
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+

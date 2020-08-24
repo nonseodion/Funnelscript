@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  font-family: poppins;
+  scroll-behavior: smooth;
+}
+
+.email-copy-content {
+  background-color: #E5E5E5;
+  position: relative;
+  z-index: 10;
+  padding: 3rem;
+}
+.email-copy-content__heading {
+  color: #4834D4;
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.email-copy-content__body:not(:target) {
+  display: none;
+}
+
+.email-sub-heading {
+  background: linear-gradient(90deg, #4776E6 13.04%, #8E54E9 100%);
+  border-radius: 10px 10px 0 0;
+  height: 3.8rem;
+  padding: 0 1.5rem;
+  color: #F5F6F9;
+  font-size: 17px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+}
+
+.email-content {
+  padding: 2rem 3rem 2rem;
+  background-color: white;
+}
+.email-content .email-detail {
+  margin-bottom: 1.7rem;
+}
+.email-content .email-detail__heading {
+  margin: 1.5rem 0;
+  color: #191847;
+}
+.email-content .email-detail__heading:nth-child(1) {
+  margin: 0;
+}
+.email-content .email-detail__heading:nth-child(2) {
+  margin-top: 0;
+}
+.email-content .email-detail__input {
+  border: 1px solid #CDC6FF;
+  height: 2.7rem;
+  padding: 0 1.5rem;
+  font-size: 20px;
+  width: 100%;
+  outline-color: #8a7aff;
+  margin-top: 1.5rem;
+}
+.email-content .email-detail__heading + input {
+  margin: 0;
+}
+.email-content .email-detail__add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  font-size: 30px;
+  color: white;
+  font-weight: 500;
+  background: linear-gradient(90deg, #4776E6 13.04%, #8E54E9 100%);
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  transform: translateY(15%);
+  border: none;
+}
+.email-content .email-detail ::placeholder {
+  color: #4834D4;
+  opacity: 0.5;
+}
+.email-content .email-btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.email-content .email-btns__btn {
+  margin-left: 1rem;
+  padding: 10px 23px;
+  font-weight: 500;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-family: Karla;
+  font-size: 20px;
+}
+.email-content .email-btns__btn--next {
+  background: #4834D4;
+}
+.email-content .email-btns__btn--back {
+  background: #F29401;
+}
+
+/*# sourceMappingURL=email-style.css.map */

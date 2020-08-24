@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+.script-builder {
+  background-color: #E5E5E5;
+  position: relative;
+  z-index: 10;
+  padding: 3rem;
+}
+
+.script-header {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.script-header__heading {
+  color: #4834D4;
+  margin-top: 0;
+  font-size: 28px;
+  margin: 0;
+}
+.script-header__image {
+  position: relative;
+  left: 10%;
+}
+
+.how-to {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 3rem 2rem;
+  background-color: white;
+  padding-right: 1.3rem;
+  padding-left: 1.3rem;
+  border-radius: 7px;
+  min-width: 500px;
+}
+.how-to__guide {
+  flex-basis: 60%;
+  flex-grow: 1;
+  min-width: 400px;
+}
+.how-to__video {
+  width: 40%;
+  min-width: 200px;
+}
+.how-to__video .video {
+  width: 100%;
+  height: 80%;
+}
+.how-to__video .video-caption {
+  color: #4834D4;
+  font-weight: 700;
+}
+
+.guide__heading {
+  font-size: 20px;
+  color: #4834D4;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+.guide__steps {
+  padding-left: 15px;
+  padding-right: 2rem;
+}
+.guide__steps .guide__step {
+  margin: 1rem 0;
+}
+
+.builder-form {
+  margin: 3rem 0;
+}
+.builder-form__heading {
+  background: linear-gradient(90deg, #4776E6 13.04%, #8E54E9 100%);
+  border-radius: 10px 10px 0 0;
+  height: 3.8rem;
+  padding: 0 1.5rem;
+  color: #F5F6F9;
+  font-size: 17px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #CDC6FF;
+  height: auto;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+}
+.builder-form__heading button {
+  margin-left: 1rem;
+  padding: 10px 23px;
+  font-weight: 500;
+  color: #F5F6F9;
+  border: none;
+  border-radius: 3px;
+  font-family: Karla;
+  font-size: 20px;
+  color: #4834D4;
+}
+.builder-form__body {
+  padding: 2rem 3rem 2rem;
+  background-color: white;
+  margin: 0;
+}
+.builder-form__body ul {
+  list-style-type: none;
+  padding: 0;
+}
+.builder-form__body .form-detail {
+  margin-bottom: 2rem;
+}
+.builder-form__body .form-detail__description {
+  color: #191847;
+}
+.builder-form__body .form-detail__description--head {
+  margin: 0;
+}
+.builder-form__body .form-detail__description--example {
+  margin-top: 0.5rem;
+  color: #CDC6FF;
+}
+.builder-form__body .form-detail__description--example .emphasis {
+  color: #4834D4;
+}
+.builder-form__body .form-detail__input {
+  border: 1px solid #CDC6FF;
+  height: 2.7rem;
+  padding: 0 1.5rem;
+  font-size: 20px;
+  width: 100%;
+  outline-color: #8a7aff;
+  margin-top: 1.5rem;
+}
+.builder-form__body .form-detail__input:first-of-type {
+  margin-top: 0;
+}
+.builder-form__body .form-detail__input:last-of-type {
+  margin-bottom: 0.5rem;
+}
+.builder-form__body .form-detail__add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  font-size: 30px;
+  color: white;
+  font-weight: 500;
+  background: linear-gradient(90deg, #4776E6 13.04%, #8E54E9 100%);
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  transform: translateY(15%);
+  border: none;
+}
+.builder-form .form-btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.builder-form .form-btns .form-btn {
+  margin-left: 1rem;
+  padding: 10px 23px;
+  font-weight: 500;
+  color: #F5F6F9;
+  border: none;
+  border-radius: 3px;
+  font-family: Karla;
+  font-size: 20px;
+}
+.builder-form .form-btns .form-btn--build {
+  background-color: #4834D4;
+}
+
+/*# sourceMappingURL=sales-script-builder.css.map */

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funnelscript</title>
+    <!--Gsap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <!--Summernote-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <!--Prefix-->
+    <script src="admin/js/prefixfree.min.js"></script>
+    <!--Polyfill-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> 
+    <!--css stylesheet-->
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="css/create-headline.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header--left small-menu">S<span class="big-menu small-menu">OCISTREAM</span>.</div>
+        <div class="header--right small-menu">
+            <a class="arrow-right" >
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+            <div class="header--right--notification">
+                <img src="assets/notification bell.svg" alt="bell" class="bell">
+            </div>
+            <div class="profile">
+              <img src="assets/profile pic.png" alt="profile picture" class="profile-picture">
+              <span class="profile-arrow">
+                <svg  width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.00016 1.16661L6.8335 6.99995L1.00016 12.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div class="log-out">
+                Log out
+              </div>
+            </div>
+    </header>
+    <section class="dashboard small-menu">
+        <div class="dashboard--menu--farleft small-menu">
+                        <ul>
+              <li ><a href="index.html"><svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 24V2.25C0 1.00734 1.2312 0 2.75 0H19.25C20.7688 0 22 1.00734 22 2.25V24L11 18.75L0 24Z" fill="#4834D4"/>
+                </svg></a>
+                </li>  
+              <li ><a href="sales-letter.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.2143 18H0.785714C0.57733 18 0.37748 18.079 0.23013 18.2197C0.0827804 18.3603 0 18.5511 0 18.75L0 20.25C0 20.4489 0.0827804 20.6397 0.23013 20.7803C0.37748 20.921 0.57733 21 0.785714 21H21.2143C21.4227 21 21.6225 20.921 21.7699 20.7803C21.9172 20.6397 22 20.4489 22 20.25V18.75C22 18.5511 21.9172 18.3603 21.7699 18.2197C21.6225 18.079 21.4227 18 21.2143 18ZM21.2143 12H0.785714C0.57733 12 0.37748 12.079 0.23013 12.2197C0.0827804 12.3603 0 12.5511 0 12.75L0 14.25C0 14.4489 0.0827804 14.6397 0.23013 14.7803C0.37748 14.921 0.57733 15 0.785714 15H21.2143C21.4227 15 21.6225 14.921 21.7699 14.7803C21.9172 14.6397 22 14.4489 22 14.25V12.75C22 12.5511 21.9172 12.3603 21.7699 12.2197C21.6225 12.079 21.4227 12 21.2143 12ZM21.2143 6H0.785714C0.57733 6 0.37748 6.07902 0.23013 6.21967C0.0827804 6.36032 0 6.55109 0 6.75L0 8.25C0 8.44891 0.0827804 8.63968 0.23013 8.78033C0.37748 8.92098 0.57733 9 0.785714 9H21.2143C21.4227 9 21.6225 8.92098 21.7699 8.78033C21.9172 8.63968 22 8.44891 22 8.25V6.75C22 6.55109 21.9172 6.36032 21.7699 6.21967C21.6225 6.07902 21.4227 6 21.2143 6ZM21.2143 0H0.785714C0.57733 0 0.37748 0.0790176 0.23013 0.21967C0.0827804 0.360322 0 0.551088 0 0.75L0 2.25C0 2.44891 0.0827804 2.63968 0.23013 2.78033C0.37748 2.92098 0.57733 3 0.785714 3H21.2143C21.4227 3 21.6225 2.92098 21.7699 2.78033C21.9172 2.63968 22 2.44891 22 2.25V0.75C22 0.551088 21.9172 0.360322 21.7699 0.21967C21.6225 0.0790176 21.4227 0 21.2143 0Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="video-sales-letter.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6399 7.03636L21.9907 5.16136C22.0551 4.81659 21.7774 4.5 21.4106 4.5H17.7369L18.4549 0.661359C18.5194 0.316594 18.2417 0 17.8748 0H15.8795C15.7412 2.39844e-06 15.6073 0.0464528 15.5012 0.131218C15.3952 0.215982 15.3237 0.333659 15.2994 0.463641L14.5443 4.5H9.70062L10.4187 0.661359C10.4832 0.316594 10.2055 0 9.83861 0H7.84329C7.70497 2.39844e-06 7.57105 0.0464528 7.465 0.131218C7.35894 0.215982 7.2875 0.333659 7.26319 0.463641L6.50807 4.5H2.6239C2.48557 4.5 2.35166 4.54645 2.2456 4.63122C2.13954 4.71598 2.0681 4.83366 2.04379 4.96364L1.69302 6.83864C1.62854 7.18341 1.90624 7.5 2.27312 7.5H5.94683L4.82438 13.5H0.94021C0.801885 13.5 0.66797 13.5465 0.561913 13.6312C0.455857 13.716 0.384418 13.8337 0.360108 13.9636L0.00933576 15.8386C-0.0551419 16.1834 0.222559 16.5 0.589438 16.5H4.26314L3.54505 20.3386C3.48057 20.6834 3.75827 21 4.12515 21H6.12047C6.25879 21 6.39271 20.9535 6.49877 20.8688C6.60482 20.784 6.67626 20.6663 6.70057 20.5364L7.45574 16.5H12.2994L11.5813 20.3386C11.5168 20.6834 11.7944 21 12.1614 21H14.1567C14.295 21 14.4289 20.9535 14.535 20.8688C14.6411 20.784 14.7125 20.6663 14.7368 20.5364L15.4919 16.5H19.3761C19.5144 16.5 19.6483 16.4535 19.7544 16.3688C19.8605 16.284 19.9319 16.1663 19.9562 16.0364L20.307 14.1614C20.3714 13.8166 20.0937 13.5 19.7269 13.5H16.0532L17.1756 7.5H21.0598C21.1981 7.5 21.332 7.45355 21.4381 7.36878C21.5441 7.28402 21.6156 7.16634 21.6399 7.03636ZM12.8606 13.5H8.01698L9.13943 7.5H13.9831L12.8606 13.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="email-copy.html"><svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3333 0H7.33333L0 6V21C0 22.6547 1.64427 24 3.66667 24H18.3333C20.3557 24 22 22.6547 22 21V3C22 1.34531 20.3557 0 18.3333 0ZM9.16667 7.5H6.41667V3H9.16667V7.5ZM13.75 7.5H11V3H13.75V7.5ZM18.3333 7.5H15.5833V3H18.3333V7.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="offer-generator.html"><svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3333 0H7.33333L0 6V21C0 22.6547 1.64427 24 3.66667 24H18.3333C20.3557 24 22 22.6547 22 21V3C22 1.34531 20.3557 0 18.3333 0ZM9.16667 7.5H6.41667V3H9.16667V7.5ZM13.75 7.5H11V3H13.75V7.5ZM18.3333 7.5H15.5833V3H18.3333V7.5Z" fill="#F5F6F9"/>
+                </svg></a>
+              </li>
+              <li ><a href="webinar-writer.html"><svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3333 0H7.33333L0 6V21C0 22.6547 1.64427 24 3.66667 24H18.3333C20.3557 24 22 22.6547 22 21V3C22 1.34531 20.3557 0 18.3333 0ZM9.16667 7.5H6.41667V3H9.16667V7.5ZM13.75 7.5H11V3H13.75V7.5ZM18.3333 7.5H15.5833V3H18.3333V7.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>    
+              <li ><a href="saved-scripts.html"><svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3333 0H7.33333L0 6V21C0 22.6547 1.64427 24 3.66667 24H18.3333C20.3557 24 22 22.6547 22 21V3C22 1.34531 20.3557 0 18.3333 0ZM9.16667 7.5H6.41667V3H9.16667V7.5ZM13.75 7.5H11V3H13.75V7.5ZM18.3333 7.5H15.5833V3H18.3333V7.5Z" fill="#F5F6F9"/>
+                </svg></a>
+              <li ><a href="my-video-scripts.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6399 7.03636L21.9907 5.16136C22.0551 4.81659 21.7774 4.5 21.4106 4.5H17.7369L18.4549 0.661359C18.5194 0.316594 18.2417 0 17.8748 0H15.8795C15.7412 2.39844e-06 15.6073 0.0464528 15.5012 0.131218C15.3952 0.215982 15.3237 0.333659 15.2994 0.463641L14.5443 4.5H9.70062L10.4187 0.661359C10.4832 0.316594 10.2055 0 9.83861 0H7.84329C7.70497 2.39844e-06 7.57105 0.0464528 7.465 0.131218C7.35894 0.215982 7.2875 0.333659 7.26319 0.463641L6.50807 4.5H2.6239C2.48557 4.5 2.35166 4.54645 2.2456 4.63122C2.13954 4.71598 2.0681 4.83366 2.04379 4.96364L1.69302 6.83864C1.62854 7.18341 1.90624 7.5 2.27312 7.5H5.94683L4.82438 13.5H0.94021C0.801885 13.5 0.66797 13.5465 0.561913 13.6312C0.455857 13.716 0.384418 13.8337 0.360108 13.9636L0.00933576 15.8386C-0.0551419 16.1834 0.222559 16.5 0.589438 16.5H4.26314L3.54505 20.3386C3.48057 20.6834 3.75827 21 4.12515 21H6.12047C6.25879 21 6.39271 20.9535 6.49877 20.8688C6.60482 20.784 6.67626 20.6663 6.70057 20.5364L7.45574 16.5H12.2994L11.5813 20.3386C11.5168 20.6834 11.7944 21 12.1614 21H14.1567C14.295 21 14.4289 20.9535 14.535 20.8688C14.6411 20.784 14.7125 20.6663 14.7368 20.5364L15.4919 16.5H19.3761C19.5144 16.5 19.6483 16.4535 19.7544 16.3688C19.8605 16.284 19.9319 16.1663 19.9562 16.0364L20.307 14.1614C20.3714 13.8166 20.0937 13.5 19.7269 13.5H16.0532L17.1756 7.5H21.0598C21.1981 7.5 21.332 7.45355 21.4381 7.36878C21.5441 7.28402 21.6156 7.16634 21.6399 7.03636ZM12.8606 13.5H8.01698L9.13943 7.5H13.9831L12.8606 13.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="training.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6399 7.03636L21.9907 5.16136C22.0551 4.81659 21.7774 4.5 21.4106 4.5H17.7369L18.4549 0.661359C18.5194 0.316594 18.2417 0 17.8748 0H15.8795C15.7412 2.39844e-06 15.6073 0.0464528 15.5012 0.131218C15.3952 0.215982 15.3237 0.333659 15.2994 0.463641L14.5443 4.5H9.70062L10.4187 0.661359C10.4832 0.316594 10.2055 0 9.83861 0H7.84329C7.70497 2.39844e-06 7.57105 0.0464528 7.465 0.131218C7.35894 0.215982 7.2875 0.333659 7.26319 0.463641L6.50807 4.5H2.6239C2.48557 4.5 2.35166 4.54645 2.2456 4.63122C2.13954 4.71598 2.0681 4.83366 2.04379 4.96364L1.69302 6.83864C1.62854 7.18341 1.90624 7.5 2.27312 7.5H5.94683L4.82438 13.5H0.94021C0.801885 13.5 0.66797 13.5465 0.561913 13.6312C0.455857 13.716 0.384418 13.8337 0.360108 13.9636L0.00933576 15.8386C-0.0551419 16.1834 0.222559 16.5 0.589438 16.5H4.26314L3.54505 20.3386C3.48057 20.6834 3.75827 21 4.12515 21H6.12047C6.25879 21 6.39271 20.9535 6.49877 20.8688C6.60482 20.784 6.67626 20.6663 6.70057 20.5364L7.45574 16.5H12.2994L11.5813 20.3386C11.5168 20.6834 11.7944 21 12.1614 21H14.1567C14.295 21 14.4289 20.9535 14.535 20.8688C14.6411 20.784 14.7125 20.6663 14.7368 20.5364L15.4919 16.5H19.3761C19.5144 16.5 19.6483 16.4535 19.7544 16.3688C19.8605 16.284 19.9319 16.1663 19.9562 16.0364L20.307 14.1614C20.3714 13.8166 20.0937 13.5 19.7269 13.5H16.0532L17.1756 7.5H21.0598C21.1981 7.5 21.332 7.45355 21.4381 7.36878C21.5441 7.28402 21.6156 7.16634 21.6399 7.03636ZM12.8606 13.5H8.01698L9.13943 7.5H13.9831L12.8606 13.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="support.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6399 7.03636L21.9907 5.16136C22.0551 4.81659 21.7774 4.5 21.4106 4.5H17.7369L18.4549 0.661359C18.5194 0.316594 18.2417 0 17.8748 0H15.8795C15.7412 2.39844e-06 15.6073 0.0464528 15.5012 0.131218C15.3952 0.215982 15.3237 0.333659 15.2994 0.463641L14.5443 4.5H9.70062L10.4187 0.661359C10.4832 0.316594 10.2055 0 9.83861 0H7.84329C7.70497 2.39844e-06 7.57105 0.0464528 7.465 0.131218C7.35894 0.215982 7.2875 0.333659 7.26319 0.463641L6.50807 4.5H2.6239C2.48557 4.5 2.35166 4.54645 2.2456 4.63122C2.13954 4.71598 2.0681 4.83366 2.04379 4.96364L1.69302 6.83864C1.62854 7.18341 1.90624 7.5 2.27312 7.5H5.94683L4.82438 13.5H0.94021C0.801885 13.5 0.66797 13.5465 0.561913 13.6312C0.455857 13.716 0.384418 13.8337 0.360108 13.9636L0.00933576 15.8386C-0.0551419 16.1834 0.222559 16.5 0.589438 16.5H4.26314L3.54505 20.3386C3.48057 20.6834 3.75827 21 4.12515 21H6.12047C6.25879 21 6.39271 20.9535 6.49877 20.8688C6.60482 20.784 6.67626 20.6663 6.70057 20.5364L7.45574 16.5H12.2994L11.5813 20.3386C11.5168 20.6834 11.7944 21 12.1614 21H14.1567C14.295 21 14.4289 20.9535 14.535 20.8688C14.6411 20.784 14.7125 20.6663 14.7368 20.5364L15.4919 16.5H19.3761C19.5144 16.5 19.6483 16.4535 19.7544 16.3688C19.8605 16.284 19.9319 16.1663 19.9562 16.0364L20.307 14.1614C20.3714 13.8166 20.0937 13.5 19.7269 13.5H16.0532L17.1756 7.5H21.0598C21.1981 7.5 21.332 7.45355 21.4381 7.36878C21.5441 7.28402 21.6156 7.16634 21.6399 7.03636ZM12.8606 13.5H8.01698L9.13943 7.5H13.9831L12.8606 13.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="settings.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6399 7.03636L21.9907 5.16136C22.0551 4.81659 21.7774 4.5 21.4106 4.5H17.7369L18.4549 0.661359C18.5194 0.316594 18.2417 0 17.8748 0H15.8795C15.7412 2.39844e-06 15.6073 0.0464528 15.5012 0.131218C15.3952 0.215982 15.3237 0.333659 15.2994 0.463641L14.5443 4.5H9.70062L10.4187 0.661359C10.4832 0.316594 10.2055 0 9.83861 0H7.84329C7.70497 2.39844e-06 7.57105 0.0464528 7.465 0.131218C7.35894 0.215982 7.2875 0.333659 7.26319 0.463641L6.50807 4.5H2.6239C2.48557 4.5 2.35166 4.54645 2.2456 4.63122C2.13954 4.71598 2.0681 4.83366 2.04379 4.96364L1.69302 6.83864C1.62854 7.18341 1.90624 7.5 2.27312 7.5H5.94683L4.82438 13.5H0.94021C0.801885 13.5 0.66797 13.5465 0.561913 13.6312C0.455857 13.716 0.384418 13.8337 0.360108 13.9636L0.00933576 15.8386C-0.0551419 16.1834 0.222559 16.5 0.589438 16.5H4.26314L3.54505 20.3386C3.48057 20.6834 3.75827 21 4.12515 21H6.12047C6.25879 21 6.39271 20.9535 6.49877 20.8688C6.60482 20.784 6.67626 20.6663 6.70057 20.5364L7.45574 16.5H12.2994L11.5813 20.3386C11.5168 20.6834 11.7944 21 12.1614 21H14.1567C14.295 21 14.4289 20.9535 14.535 20.8688C14.6411 20.784 14.7125 20.6663 14.7368 20.5364L15.4919 16.5H19.3761C19.5144 16.5 19.6483 16.4535 19.7544 16.3688C19.8605 16.284 19.9319 16.1663 19.9562 16.0364L20.307 14.1614C20.3714 13.8166 20.0937 13.5 19.7269 13.5H16.0532L17.1756 7.5H21.0598C21.1981 7.5 21.332 7.45355 21.4381 7.36878C21.5441 7.28402 21.6156 7.16634 21.6399 7.03636ZM12.8606 13.5H8.01698L9.13943 7.5H13.9831L12.8606 13.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>
+            </ul>
+        </div>
+        <div class="dashboard--menu--closeleft small-menu">
+            <ul>
+                <li ><a href="index.html">Dashboard</a></li>  
+                <li ><a href="sales-letter.html">Sales letter</a></li>  
+                <li ><a href="video-sales-letter.html">Video sales letter</a></li>  
+                <li ><a href="email-copy.html">Email copy</a></li>  
+                <li ><a href="offer-generator.html">Offer generator</a></li>  
+                <li ><a href="webinar-writer.html" class="purple">Webinar writer</a></li>  
+                <li ><a href="saved-scripts.html">Saved scripts</a></li>  
+                <li ><a href="my-video-scripts.html">My video scripts</a></li>  
+                <li ><a href="training.html">Training</a></li>  
+                <li ><a href="support.html">Support</a></li>  
+                <li ><a href="settings.html">Settings</a></li>
+            </ul>
+        </div>
+        <section class="create-headline">
+          <div class="create-headline__header">
+            <h3 class="create-headline__heading">Create a stunning headline</h3>
+            <button type="button" class="create-headline__btn">
+              <svg class="create-headline__add" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="21" cy="21" r="21" fill="white"/>
+                <path d="M21.5 15V26M16 20.5H27" stroke="#191847" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+          <div class="table">
+            <div class="table-header">
+              <div class="table-header__heading table-header__heading--headline">
+                Headlines
+              </div>
+              <div class="table-header__heading table-header__heading--content">
+                Content
+              </div>
+            </div>
+            <ul class="headline-list">
+              <li class="headline-list__headline">
+                A Sarcastic ......... Discovers What You Have Always Wanted To Know How To .........
+               <button type="button" class="headline-list__btn"> 
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0C15.5242 0 20 4.47581 20 10C20 15.5242 15.5242 20 10 20C4.47581 20 0 15.5242 0 10C0 4.47581 4.47581 0 10 0ZM14.5927 9.31452L9.12903 3.85081C8.75 3.47177 8.1371 3.47177 7.7621 3.85081L7.07661 4.53629C6.69758 4.91532 6.69758 5.52823 7.07661 5.90323L11.1734 10L7.07661 14.0968C6.69758 14.4758 6.69758 15.0887 7.07661 15.4637L7.7621 16.1492C8.14113 16.5282 8.75403 16.5282 9.12903 16.1492L14.5927 10.6855C14.9718 10.3065 14.9718 9.69355 14.5927 9.31452Z" fill="#CDC6FF"/>
+                  </svg>
+               </button>                  
+              </li>
+              <li class="headline-list__headline">
+                A Sarcastic ......... Discovers What You Have Always Wanted To Know How To .........
+               <button type="button" class="headline-list__btn"> 
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0C15.5242 0 20 4.47581 20 10C20 15.5242 15.5242 20 10 20C4.47581 20 0 15.5242 0 10C0 4.47581 4.47581 0 10 0ZM14.5927 9.31452L9.12903 3.85081C8.75 3.47177 8.1371 3.47177 7.7621 3.85081L7.07661 4.53629C6.69758 4.91532 6.69758 5.52823 7.07661 5.90323L11.1734 10L7.07661 14.0968C6.69758 14.4758 6.69758 15.0887 7.07661 15.4637L7.7621 16.1492C8.14113 16.5282 8.75403 16.5282 9.12903 16.1492L14.5927 10.6855C14.9718 10.3065 14.9718 9.69355 14.5927 9.31452Z" fill="#CDC6FF"/>
+                  </svg>
+               </button>
+              </li>
+              <li class="headline-list__headline">
+                A Sarcastic ......... Discovers What You Have Always Wanted To Know How To .........
+               <button type="button" class="headline-list__btn"> 
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0C15.5242 0 20 4.47581 20 10C20 15.5242 15.5242 20 10 20C4.47581 20 0 15.5242 0 10C0 4.47581 4.47581 0 10 0ZM14.5927 9.31452L9.12903 3.85081C8.75 3.47177 8.1371 3.47177 7.7621 3.85081L7.07661 4.53629C6.69758 4.91532 6.69758 5.52823 7.07661 5.90323L11.1734 10L7.07661 14.0968C6.69758 14.4758 6.69758 15.0887 7.07661 15.4637L7.7621 16.1492C8.14113 16.5282 8.75403 16.5282 9.12903 16.1492L14.5927 10.6855C14.9718 10.3065 14.9718 9.69355 14.5927 9.31452Z" fill="#CDC6FF"/>
+                  </svg>
+               </button>
+              </li>
+              <li class="headline-list__headline">
+                A Sarcastic ......... Discovers What You Have Always Wanted To Know How To .........
+               <button type="button" class="headline-list__btn"> 
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0C15.5242 0 20 4.47581 20 10C20 15.5242 15.5242 20 10 20C4.47581 20 0 15.5242 0 10C0 4.47581 4.47581 0 10 0ZM14.5927 9.31452L9.12903 3.85081C8.75 3.47177 8.1371 3.47177 7.7621 3.85081L7.07661 4.53629C6.69758 4.91532 6.69758 5.52823 7.07661 5.90323L11.1734 10L7.07661 14.0968C6.69758 14.4758 6.69758 15.0887 7.07661 15.4637L7.7621 16.1492C8.14113 16.5282 8.75403 16.5282 9.12903 16.1492L14.5927 10.6855C14.9718 10.3065 14.9718 9.69355 14.5927 9.31452Z" fill="#CDC6FF"/>
+                  </svg>
+               </button>
+              </li>
+              <li class="headline-list__headline">
+                A Sarcastic ......... Discovers What You Have Always Wanted To Know How To .........
+               <button type="button" class="headline-list__btn"> 
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0C15.5242 0 20 4.47581 20 10C20 15.5242 15.5242 20 10 20C4.47581 20 0 15.5242 0 10C0 4.47581 4.47581 0 10 0ZM14.5927 9.31452L9.12903 3.85081C8.75 3.47177 8.1371 3.47177 7.7621 3.85081L7.07661 4.53629C6.69758 4.91532 6.69758 5.52823 7.07661 5.90323L11.1734 10L7.07661 14.0968C6.69758 14.4758 6.69758 15.0887 7.07661 15.4637L7.7621 16.1492C8.14113 16.5282 8.75403 16.5282 9.12903 16.1492L14.5927 10.6855C14.9718 10.3065 14.9718 9.69355 14.5927 9.31452Z" fill="#CDC6FF"/>
+                  </svg>
+               </button>
+              </li>
+              <li class="headline-list__headline">
+                A Sarcastic ......... Discovers What You Have Always Wanted To Know How To .........
+               <button type="button" class="headline-list__btn"> 
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0C15.5242 0 20 4.47581 20 10C20 15.5242 15.5242 20 10 20C4.47581 20 0 15.5242 0 10C0 4.47581 4.47581 0 10 0ZM14.5927 9.31452L9.12903 3.85081C8.75 3.47177 8.1371 3.47177 7.7621 3.85081L7.07661 4.53629C6.69758 4.91532 6.69758 5.52823 7.07661 5.90323L11.1734 10L7.07661 14.0968C6.69758 14.4758 6.69758 15.0887 7.07661 15.4637L7.7621 16.1492C8.14113 16.5282 8.75403 16.5282 9.12903 16.1492L14.5927 10.6855C14.9718 10.3065 14.9718 9.69355 14.5927 9.31452Z" fill="#CDC6FF"/>
+                  </svg>
+               </button>
+              </li>
+              <li class="headline-list__headline">
+                A Sarcastic ......... Discovers What You Have Always Wanted To Know How To .........
+               <button type="button" class="headline-list__btn"> 
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0C15.5242 0 20 4.47581 20 10C20 15.5242 15.5242 20 10 20C4.47581 20 0 15.5242 0 10C0 4.47581 4.47581 0 10 0ZM14.5927 9.31452L9.12903 3.85081C8.75 3.47177 8.1371 3.47177 7.7621 3.85081L7.07661 4.53629C6.69758 4.91532 6.69758 5.52823 7.07661 5.90323L11.1734 10L7.07661 14.0968C6.69758 14.4758 6.69758 15.0887 7.07661 15.4637L7.7621 16.1492C8.14113 16.5282 8.75403 16.5282 9.12903 16.1492L14.5927 10.6855C14.9718 10.3065 14.9718 9.69355 14.5927 9.31452Z" fill="#CDC6FF"/>
+                  </svg>
+               </button>
+              </li>
+              <li class="headline-list__headline">
+                A Sarcastic ......... Discovers What You Have Always Wanted To Know How To .........
+               <button type="button" class="headline-list__btn"> 
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0C15.5242 0 20 4.47581 20 10C20 15.5242 15.5242 20 10 20C4.47581 20 0 15.5242 0 10C0 4.47581 4.47581 0 10 0ZM14.5927 9.31452L9.12903 3.85081C8.75 3.47177 8.1371 3.47177 7.7621 3.85081L7.07661 4.53629C6.69758 4.91532 6.69758 5.52823 7.07661 5.90323L11.1734 10L7.07661 14.0968C6.69758 14.4758 6.69758 15.0887 7.07661 15.4637L7.7621 16.1492C8.14113 16.5282 8.75403 16.5282 9.12903 16.1492L14.5927 10.6855C14.9718 10.3065 14.9718 9.69355 14.5927 9.31452Z" fill="#CDC6FF"/>
+                  </svg>
+               </button>
+              </li>
+              <li class="headline-list__headline">
+                A Sarcastic ......... Discovers What You Have Always Wanted To Know How To .........
+               <button type="button" class="headline-list__btn"> 
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0C15.5242 0 20 4.47581 20 10C20 15.5242 15.5242 20 10 20C4.47581 20 0 15.5242 0 10C0 4.47581 4.47581 0 10 0ZM14.5927 9.31452L9.12903 3.85081C8.75 3.47177 8.1371 3.47177 7.7621 3.85081L7.07661 4.53629C6.69758 4.91532 6.69758 5.52823 7.07661 5.90323L11.1734 10L7.07661 14.0968C6.69758 14.4758 6.69758 15.0887 7.07661 15.4637L7.7621 16.1492C8.14113 16.5282 8.75403 16.5282 9.12903 16.1492L14.5927 10.6855C14.9718 10.3065 14.9718 9.69355 14.5927 9.31452Z" fill="#CDC6FF"/>
+                  </svg>
+               </button>
+              </li>
+            </ul>
+            <div class="table-nav">
+              <span class="table-nav__page-no table-nav__page-no--active">1</span>
+              <span class="table-nav__page-no">2</span>
+              <span class="table-nav__page-no">3</span>
+              <svg class="table-nav__arrow" width="31" height="8" viewBox="0 0 31 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30.3536 4.35355C30.5488 4.15829 30.5488 3.84171 30.3536 3.64645L27.1716 0.464466C26.9763 0.269204 26.6597 0.269204 26.4645 0.464466C26.2692 0.659728 26.2692 0.976311 26.4645 1.17157L29.2929 4L26.4645 6.82843C26.2692 7.02369 26.2692 7.34027 26.4645 7.53553C26.6597 7.7308 26.9763 7.7308 27.1716 7.53553L30.3536 4.35355ZM0 4.5H30V3.5H0L0 4.5Z" fill="#4834D4"/>
+              </svg>                
+            </div>
+          </div>
+        </section>
+    </section>
+    <div class="overlay">
+      <div class="add-headline">
+        <button type="button" class="add-headline__close">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="9" r="9" fill="#CDC6FF"/>
+            <path d="M12.6004 5.3999L5.40039 12.5999M5.40039 5.3999L12.6004 12.5999" stroke="white" stroke-width="0.785714" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>              
+        <p class="add-headline__label headline__label--old">Review</p>
+        <div class="add-headline__body">
+          A Sarcastic .... Discovers What You Have Always Wanted To Know How To ....
+        </div>
+        <label class="add-headline__label add-headline__label--new" for="new-headline">Complete & insert</label>
+        <div contenteditable class="add-headline__body" id="new-headline">
+          <div contenteditable></div>
+        </div>
+        <div class="add-headline__btns">
+          <button type="button" class="add-headline__btn add-headline__btn--insert">insert</button>
+        </div>
+      </div>
+      <div class="editor">
+        <div class="editor__header">
+          Editor
+          <button class="editor__close-btn">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="9" cy="9" r="9" fill="#CDC6FF"/>
+              <path d="M12.6004 5.3999L5.40039 12.5999M5.40039 5.3999L12.6004 12.5999" stroke="white" stroke-width="0.642857" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>            
+          </button>
+        </div>
+        <div id="summernote" class="editor__summernote">
+          
+        </div>
+        <div class="editor__btns">
+          <button class="editor__btn editor__btn-copy">Copy to Clipboard</button>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="create-headline.js"></script>
+</body>
+</html>

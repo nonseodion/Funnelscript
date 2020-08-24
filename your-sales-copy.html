@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funnelscript</title>
+    <!--Gsap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <!--css stylesheet-->
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="css/your-sales-copy.css">
+    <!--Prefix-->
+    <script src="admin/js/prefixfree.min.js"></script>
+    <!--Polyfill-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> 
+</head>
+<body>
+    <header class="header">
+        <div class="header--left small-menu">S<span class="big-menu small-menu">OCISTREAM</span>.</div>
+        <div class="header--right small-menu">
+            <a class="arrow-right" >
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.16664 10L15.8333 10" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.99998 4.16661L15.8333 9.99995L9.99998 15.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+
+            <div class="header--right--notification">
+                <img src="assets/notification bell.svg" alt="bell" class="bell">
+                
+            </div>
+            <div class="profile">
+              <img src="assets/profile pic.png" alt="profile picture" class="profile-picture">
+              <span class="profile-arrow">
+                <svg  width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.00016 1.16661L6.8335 6.99995L1.00016 12.8333" stroke="#4834D4" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  
+              </span>
+              <div class="log-out">
+                Log out
+              </div>
+            </div>
+    </header>
+    <section class="dashboard small-menu">
+        <div class="dashboard--menu--farleft small-menu">
+                        <ul>
+              <li ><a href="index.html"><svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 24V2.25C0 1.00734 1.2312 0 2.75 0H19.25C20.7688 0 22 1.00734 22 2.25V24L11 18.75L0 24Z" fill="#4834D4"/>
+                </svg></a>
+                </li>  
+              <li ><a href="sales-letter.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.2143 18H0.785714C0.57733 18 0.37748 18.079 0.23013 18.2197C0.0827804 18.3603 0 18.5511 0 18.75L0 20.25C0 20.4489 0.0827804 20.6397 0.23013 20.7803C0.37748 20.921 0.57733 21 0.785714 21H21.2143C21.4227 21 21.6225 20.921 21.7699 20.7803C21.9172 20.6397 22 20.4489 22 20.25V18.75C22 18.5511 21.9172 18.3603 21.7699 18.2197C21.6225 18.079 21.4227 18 21.2143 18ZM21.2143 12H0.785714C0.57733 12 0.37748 12.079 0.23013 12.2197C0.0827804 12.3603 0 12.5511 0 12.75L0 14.25C0 14.4489 0.0827804 14.6397 0.23013 14.7803C0.37748 14.921 0.57733 15 0.785714 15H21.2143C21.4227 15 21.6225 14.921 21.7699 14.7803C21.9172 14.6397 22 14.4489 22 14.25V12.75C22 12.5511 21.9172 12.3603 21.7699 12.2197C21.6225 12.079 21.4227 12 21.2143 12ZM21.2143 6H0.785714C0.57733 6 0.37748 6.07902 0.23013 6.21967C0.0827804 6.36032 0 6.55109 0 6.75L0 8.25C0 8.44891 0.0827804 8.63968 0.23013 8.78033C0.37748 8.92098 0.57733 9 0.785714 9H21.2143C21.4227 9 21.6225 8.92098 21.7699 8.78033C21.9172 8.63968 22 8.44891 22 8.25V6.75C22 6.55109 21.9172 6.36032 21.7699 6.21967C21.6225 6.07902 21.4227 6 21.2143 6ZM21.2143 0H0.785714C0.57733 0 0.37748 0.0790176 0.23013 0.21967C0.0827804 0.360322 0 0.551088 0 0.75L0 2.25C0 2.44891 0.0827804 2.63968 0.23013 2.78033C0.37748 2.92098 0.57733 3 0.785714 3H21.2143C21.4227 3 21.6225 2.92098 21.7699 2.78033C21.9172 2.63968 22 2.44891 22 2.25V0.75C22 0.551088 21.9172 0.360322 21.7699 0.21967C21.6225 0.0790176 21.4227 0 21.2143 0Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="video-sales-letter.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6399 7.03636L21.9907 5.16136C22.0551 4.81659 21.7774 4.5 21.4106 4.5H17.7369L18.4549 0.661359C18.5194 0.316594 18.2417 0 17.8748 0H15.8795C15.7412 2.39844e-06 15.6073 0.0464528 15.5012 0.131218C15.3952 0.215982 15.3237 0.333659 15.2994 0.463641L14.5443 4.5H9.70062L10.4187 0.661359C10.4832 0.316594 10.2055 0 9.83861 0H7.84329C7.70497 2.39844e-06 7.57105 0.0464528 7.465 0.131218C7.35894 0.215982 7.2875 0.333659 7.26319 0.463641L6.50807 4.5H2.6239C2.48557 4.5 2.35166 4.54645 2.2456 4.63122C2.13954 4.71598 2.0681 4.83366 2.04379 4.96364L1.69302 6.83864C1.62854 7.18341 1.90624 7.5 2.27312 7.5H5.94683L4.82438 13.5H0.94021C0.801885 13.5 0.66797 13.5465 0.561913 13.6312C0.455857 13.716 0.384418 13.8337 0.360108 13.9636L0.00933576 15.8386C-0.0551419 16.1834 0.222559 16.5 0.589438 16.5H4.26314L3.54505 20.3386C3.48057 20.6834 3.75827 21 4.12515 21H6.12047C6.25879 21 6.39271 20.9535 6.49877 20.8688C6.60482 20.784 6.67626 20.6663 6.70057 20.5364L7.45574 16.5H12.2994L11.5813 20.3386C11.5168 20.6834 11.7944 21 12.1614 21H14.1567C14.295 21 14.4289 20.9535 14.535 20.8688C14.6411 20.784 14.7125 20.6663 14.7368 20.5364L15.4919 16.5H19.3761C19.5144 16.5 19.6483 16.4535 19.7544 16.3688C19.8605 16.284 19.9319 16.1663 19.9562 16.0364L20.307 14.1614C20.3714 13.8166 20.0937 13.5 19.7269 13.5H16.0532L17.1756 7.5H21.0598C21.1981 7.5 21.332 7.45355 21.4381 7.36878C21.5441 7.28402 21.6156 7.16634 21.6399 7.03636ZM12.8606 13.5H8.01698L9.13943 7.5H13.9831L12.8606 13.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="email-copy.html"><svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3333 0H7.33333L0 6V21C0 22.6547 1.64427 24 3.66667 24H18.3333C20.3557 24 22 22.6547 22 21V3C22 1.34531 20.3557 0 18.3333 0ZM9.16667 7.5H6.41667V3H9.16667V7.5ZM13.75 7.5H11V3H13.75V7.5ZM18.3333 7.5H15.5833V3H18.3333V7.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="offer-generator.html"><svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3333 0H7.33333L0 6V21C0 22.6547 1.64427 24 3.66667 24H18.3333C20.3557 24 22 22.6547 22 21V3C22 1.34531 20.3557 0 18.3333 0ZM9.16667 7.5H6.41667V3H9.16667V7.5ZM13.75 7.5H11V3H13.75V7.5ZM18.3333 7.5H15.5833V3H18.3333V7.5Z" fill="#F5F6F9"/>
+                </svg></a>
+              </li>
+              <li ><a href="webinar-writer.html"><svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3333 0H7.33333L0 6V21C0 22.6547 1.64427 24 3.66667 24H18.3333C20.3557 24 22 22.6547 22 21V3C22 1.34531 20.3557 0 18.3333 0ZM9.16667 7.5H6.41667V3H9.16667V7.5ZM13.75 7.5H11V3H13.75V7.5ZM18.3333 7.5H15.5833V3H18.3333V7.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>    
+              <li ><a href="saved-scripts.html"><svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3333 0H7.33333L0 6V21C0 22.6547 1.64427 24 3.66667 24H18.3333C20.3557 24 22 22.6547 22 21V3C22 1.34531 20.3557 0 18.3333 0ZM9.16667 7.5H6.41667V3H9.16667V7.5ZM13.75 7.5H11V3H13.75V7.5ZM18.3333 7.5H15.5833V3H18.3333V7.5Z" fill="#F5F6F9"/>
+                </svg></a>
+              <li ><a href="my-video-scripts.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6399 7.03636L21.9907 5.16136C22.0551 4.81659 21.7774 4.5 21.4106 4.5H17.7369L18.4549 0.661359C18.5194 0.316594 18.2417 0 17.8748 0H15.8795C15.7412 2.39844e-06 15.6073 0.0464528 15.5012 0.131218C15.3952 0.215982 15.3237 0.333659 15.2994 0.463641L14.5443 4.5H9.70062L10.4187 0.661359C10.4832 0.316594 10.2055 0 9.83861 0H7.84329C7.70497 2.39844e-06 7.57105 0.0464528 7.465 0.131218C7.35894 0.215982 7.2875 0.333659 7.26319 0.463641L6.50807 4.5H2.6239C2.48557 4.5 2.35166 4.54645 2.2456 4.63122C2.13954 4.71598 2.0681 4.83366 2.04379 4.96364L1.69302 6.83864C1.62854 7.18341 1.90624 7.5 2.27312 7.5H5.94683L4.82438 13.5H0.94021C0.801885 13.5 0.66797 13.5465 0.561913 13.6312C0.455857 13.716 0.384418 13.8337 0.360108 13.9636L0.00933576 15.8386C-0.0551419 16.1834 0.222559 16.5 0.589438 16.5H4.26314L3.54505 20.3386C3.48057 20.6834 3.75827 21 4.12515 21H6.12047C6.25879 21 6.39271 20.9535 6.49877 20.8688C6.60482 20.784 6.67626 20.6663 6.70057 20.5364L7.45574 16.5H12.2994L11.5813 20.3386C11.5168 20.6834 11.7944 21 12.1614 21H14.1567C14.295 21 14.4289 20.9535 14.535 20.8688C14.6411 20.784 14.7125 20.6663 14.7368 20.5364L15.4919 16.5H19.3761C19.5144 16.5 19.6483 16.4535 19.7544 16.3688C19.8605 16.284 19.9319 16.1663 19.9562 16.0364L20.307 14.1614C20.3714 13.8166 20.0937 13.5 19.7269 13.5H16.0532L17.1756 7.5H21.0598C21.1981 7.5 21.332 7.45355 21.4381 7.36878C21.5441 7.28402 21.6156 7.16634 21.6399 7.03636ZM12.8606 13.5H8.01698L9.13943 7.5H13.9831L12.8606 13.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="training.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6399 7.03636L21.9907 5.16136C22.0551 4.81659 21.7774 4.5 21.4106 4.5H17.7369L18.4549 0.661359C18.5194 0.316594 18.2417 0 17.8748 0H15.8795C15.7412 2.39844e-06 15.6073 0.0464528 15.5012 0.131218C15.3952 0.215982 15.3237 0.333659 15.2994 0.463641L14.5443 4.5H9.70062L10.4187 0.661359C10.4832 0.316594 10.2055 0 9.83861 0H7.84329C7.70497 2.39844e-06 7.57105 0.0464528 7.465 0.131218C7.35894 0.215982 7.2875 0.333659 7.26319 0.463641L6.50807 4.5H2.6239C2.48557 4.5 2.35166 4.54645 2.2456 4.63122C2.13954 4.71598 2.0681 4.83366 2.04379 4.96364L1.69302 6.83864C1.62854 7.18341 1.90624 7.5 2.27312 7.5H5.94683L4.82438 13.5H0.94021C0.801885 13.5 0.66797 13.5465 0.561913 13.6312C0.455857 13.716 0.384418 13.8337 0.360108 13.9636L0.00933576 15.8386C-0.0551419 16.1834 0.222559 16.5 0.589438 16.5H4.26314L3.54505 20.3386C3.48057 20.6834 3.75827 21 4.12515 21H6.12047C6.25879 21 6.39271 20.9535 6.49877 20.8688C6.60482 20.784 6.67626 20.6663 6.70057 20.5364L7.45574 16.5H12.2994L11.5813 20.3386C11.5168 20.6834 11.7944 21 12.1614 21H14.1567C14.295 21 14.4289 20.9535 14.535 20.8688C14.6411 20.784 14.7125 20.6663 14.7368 20.5364L15.4919 16.5H19.3761C19.5144 16.5 19.6483 16.4535 19.7544 16.3688C19.8605 16.284 19.9319 16.1663 19.9562 16.0364L20.307 14.1614C20.3714 13.8166 20.0937 13.5 19.7269 13.5H16.0532L17.1756 7.5H21.0598C21.1981 7.5 21.332 7.45355 21.4381 7.36878C21.5441 7.28402 21.6156 7.16634 21.6399 7.03636ZM12.8606 13.5H8.01698L9.13943 7.5H13.9831L12.8606 13.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="support.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6399 7.03636L21.9907 5.16136C22.0551 4.81659 21.7774 4.5 21.4106 4.5H17.7369L18.4549 0.661359C18.5194 0.316594 18.2417 0 17.8748 0H15.8795C15.7412 2.39844e-06 15.6073 0.0464528 15.5012 0.131218C15.3952 0.215982 15.3237 0.333659 15.2994 0.463641L14.5443 4.5H9.70062L10.4187 0.661359C10.4832 0.316594 10.2055 0 9.83861 0H7.84329C7.70497 2.39844e-06 7.57105 0.0464528 7.465 0.131218C7.35894 0.215982 7.2875 0.333659 7.26319 0.463641L6.50807 4.5H2.6239C2.48557 4.5 2.35166 4.54645 2.2456 4.63122C2.13954 4.71598 2.0681 4.83366 2.04379 4.96364L1.69302 6.83864C1.62854 7.18341 1.90624 7.5 2.27312 7.5H5.94683L4.82438 13.5H0.94021C0.801885 13.5 0.66797 13.5465 0.561913 13.6312C0.455857 13.716 0.384418 13.8337 0.360108 13.9636L0.00933576 15.8386C-0.0551419 16.1834 0.222559 16.5 0.589438 16.5H4.26314L3.54505 20.3386C3.48057 20.6834 3.75827 21 4.12515 21H6.12047C6.25879 21 6.39271 20.9535 6.49877 20.8688C6.60482 20.784 6.67626 20.6663 6.70057 20.5364L7.45574 16.5H12.2994L11.5813 20.3386C11.5168 20.6834 11.7944 21 12.1614 21H14.1567C14.295 21 14.4289 20.9535 14.535 20.8688C14.6411 20.784 14.7125 20.6663 14.7368 20.5364L15.4919 16.5H19.3761C19.5144 16.5 19.6483 16.4535 19.7544 16.3688C19.8605 16.284 19.9319 16.1663 19.9562 16.0364L20.307 14.1614C20.3714 13.8166 20.0937 13.5 19.7269 13.5H16.0532L17.1756 7.5H21.0598C21.1981 7.5 21.332 7.45355 21.4381 7.36878C21.5441 7.28402 21.6156 7.16634 21.6399 7.03636ZM12.8606 13.5H8.01698L9.13943 7.5H13.9831L12.8606 13.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>  
+              <li ><a href="settings.html"><svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.6399 7.03636L21.9907 5.16136C22.0551 4.81659 21.7774 4.5 21.4106 4.5H17.7369L18.4549 0.661359C18.5194 0.316594 18.2417 0 17.8748 0H15.8795C15.7412 2.39844e-06 15.6073 0.0464528 15.5012 0.131218C15.3952 0.215982 15.3237 0.333659 15.2994 0.463641L14.5443 4.5H9.70062L10.4187 0.661359C10.4832 0.316594 10.2055 0 9.83861 0H7.84329C7.70497 2.39844e-06 7.57105 0.0464528 7.465 0.131218C7.35894 0.215982 7.2875 0.333659 7.26319 0.463641L6.50807 4.5H2.6239C2.48557 4.5 2.35166 4.54645 2.2456 4.63122C2.13954 4.71598 2.0681 4.83366 2.04379 4.96364L1.69302 6.83864C1.62854 7.18341 1.90624 7.5 2.27312 7.5H5.94683L4.82438 13.5H0.94021C0.801885 13.5 0.66797 13.5465 0.561913 13.6312C0.455857 13.716 0.384418 13.8337 0.360108 13.9636L0.00933576 15.8386C-0.0551419 16.1834 0.222559 16.5 0.589438 16.5H4.26314L3.54505 20.3386C3.48057 20.6834 3.75827 21 4.12515 21H6.12047C6.25879 21 6.39271 20.9535 6.49877 20.8688C6.60482 20.784 6.67626 20.6663 6.70057 20.5364L7.45574 16.5H12.2994L11.5813 20.3386C11.5168 20.6834 11.7944 21 12.1614 21H14.1567C14.295 21 14.4289 20.9535 14.535 20.8688C14.6411 20.784 14.7125 20.6663 14.7368 20.5364L15.4919 16.5H19.3761C19.5144 16.5 19.6483 16.4535 19.7544 16.3688C19.8605 16.284 19.9319 16.1663 19.9562 16.0364L20.307 14.1614C20.3714 13.8166 20.0937 13.5 19.7269 13.5H16.0532L17.1756 7.5H21.0598C21.1981 7.5 21.332 7.45355 21.4381 7.36878C21.5441 7.28402 21.6156 7.16634 21.6399 7.03636ZM12.8606 13.5H8.01698L9.13943 7.5H13.9831L12.8606 13.5Z" fill="#F5F6F9"/>
+                </svg></a>
+                </li>
+            </ul>
+        </div>
+        <div class="dashboard--menu--closeleft small-menu">
+            <ul>
+                <li ><a href="index.html">Dashboard</a></li>  
+                <li ><a href="sales-letter.html" class="purple">Sales letter</a></li>  
+                <li ><a href="video-sales-letter.html">Video sales letter</a></li>  
+                <li ><a href="email-copy.html">Email copy</a></li>  
+                <li ><a href="offer-generator.html">Offer generator</a></li>  
+                <li ><a href="webinar-writer.html" >Webinar writer</a></li>  
+                <li ><a href="saved-scripts.html">Saved scripts</a></li>  
+                <li ><a href="my-video-scripts.html">My video scripts</a></li>  
+                <li ><a href="training.html">Training</a></li>  
+                <li ><a href="support.html">Support</a></li>  
+                <li ><a href="settings.html">Settings</a></li>
+            </ul>
+        </div>
+        <section class="your-sales-copy">
+          <div class="sales-header">
+              <h3 class="sales-header__heading">This script creates fast, effective, proven sales <br> letters that work!</h3>
+              <!--Heading image-->
+              <svg class="sales-header__image" width="97" height="97" viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M48.5 97C75.2858 97 97 75.2858 97 48.5C97 21.7142 75.2858 0 48.5 0C21.7142 0 0 21.7142 0 48.5C0 75.2858 21.7142 97 48.5 97Z" fill="url(#paint0_linear)"/>
+                <path d="M68.6578 29.9893C65.8789 29.9893 63.6184 32.2538 63.6184 35.0376V50.1827H73.6973V35.0376C73.6973 32.2538 71.4367 29.9893 68.6578 29.9893ZM63.6184 63.9344C63.6184 67.4017 65.0226 70.7969 67.4701 73.2488C67.7983 73.5775 68.2279 73.7418 68.6578 73.7418C69.0877 73.7418 69.5174 73.5775 69.8455 73.2488C72.293 70.7969 73.6973 67.4017 73.6973 63.9344V53.5484H63.6184V63.9344ZM43.2309 41.2381C42.6271 42.27 40.9344 42.27 40.3306 41.2381C39.8056 40.3374 39.0838 40.1485 38.5704 40.1485C37.7158 40.1485 36.7412 41.1903 36.7412 42.1058C36.7412 42.9159 37.6419 44.4146 41.7807 47.0276C45.9195 44.4146 46.8201 42.9159 46.8201 42.1058C46.8201 40.6383 44.6285 38.8371 43.2309 41.2381ZM50.1799 20.8785V29.9893H59.2746L50.1799 20.8785ZM46.8201 31.6722V19.8926H24.9826C24.0541 19.8926 23.3027 20.6453 23.3027 21.5753V75.4245C23.3027 76.3547 24.0541 77.1072 24.9826 77.1072H58.5789C59.5074 77.1072 60.2588 76.3545 60.2588 75.4245V33.3549H48.5C47.5715 33.3549 46.8201 32.6022 46.8201 31.6722ZM51.8596 70.3763H31.7018C30.7732 70.3763 30.0221 69.6236 30.0221 68.6936C30.0221 67.7636 30.7734 67.0109 31.7018 67.0109H51.8596C52.7881 67.0109 53.5395 67.7636 53.5395 68.6936C53.5395 69.6236 52.7881 70.3763 51.8596 70.3763ZM33.3816 61.9623C33.3816 61.0321 34.133 60.2796 35.0615 60.2796H48.5C49.4285 60.2796 50.1799 61.0323 50.1799 61.9623C50.1799 62.8926 49.4285 63.6451 48.5 63.6451H35.0615C34.133 63.6451 33.3816 62.8924 33.3816 61.9623ZM53.5395 55.2311C53.5395 56.1613 52.7881 56.9138 51.8596 56.9138H31.7018C30.7732 56.9138 30.0221 56.1611 30.0221 55.2311C30.0221 54.3011 30.7734 53.5484 31.7018 53.5484H51.8596C52.7881 53.5484 53.5395 54.3011 53.5395 55.2311ZM50.1799 42.1058C50.1799 44.7647 47.9275 47.2593 42.647 50.4457C42.1156 50.7678 41.4463 50.7678 40.9147 50.4457C35.6341 47.2593 33.3818 44.7646 33.3818 42.1058C33.3818 39.3202 35.8557 36.7829 38.5706 36.7829C39.7666 36.7829 40.8705 37.1641 41.7809 37.8675C42.6914 37.1641 43.7953 36.7829 44.9913 36.7829C47.706 36.7829 50.1799 39.3202 50.1799 42.1058Z" fill="url(#paint1_linear)"/>
+                <defs>
+                <linearGradient id="paint0_linear" x1="48.5" y1="97" x2="48.5" y2="0" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFBEF9"/>
+                <stop offset="1" stop-color="#FFF1FF"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear" x1="48.5" y1="77.1074" x2="48.5" y2="19.8926" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FF81FF"/>
+                <stop offset="1" stop-color="#A93AFF"/>
+                </linearGradient>
+                </defs>
+              </svg>              
+              <nav class="sales-header__nav">
+                <a href="sales-script-builder.html">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="back">
+                    <path d="M15 8H1" stroke="#191847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 15L1 8L8 1" stroke="#191847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>GO BACK</span>
+                </a>
+              </nav>
+          </div>
+          <div class="sales-copy">
+            <div class="sales-copy__heading">Your sales copy is ready!!!</div>
+            <div class="sales-copy__body">
+              <p class="sales-copy__headline">"How To Avoid Paying $6,823... $9,128... $12,913 Or More In Real Estate Commissions By Selling Without An Agent!"<p>
+              <p class="center">Create your VSL using the PPT Video Sales Letter Script OR the VSL Wizard Software</p>
+              <p class="center">"&lt;&lt;Video Sales Letter Goes Here&gt;&gt;"</p>
+              <video
+                id="my-video"
+                class="video-js sales-copy__video"
+                controls
+                preload="auto"
+                data-setup="{}"
+              >
+                <source src="assets/demo.mp4" type="video/mp4" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that
+                  <a href="https://videojs.com/html5-video-support/" target="_blank"
+                    >supports HTML5 video</a>
+                </p>
+              </video>
+              
+              <p class="sales-copy__bonuses"><span class="emphasis">Yes!</span> I'm ready to save the commission, keep more money in your pocket for downpayment on your next house, and keep control of the transaction and save time!</p>
+              
+              <div class="sales-copy__access">
+                <h5 class="access__heading">I Understand That When I Act Now, I get Instant Access to "Selling Your Home Alone", which includes:</h5>
+                <ul class="access__list">
+                  <li ><span class="pointer">*</span>How to get FREE and Low-Cost Advertising...</li>
+                  <li ><span class="pointer">*</span>How to Negotiate a Win-Win Sale with nervous buyers... </li>
+                  <li ><span class="pointer">*</span>The absolute best way to Use the Internet to Sell Your Home...</li>
+                  <li ><span class="pointer">*</span>How to have lawyers and bankers begging to help you... at no extra charge!</li>
+                  <li ><span class="pointer">*</span>How to handle Real Estate Agents (and make them work for you, instead of against you!)... </li>
+                  <li ><span class="pointer">*</span>How to use online classifieds to sell your house faster than any agent could...</li>
+                </ul>
+              </div>
+
+              <div class="sales-copy__bonuses bonus">
+                <h5 class="bonus__heading">I Also Understand that When<br>I ACT NOW, I Also Get...</h5>
+                <ul class="bonus__list">
+                  <li ><span class="pointer">*</span>Bonus Video: "How To Offer Owner Financing Even If You Still Owe Money On Your Property"</li>
+                  <li ><span class="pointer">*</span>Bonus Report: "10 Secrets to Find A Cash Buyer This Weekend"</li>
+                  <li ><span class="pointer">*</span>50% INSTANT Savings OFF The Regular Price</li>
+                </ul>
+              </div>
+
+              <div class="sales-copy__guarantee">
+                <h5 class="gurantee__heading">100% Guranteed</h5>
+                <p>If Selling Your Home Alone doesn't show me exactly how to save the commission... if it doesn't 
+                  take me by the hand, step-by-step to keep more money in your pocket for downpayment on your next house... 
+                  or if it fails to help me keep control of the transaction and save time, then I understand that I will 
+                  receive a full refund, No Questions Asked!
+                </p>
+              </div>
+
+              <p class="sales-copy__price">I understand that the regular price for all this is $97...</p>
+              <p class="sales-copy__price">
+                But, when I act now, as part of a special marketing test, I get everything for only $47 - over 50% OFF!!
+              </p>
+
+              <ul class="sales-copy__actions">
+                <li>(Option #1) Click Here to Download Now</li>
+                <li>(Option #2) Click Here to Save The Commission</li>
+                <li>(Option #3) Click Here to get Selling Your Home Alone</li>
+              </ul>
+
+              <div class="sales-copy__message message">
+                <p>To Your Success,</p>
+                <h5 class="message__recipient">Jim Edwards</h5>
+                <p class="message__body">
+                  P.S. - Every minute you wait to get "Selling Your Home Alone" is another minute buyers will walk 
+                  right on by your house and buy from a Realtor. Put the power of "Selling Your Home Alone" to work 
+                  for you so you can quickly and easily save the commission, keep more money in your pocket for 
+                  downpayment on your next house, and keep control of the transaction and save time! 
+                </p>
+                <p class="message__body">
+                  P.P.S. - But don't just take my word for it... take a look at these (statistics / testimonials 
+                  / endorsements / quotes /comments / reviews) from happy For Sale By Owners just like you!
+                </p>
+
+                <p class="contact">
+                  Your Company Contact Information, Phone, Email, Help Desk, <br>Legal&nbsp;Disclaimers, Etc. Go Here 
+                  <br>
+                  &lt;&lt;End Copy&gt;&gt;
+                </p>
+              </div>
+              <div class="sales-copy__btns">
+                <button type="button" class="sales-copy__btns--export">Export Script</button>
+                <button type="button" class="sales-copy__btns--new">Create New</button>
+              </div>
+            </div>
+          </div>
+  
+        </section>
+      </section>
+        <!--Page Overlay -->
+        <section class="overlay">
+          <section class="export">
+            <h6 class="export__heading">Decide how to use your copy</h6>
+            <div class="export__formats">
+              <div class="export__format export__format--docx">
+                <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M104 128H24C10.744 128 0 117.256 0 104V24C0 10.744 10.744 0 24 0H104C117.256 0 128 10.744 128 24V104C128 117.256 117.256 128 104 128Z" fill="#FFF9DD"/>
+                  <path d="M46 78.668H44V86.668H46C46.372 86.668 46.668 86.376 46.668 86V79.332C46.668 78.96 46.372 78.668 46 78.668Z" fill="#FFD200"/>
+                  <path d="M59.332 78.668H58C57.628 78.668 57.332 78.96 57.332 79.336V86C57.332 86.372 57.624 86.668 58 86.668H59.332C59.704 86.668 60 86.376 60 86V79.332C60 78.96 59.708 78.668 59.332 78.668Z" fill="#FFD200"/>
+                  <path d="M78 73.332C65.148 73.332 54.668 62.852 54.668 50C54.668 42.772 57.976 36.292 63.176 32H39.336C35.28 32 32 35.28 32 39.332V88.664C32 92.72 35.28 96 39.332 96H78C82.052 96 85.332 92.72 85.332 88.668V72.16C83.04 72.908 80.56 73.332 78 73.332ZM50.668 86C50.668 88.56 48.56 90.668 46 90.668H42C40.908 90.668 40 89.76 40 88.668V76.668C40 75.576 40.908 74.668 42 74.668H46C48.56 74.668 50.668 76.776 50.668 79.336V86ZM64 86C64 88.56 61.892 90.668 59.332 90.668H58C55.44 90.668 53.332 88.56 53.332 86V79.332C53.332 76.772 55.44 74.664 58 74.664H59.332C61.892 74.664 64 76.772 64 79.332V86ZM71.332 86.668H75.332C76.436 86.668 77.332 87.564 77.332 88.668C77.332 89.772 76.436 90.668 75.332 90.668H71.332C68.76 90.668 66.664 88.576 66.664 86V79.332C66.664 76.76 68.756 74.664 71.332 74.664H75.332C76.436 74.664 77.332 75.56 77.332 76.664C77.332 77.768 76.436 78.664 75.332 78.664H71.332C70.964 78.664 70.664 78.964 70.664 79.332V86C70.668 86.368 70.968 86.668 71.332 86.668Z" fill="#FFD200"/>
+                  <path d="M78 32C68.076 32 60 40.076 60 50C60 59.924 68.076 68 78 68C87.924 68 96 59.924 96 50C96 40.076 87.924 32 78 32ZM85.332 52.668H80.664V57.336C80.664 58.808 79.468 60.004 77.996 60.004C76.524 60.004 75.328 58.808 75.328 57.336V52.668H70.66C69.196 52.668 68 51.472 68 50C68 48.528 69.196 47.332 70.668 47.332H75.336V42.664C75.336 41.192 76.532 39.996 78.004 39.996C79.476 39.996 80.672 41.192 80.672 42.664V47.332H85.34C86.812 47.332 88.008 48.528 88.008 50C88.008 51.472 86.804 52.668 85.332 52.668Z" fill="#FFE777"/>
+                </svg>                
+                <p class="export__name export__name--docx">Download as .docx</p>
+              </div>
+              <div class="export__format export__format--mail">
+                <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M104 128H24C10.744 128 0 117.256 0 104V24C0 10.744 10.744 0 24 0H104C117.256 0 128 10.744 128 24V104C128 117.256 117.256 128 104 128Z" fill="#C6F4FF"/>
+                  <path d="M107.393 35.7549C107.123 35.4453 106.812 35.1875 106.47 34.9863C104.96 33.8877 103.104 33.2373 101.098 33.2373H26.9023C24.8975 33.2373 23.042 33.8877 21.5322 34.9854C21.1895 35.1865 20.877 35.4443 20.6064 35.7559C18.8496 37.4248 17.75 39.7803 17.75 42.3896V85.6104C17.75 90.6572 21.8555 94.7627 26.9023 94.7627H101.098C106.145 94.7627 110.25 90.6572 110.25 85.6104V42.3896C110.25 39.7803 109.15 37.4238 107.393 35.7549ZM93.6094 40.7373L64 59.5566L34.3906 40.7373H93.6094ZM101.098 87.2627H26.9023C25.9912 87.2627 25.25 86.5215 25.25 85.6104V43.8145L61.9883 67.165C62.6025 67.5547 63.3008 67.75 64 67.75C64.6992 67.75 65.3975 67.5547 66.0117 67.165L102.75 43.8145V85.6104C102.75 86.5215 102.009 87.2627 101.098 87.2627Z" fill="#54DDFE"/>
+                </svg>  
+                <p class="export__name export__name--mail">Send to mail</p>
+              </div>
+              <div class="export__format export__format--pdf">
+                <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M104 128H24C10.744 128 0 117.256 0 104V24C0 10.744 10.744 0 24 0H104C117.256 0 128 10.744 128 24V104C128 117.256 117.256 128 104 128Z" fill="#FFE6E2"/>
+                  <path d="M45.332 78.668H44V81.336H45.332C46.08 81.336 46.664 80.748 46.664 80.004C46.668 79.252 46.08 78.668 45.332 78.668Z" fill="#FC573B"/>
+                  <path d="M59.332 78.668H57.332V86.668H59.332C59.704 86.668 60 86.376 60 86V79.332C60 78.96 59.708 78.668 59.332 78.668Z" fill="#FC573B"/>
+                  <path d="M78 73.332C65.148 73.332 54.668 62.852 54.668 50C54.668 42.772 57.976 36.292 63.176 32H39.336C35.28 32 32 35.28 32 39.332V88.664C32 92.72 35.28 96 39.332 96H78C82.052 96 85.332 92.72 85.332 88.668V72.16C83.04 72.908 80.56 73.332 78 73.332ZM45.332 85.332H44V88.664C44 89.756 43.092 90.664 42 90.664C40.908 90.664 40 89.756 40 88.664V76.664C40 75.572 40.908 74.664 42 74.664H45.332C48.264 74.664 50.664 77.064 50.664 79.996C50.668 82.932 48.268 85.332 45.332 85.332ZM64 86C64 88.56 61.892 90.668 59.332 90.668H55.332C54.24 90.668 53.332 89.76 53.332 88.668V76.668C53.332 75.576 54.24 74.668 55.332 74.668H59.332C61.892 74.668 64 76.776 64 79.336V86ZM75.332 81.332C76.436 81.332 77.332 82.228 77.332 83.332C77.332 84.436 76.436 85.332 75.332 85.332H70.664V88.664C70.664 89.768 69.768 90.664 68.664 90.664C67.56 90.664 66.664 89.768 66.664 88.664V79.332C66.664 76.76 68.756 74.664 71.332 74.664H75.332C76.436 74.664 77.332 75.56 77.332 76.664C77.332 77.768 76.436 78.664 75.332 78.664H71.332C70.964 78.664 70.664 78.964 70.664 79.332V81.332H75.332Z" fill="#FC573B"/>
+                  <path d="M78 32C68.076 32 60 40.076 60 50C60 59.924 68.076 68 78 68C87.924 68 96 59.924 96 50C96 40.076 87.924 32 78 32ZM85.332 52.668H80.664V57.336C80.664 58.808 79.468 60.004 77.996 60.004C76.524 60.004 75.328 58.808 75.328 57.336V52.668H70.66C69.196 52.668 68 51.472 68 50C68 48.528 69.196 47.332 70.668 47.332H75.336V42.664C75.336 41.192 76.532 39.996 78.004 39.996C79.476 39.996 80.672 41.192 80.672 42.664V47.332H85.34C86.812 47.332 88.008 48.528 88.008 50C88.008 51.472 86.804 52.668 85.332 52.668Z" fill="#FD907E"/>
+                </svg>                
+                <p class="export__name export__name--pdf">Download as pdf</p>
+              </div>
+            </div>
+            <div class="export__btns">
+              <button type="button" class="export__btn export__btn--cancel">Cancel</button>
+              <button type="button" class="export__btn export__btn--complete">Complete action</button>
+            </div>
+          </section>
+        </section>
+    <script src="app.js"></script>
+    <script>
+      //export modal animation
+      const tween = gsap.timeline({paused: true, reversed: true});
+      tween.to(".overlay", {display: "block", opacity: 1});
+
+      document.querySelector(".sales-copy__btns--export").addEventListener("click", () => { 
+        tween.reversed() ? tween.play() : tween.reverse(); 
+      })
+      document.querySelector(".export__btn--cancel").addEventListener("click", () => { 
+        tween.reversed() ? tween.play() : tween.reverse(); 
+      })
+
+    </script>
+</body>
+</html>

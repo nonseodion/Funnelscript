@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+.sales-copy__actions, .gurantee__heading, .bonus__heading, .access__heading {
+  font-size: 20px;
+  font-weight: normal;
+  color: #4834D4;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.your-sales-copy {
+  color: #4F4F4F;
+}
+
+.center {
+  text-align: center;
+}
+
+.emphasis {
+  color: #EB5757;
+}
+
+.your-sales-copy {
+  background-color: #E5E5E5;
+  position: relative;
+  z-index: 10;
+  padding: 3rem;
+}
+
+.sales-header {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.sales-header__heading {
+  color: #4834D4;
+  margin-top: 0;
+  font-size: 28px;
+  margin: 0;
+}
+.sales-header__image {
+  position: relative;
+  left: 10%;
+}
+.sales-header__nav {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.sales-header__nav a {
+  color: #4834D4;
+}
+.sales-header__nav .back {
+  margin-right: 1rem;
+  transform: translateY(15%);
+}
+
+.sales-copy {
+  margin: 3rem 0;
+}
+.sales-copy__heading {
+  background: linear-gradient(90deg, #4776E6 13.04%, #8E54E9 100%);
+  border-radius: 10px 10px 0 0;
+  height: 3.8rem;
+  padding: 0 1.5rem;
+  color: #F5F6F9;
+  font-size: 17px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #CDC6FF;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+}
+.sales-copy__body {
+  padding: 2rem 3rem 2rem;
+  background-color: white;
+  margin: 0;
+}
+.sales-copy__headline {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #EB5757;
+  margin-top: 0;
+  text-align: center;
+}
+.sales-copy__video {
+  width: 40%;
+  margin: auto;
+  min-width: 200px;
+  max-width: 450px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.access__heading {
+  font-size: 1rem;
+}
+.access__list {
+  list-style-type: none;
+  padding-left: 15px;
+}
+.access__list li {
+  position: relative;
+}
+.access__list li .pointer {
+  position: absolute;
+  left: -15px;
+}
+
+.bonus__list {
+  list-style-type: none;
+  padding-left: 15px;
+}
+.bonus__list li {
+  position: relative;
+}
+.bonus__list li .pointer {
+  position: absolute;
+  left: -15px;
+}
+
+.sales-copy__actions {
+  list-style-type: none;
+}
+
+.message__recipient {
+  font-size: 20px;
+  color: #333333;
+  font-weight: normal;
+}
+.message__body {
+  padding-bottom: 1.67em;
+}
+
+.contact {
+  text-align: center;
+  margin-top: 1.67em;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 4rem;
+}
+
+.sales-copy__btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sales-copy__btns--export {
+  background-color: #4834D4;
+  margin-left: 1rem;
+  padding: 10px 23px;
+  font-weight: 500;
+  color: #F5F6F9;
+  border: none;
+  border-radius: 3px;
+  font-family: Karla;
+  font-size: 20px;
+}
+.sales-copy__btns--new {
+  margin-left: 1rem;
+  padding: 10px 23px;
+  font-weight: 500;
+  color: #F5F6F9;
+  border: none;
+  border-radius: 3px;
+  font-family: Karla;
+  font-size: 20px;
+  border: 1px solid #4834D4;
+  color: #4834D4;
+  background-color: white;
+}
+
+.overlay {
+  background: rgba(25, 24, 71, 0.3);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 30;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  opacity: 0;
+  display: none;
+}
+.overlay .export {
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px 10px 0 0;
+  padding: 1.3rem 0.5rem;
+}
+.overlay .export__heading {
+  color: #4834D4;
+  margin-top: 0;
+  font-size: 15px;
+  font-weight: normal;
+}
+.overlay .export__formats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.overlay .export__format {
+  width: 10rem;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  flex-direction: column;
+}
+.overlay .export__format--docx:hover {
+  border: 1px solid #FFD200;
+}
+.overlay .export__format--mail:hover {
+  border: 1px solid #54DDFE;
+}
+.overlay .export__format--pdf:hover {
+  border: 1px solid #FC573B;
+}
+.overlay .export__format svg {
+  width: 40%;
+}
+.overlay .export__name {
+  font-size: 13px;
+}
+.overlay .export__name--docx {
+  color: #FFD200;
+}
+.overlay .export__name--mail {
+  color: #54DDFE;
+}
+.overlay .export__name--pdf {
+  color: #FC573B;
+}
+.overlay .export__btns {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.overlay .export__btn {
+  margin-left: 1rem;
+  padding: 10px 23px;
+  font-weight: 500;
+  color: #F5F6F9;
+  border: none;
+  border-radius: 3px;
+  font-family: Karla;
+  font-size: 20px;
+  padding: 8px 15px;
+  font-size: 15px;
+}
+.overlay .export__btn--cancel {
+  background-color: #F29401;
+}
+.overlay .export__btn--complete {
+  background-color: #4834D4;
+}
+
+/*# sourceMappingURL=your-sales-copy.css.map */

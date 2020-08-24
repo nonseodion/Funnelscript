@@ -1,0 +1,256 @@
+.add-headline__label::after, .add-headline__label::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+.create-headline {
+  background-color: #E5E5E5;
+  position: relative;
+  z-index: 10;
+  padding: 3rem;
+}
+.create-headline__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.create-headline__heading {
+  color: #4834D4;
+  margin-top: 0;
+  font-size: 28px;
+  margin-bottom: 0;
+}
+.create-headline__btn {
+  cursor: pointer;
+  min-width: 15px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table .table-header {
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  background-color: white;
+}
+.table .table-header__heading {
+  padding: 1rem 2rem;
+}
+.table .table-header__heading--headline {
+  background-color: #4834D4;
+  color: white;
+}
+.table .table-header__heading--content {
+  color: #333333;
+}
+
+.headline-list {
+  margin: 0;
+  list-style: none;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+.headline-list__headline {
+  padding: 1rem 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #191847;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.headline-list__headline .headline-list__btn {
+  cursor: pointer;
+  min-width: 15px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headline-list__headline .headline-list__btn svg {
+  min-width: 15px;
+}
+.headline-list__headline:nth-child(even) {
+  background: white;
+}
+.headline-list__headline:nth-child(odd) {
+  background: #F5F6F9;
+}
+.headline-list__headline:nth-child(9) {
+  opacity: 0.3;
+  background: transparent;
+}
+
+.table-nav {
+  color: #191847;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.table-nav__page-no {
+  display: inline-block;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+.table-nav__page-no--active {
+  color: #4834D4;
+  border: 1px solid #4834D4;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.table-nav__arrow {
+  cursor: pointer;
+}
+
+.overlay {
+  background: rgba(255, 255, 255, 0.03);
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  display: none;
+}
+
+.add-headline {
+  font-size: 15px;
+  position: absolute;
+  background: white;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  display: none;
+  opacity: 0;
+}
+.add-headline__close {
+  float: right;
+  cursor: pointer;
+  cursor: pointer;
+  min-width: 15px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-headline__label {
+  color: #191847;
+}
+.add-headline__label--new {
+  display: inline-block;
+  margin: 1rem 0;
+}
+.add-headline__body {
+  border: 1px solid #CDC6FF;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  width: 100%;
+}
+.add-headline__btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.add-headline__btn {
+  margin-left: 1rem;
+  padding: 10px 23px;
+  font-weight: 500;
+  color: #F5F6F9;
+  border: none;
+  border-radius: 3px;
+  font-family: Karla;
+  font-size: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 1rem;
+}
+.add-headline__btn--insert {
+  background-color: #4834D4;
+}
+
+.editor {
+  position: absolute;
+  right: 3%;
+  width: 400px;
+  top: 5%;
+  display: none;
+  opacity: 0;
+}
+.editor__close-btn {
+  cursor: pointer;
+  min-width: 15px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.editor__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+}
+.editor .note-editable {
+  height: 400px;
+}
+.editor .note-toolbar {
+  background: #191847;
+}
+.editor .note-toolbar button {
+  background: #191847;
+  color: white;
+  border: none;
+}
+.editor__btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+.editor__btn {
+  margin-left: 1rem;
+  padding: 10px 23px;
+  font-weight: 500;
+  color: #F5F6F9;
+  border: none;
+  border-radius: 3px;
+  font-family: Karla;
+  font-size: 20px;
+  cursor: pointer;
+  background: #4834D4;
+  font-size: 15px;
+  padding: 5px 15px;
+  border-radius: unset;
+}
+.editor .note-editor.note-frame .note-editing-area .note-codable {
+  font-family: poppins;
+}
+.editor .note-editor.note-frame .note-statusbar {
+  display: none;
+}
+.editor .note-editor.note-frame {
+  border: none;
+  border-radius: unset;
+}
+
+/*# sourceMappingURL=create-headline.css.map */

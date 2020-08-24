@@ -1,0 +1,233 @@
+@use 'base';
+
+@include base.root;
+
+//mixins
+@mixin  asterisk-list {
+  list-style-type: none;
+  padding-left: 15px;
+
+  li{
+    position: relative;
+    .pointer{
+      position: absolute;
+      left: -15px;
+    }
+  }
+}
+
+@mixin export-colors{
+  &--docx{color: #FFD200;}
+  &--mail{color: #54DDFE;}
+  &--pdf{color: #FC573B;}
+}
+
+//extensions
+%sub-heading{
+  font-size: 20px;
+  font-weight: normal;
+  color: base.$primary-color;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+//styles
+
+.your-sales-copy{color: #4F4F4F;}
+
+.center{
+  text-align: center;
+}
+
+.emphasis{
+  color: #EB5757;;
+}
+
+.your-sales-copy{
+  @include base.menu-item-body;
+}
+
+.sales-header{
+  @include base.header-with-image;
+
+  &__nav{
+    width: 100%;
+    margin-top: 1rem;
+    @include base.flex-display(center, flex-end);
+    
+    a{color: base.$primary-color;}
+
+    .back{
+      margin-right: 1rem;
+      transform: translateY(15%);
+    }
+  }
+}
+
+.sales-copy{
+  margin: 3rem 0;
+
+  &__heading{
+    @include base.sub-heading;
+    @include base.flex-display(center, space-between);
+    color: #CDC6FF;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+  }
+
+  &__body{
+    @include base.main-content;
+    margin: 0;
+  }
+  
+  &__headline{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #EB5757;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  &__video{
+    width: 40%;
+    margin: auto;
+    min-width: 200px;
+    max-width: 450px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.access{
+  &__heading{
+    @extend %sub-heading;
+    font-size: 1rem;
+  }
+
+  &__list{
+    @include asterisk-list;
+  }
+}
+
+.bonus{
+  &__heading{
+    @extend %sub-heading;
+  }
+
+  &__list{
+    @include asterisk-list;
+  }
+}
+
+.gurantee__heading{ @extend %sub-heading; }
+
+.sales-copy__actions{
+  list-style-type: none;
+  @extend %sub-heading;
+}
+
+.message{
+  &__recipient{ 
+    font-size: 20px;
+    color: #333333;
+    font-weight: normal;
+  }
+
+  &__body{
+    padding-bottom: 1.67em;
+  }
+}
+
+.contact{
+  text-align: center;
+  margin-top: 1.67em;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 4rem;
+}
+
+.sales-copy__btns{ 
+  @include base.flex-display(center, space-between);
+  
+  &--export{
+    background-color: base.$primary-color;
+    @include base.btn
+  }
+
+  &--new{
+    @include base.btn;
+    border: 1px solid base.$primary-color;
+    color: base.$primary-color;
+    background-color: white;
+  }
+}
+
+.overlay{
+  background: rgba(25,24,71, 0.3);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 30;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  opacity: 0;
+  display: none;
+
+  .export{
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px 10px 0 0;
+    padding: 1.3rem 0.5rem;
+
+    &__heading{
+      color: base.$primary-color;
+      margin-top: 0;
+      font-size: 15px;
+      font-weight: normal;
+    }
+
+    &__formats{
+      @include base.flex-display(center, center);
+      flex-wrap: wrap;
+    }
+
+    &__format{
+      width: 10rem;
+      height: 15rem;
+      @include base.flex-display(center, unset);
+      flex-direction: column;
+
+        &--docx:hover{border: 1px solid #FFD200;}
+        &--mail:hover{border: 1px solid #54DDFE;}
+        &--pdf:hover{border: 1px solid #FC573B;}
+
+      svg{ width: 40%; }
+    }
+
+    &__name{
+      font-size: 13px;
+      @include export-colors;
+    }
+
+    &__btns{
+      margin-top: 1rem;
+      @include base.flex-display(center, flex-end);
+    }
+
+    &__btn{
+      @include base.btn;
+      padding: 8px 15px;
+      font-size: 15px;
+
+      &--cancel{background-color: #F29401;}
+      &--complete{background-color: base.$primary-color;}
+    }
+  }
+}

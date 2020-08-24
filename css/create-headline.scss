@@ -1,0 +1,211 @@
+@use "base";
+
+@include base.root;
+
+.create-headline{
+  @include base.menu-item-body;
+
+  &__header{
+    @include base.flex-display(center, space-between);
+    margin-bottom: 2rem;
+  }
+
+  &__heading{
+    @include base.heading;
+    margin-bottom: 0;
+  }
+
+  &__btn{ @include base.btn-like }
+}
+
+$table-padding: 1rem 2rem;
+
+.table{
+  .table-header{
+    @include base.flex-display(center, unset);
+    background-color: white;
+
+    &__heading{
+      padding: $table-padding;
+
+      &--headline{
+        background-color: base.$primary-color;
+        color: white;
+        
+      }
+      &--content{
+        color: #333333;
+      }
+    }
+  }
+}
+
+.headline-list{
+  margin: 0;
+  list-style: none;
+  margin-bottom: 2rem;
+  padding: 0;
+
+  &__headline{
+    padding: $table-padding;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: #191847;
+    @include base.flex-display(center, space-between);
+    
+    .headline-list__btn{
+      @include base.btn-like;
+
+      svg{min-width: 15px;}
+    }
+
+    &:nth-child(even){background: white;}
+    &:nth-child(odd){background: #F5F6F9;}
+    &:nth-child(9){ 
+      opacity: 0.3;
+      background: transparent;
+    }
+  }
+} 
+
+.table-nav{
+  color: #191847;;
+  @include base.flex-display(center, flex-end);
+
+  &__page-no{
+    display: inline-block;
+    margin: 0 0.5rem;
+    cursor: pointer;
+
+    &--active{
+      color: base.$primary-color;
+      border: 1px solid base.$primary-color;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;  
+      @include base.flex-display(center, center)
+    }
+  }
+
+  &__arrow{ cursor: pointer; }
+}
+
+.overlay{
+  background: rgba(255, 255, 255, 0.03);
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  display: none;
+}
+
+.add-headline{
+  font-size: 15px;
+  position: absolute;
+  background: white;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  display: none;
+  opacity: 0;
+
+  &__close{
+    float: right;
+    cursor: pointer;
+    @include base.btn-like;
+  }
+
+  &__label{
+    color: #191847;
+    @extend %clearfix;
+    
+    &--new{
+      display: inline-block;
+      margin: 1rem 0;
+    }
+  }
+
+  &__body{
+    border: 1px solid #CDC6FF;
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    width: 100%;
+  }
+
+  &__btns{
+    @include base.flex-display(center, flex-end);
+  }
+
+      
+  &__btn{
+    @include base.btn;
+    font-size: 15px;
+  margin-top: 1rem;
+
+    &--insert{
+      background-color: base.$primary-color;
+    }
+  }
+}
+
+.editor{
+  position: absolute;
+  right: 3%;
+  width: 400px;
+  top: 5%;
+  display: none;
+  opacity: 0;
+
+  &__close-btn{ @include base.btn-like }
+
+  &__header{
+    @include base.flex-display(center, space-between);
+    padding: 0.5rem 1.5rem;
+  }
+
+  .note-editable{
+    height: 400px;
+  }
+
+  .note-toolbar{
+    background: #191847;
+
+    button{
+      background: #191847;
+      color: white;
+      border: none;
+    }
+  }
+
+  &__btns{ 
+    @include base.flex-display(center, flex-end); 
+    margin-top: 1rem;
+  }
+
+  &__btn{
+    @include base.btn;
+    background: base.$primary-color;
+    font-size: 15px;
+    padding: 5px 15px;
+    border-radius: unset;
+  }
+
+  //summernote overrides
+  .note-editor.note-frame
+  .note-editing-area .note-codable{
+    font-family: poppins;
+  } 
+  .note-editor.note-frame 
+  .note-statusbar{
+    display: none;
+  }
+  .note-editor.note-frame{
+    border: none;
+    border-radius: unset;
+  }
+}
