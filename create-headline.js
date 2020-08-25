@@ -120,7 +120,6 @@ function switchPgBtn(e){
 function switchTables(e){
   activeTable.classList.remove("table-header__heading--active");
   let table = activeTable.innerText.trim();
-  debugger
   document.querySelector(`#${table}`).style.display = "none";
   e.target.classList.add("table-header__heading--active");
   activeTable = e.target;
