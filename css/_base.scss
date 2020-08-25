@@ -5,6 +5,7 @@ $primary-text-color: #191847;
     *{
       box-sizing: border-box;
       font-family: poppins;
+      scroll-behavior: smooth;
     }
 }
 
@@ -110,3 +111,18 @@ $primary-text-color: #191847;
   justify-content: $justify;
 }
 
+  //summernote overrides
+%summernote-override{
+  .note-editor.note-frame
+  .note-editing-area .note-codable{
+    font-family: poppins;
+  } 
+  .note-editor.note-frame 
+  .note-statusbar{
+    display: none;
+  }
+  .note-editor.note-frame{
+    border: none;
+    border-radius: unset;
+  }
+}

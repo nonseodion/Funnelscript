@@ -27,24 +27,28 @@ $table-padding: 1rem 2rem;
 
     &__heading{
       padding: $table-padding;
-
-      &--headline{
+      border: none;
+      cursor: pointer;
+      background-color: white;
+      color: #333333;
+      
+      &--active{ 
         background-color: base.$primary-color;
         color: white;
-        
-      }
-      &--content{
-        color: #333333;
       }
     }
   }
 }
 
+#Content,
+#Headlines{ display: none;}
+
 .headline-list{
-  margin: 0;
+  margin: 0; 
   list-style: none;
   margin-bottom: 2rem;
   padding: 0;
+  display: none;
 
   &__headline{
     padding: $table-padding;
@@ -114,6 +118,15 @@ $table-padding: 1rem 2rem;
   display: none;
   opacity: 0;
 
+  mark:not(:empty){
+    background-color: transparent;
+  }
+
+  mark:empty::before{
+    content: "............";
+    background-color: yellow;
+  }
+
   &__close{
     float: right;
     cursor: pointer;
@@ -130,7 +143,11 @@ $table-padding: 1rem 2rem;
     }
   }
 
-  &__body{
+  @extend %summernote-override;
+  .note-toolbar{ display: none;}
+
+  &__body,
+  .note-editor.note-frame{
     border: 1px solid #CDC6FF;
     border-radius: 10px;
     padding: 1.5rem 2rem;
@@ -195,17 +212,5 @@ $table-padding: 1rem 2rem;
     border-radius: unset;
   }
 
-  //summernote overrides
-  .note-editor.note-frame
-  .note-editing-area .note-codable{
-    font-family: poppins;
-  } 
-  .note-editor.note-frame 
-  .note-statusbar{
-    display: none;
-  }
-  .note-editor.note-frame{
-    border: none;
-    border-radius: unset;
-  }
+  @extend %summernote-override;
 }
