@@ -1,0 +1,58 @@
+@use 'base';
+
+@include base.root;
+
+.presentation-page{
+  @include base.menu-item-body;
+
+  &__heading{
+    @include base.heading;
+  }
+}
+
+.presentation__sub-heading{
+  @include base.sub-heading;
+  @include base.flex-display(center, space-between);
+
+  .presentation__btn--use-template{
+    color: #4834D4;
+  }
+}
+
+.presentation__btn{
+  @include base.btn;
+}
+
+.presentation{
+  @include base.main-content;
+  @extend %placeholder;
+
+  ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    margin-bottom: 2rem;
+
+    .detail-description{
+      color: #191847;
+    }
+  }
+
+  &__input{
+    @include base.input;
+    margin-top: 0;
+  }
+}
+
+.presentation__btns{
+  @include base.flex-display(center, flex-end);
+
+  .presentation__btn{
+    &--export{
+      background-color: base.$primary-color;
+    }
+    &--download{
+      @include base.white-btn;
+    }
+  }
+}

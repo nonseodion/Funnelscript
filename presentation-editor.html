@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Funnelscript</title>
+    <title>Funnelscript - Video Presentation Editor</title>
     <!--css stylesheet-->
     <link rel="stylesheet" href="style.css" >
+    <link href="css/presentation-editor.css" rel="stylesheet">
     <script src="admin/js/prefixfree.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> 
 </head>
@@ -121,31 +122,60 @@
               <li ><a href="settings.html">Settings</a></li>
             </ul>
         </div>
-        <div class="video-script-section">
-            <h2>Start Generating Your Video Scripts</h2>
-            <p>Create your video scripts using done 
-                for you templates.</p>
-            <div class="top-control clearfix">
-                <input type="text" placeholder="Type Script name">
-                <a class="use-template-btn">Use Template</a>
+        <div class="presentation-page">
+            <h2 class="presentation-page__heading">Quick start to Creating Your Presentation</h2>
+            <div class="presentation__body">
+              <div class="presentation__sub-heading">
+                  <h4>Start Filling Your Presentation</h4>
+                  <button class="presentation__btn presentation__btn--use-template">Use Template</button>
+                </div>
+                <div class="presentation">
+                <ul >
+                  <li class="presentation__detail">
+                    <label>
+                      <p class="detail-description">Video Presentation name</p>
+                      <input type="text" placeholder="Enter Presentation name" id="script-name" class="presentation__input">
+                    </label>
+                  </li>
+                  <li class="presentation__detail">
+                    <label>
+                      <p class="detail-description">Video title</p>
+                      <input type="text" placeholder="Enter Presentation name" id="script-name" class="presentation__input">
+                    </label>
+                  </li>
+                  <li class="presentation__detail">
+                    <label>
+                      <p class="detail-description">Video title</p>
+                      <input type="text" placeholder="Enter Presentation name" id="script-name" class="presentation__input">
+                    </label>
+                  </li>
+                  <li class="presentation__detail">
+                    <label>
+                      <p class="detail-description">Video title</p>
+                      <input type="text" placeholder="Enter Presentation name" id="script-name" class="presentation__input">
+                    </label>
+                  </li>
+                  <li class="presentation__detail">
+                    <label>
+                      <p class="detail-description">Video title</p>
+                      <input type="text" placeholder="Enter Presentation name" id="script-name" class="presentation__input">
+                    </label>
+                  </li>
+                  <li class="presentation__detail">
+                    <label>
+                      <p class="detail-description">Video title</p>
+                      <input type="text" placeholder="Enter Presentation name" id="script-name" class="presentation__input">
+                    </label>
+                  </li>
+                </ul>
+                
+                <div class="presentation__btns">
+                  <button class="presentation__btn presentation__btn--export" type="button" class="export">Export</button>
+                  <button class="presentation__btn presentation__btn--download" type="button" class="bottom-control">Download</button>
+                </div>
+              </div>
             </div>
-            <label for="title">Video Title</label>
-            <textarea rows="1" type="text" id="title" name="title" placeholder="Sales video"></textarea>
-            <label for="title">Video Title</label>
-            <textarea rows="1" type="text" id="title" name="title" placeholder="Sales video"></textarea>
-            <label for="title">Video Title</label>
-            <textarea rows="1" type="text" id="title" name="title" placeholder="Sales video"></textarea>
-            <label for="title">Video Title</label>
-            <textarea rows="1" type="text" id="title" name="title" placeholder="Sales video"></textarea>
-            <label for="title">Video Title</label>
-            <textarea rows="1" type="text" id="title" name="title" placeholder="Sales video"></textarea>
-            <label for="title">Video Title</label>
-            <textarea rows="1" type="text" id="title" name="title" placeholder="Sales video"></textarea>
-            <div>
-                <a class="export">Export Script</a>
-                <a class="bottom-control">Download Presentation</a>
-            </div>
-            <aside class="video-script-section-overlay">
+            <section class="video-script-section-overlay">
                 <section class="video-script-templates">
                     <div class="heading">
                         <span>Add section to your script</span>
@@ -263,9 +293,10 @@
                     </div>
                     
                 </section>
-            </aside>
+            </section>
         </div>
+    </section>
     <script src="app.js"></script>
-    <script src="video-script-editor.js"></script>
+    <script src="presentation-editor.js"></script>
 </body>
 </html>

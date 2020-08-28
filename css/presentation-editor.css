@@ -1,0 +1,90 @@
+.presentation ::placeholder {
+  color: #4834D4;
+  opacity: 0.5;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: poppins;
+  scroll-behavior: smooth;
+}
+
+.presentation-page {
+  background-color: #E5E5E5;
+  position: relative;
+  z-index: 10;
+  padding: 3rem;
+}
+.presentation-page__heading {
+  color: #4834D4;
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.presentation__sub-heading {
+  background: linear-gradient(90deg, #4776E6 13.04%, #8E54E9 100%);
+  border-radius: 10px 10px 0 0;
+  height: 3.8rem;
+  padding: 0 1.5rem;
+  color: #F5F6F9;
+  font-size: 17px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.presentation__sub-heading .presentation__btn--use-template {
+  color: #4834D4;
+}
+
+.presentation__btn {
+  margin-left: 1rem;
+  padding: 10px 23px;
+  font-weight: 500;
+  color: #F5F6F9;
+  border: none;
+  border-radius: 3px;
+  font-family: Karla;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.presentation {
+  padding: 2rem 3rem 2rem;
+  background-color: white;
+}
+.presentation ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  margin-bottom: 2rem;
+}
+.presentation ul .detail-description {
+  color: #191847;
+}
+.presentation__input {
+  border: 1px solid #CDC6FF;
+  height: 2.7rem;
+  padding: 0 1.5rem;
+  font-size: 20px;
+  width: 100%;
+  outline-color: #8a7aff;
+  margin-top: 1.5rem;
+  margin-top: 0;
+}
+
+.presentation__btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.presentation__btns .presentation__btn--export {
+  background-color: #4834D4;
+}
+.presentation__btns .presentation__btn--download {
+  border: 1px solid #4834D4;
+  color: #4834D4;
+  background-color: white;
+}
+
+/*# sourceMappingURL=presentation-editor.css.map */
