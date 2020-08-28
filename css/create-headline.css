@@ -243,6 +243,9 @@
 .editor .note-editable {
   height: 400px;
 }
+.editor .note-editable mark {
+  background-color: transparent;
+}
 .editor .note-toolbar {
   background: #191847;
 }

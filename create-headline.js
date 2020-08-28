@@ -6,6 +6,7 @@ let activePage = document.querySelector(`${activeTable.id} #page1`);
 activePage.style.display = "block";
 let activeBtn;
 
+
 //Summernote Initialization
 summerConfig = {
   tabsize: 2,
@@ -23,6 +24,7 @@ $('#summernote').summernote('poppins', 'Arial');
 //summernote for user headline
 $('#new-headline').summernote(summerConfig);
 const headlineNote = document.querySelector(".add-headline .note-editable");
+const placeholdersInput = document.querySelector(".add-headline .note-editable");
 
 //transition with gsap
 const timelineDefault = {defaults: {duration: 0.4 }, paused: true, reversed: true};
@@ -80,7 +82,8 @@ function playAnimation(tl){
 //show headline or content in editor
 function showInEditor(){
   playAnimation(t1);
-  const headline = this.previousSibling.textContent.trim().replace(/(^|\s)\.{1,}(\s|$)/g, " <mark></mark> ");
+  const headline = this.previousElementSibling.outerHTML.trim()
+    .replace(/(?<=>|^|\s)\.{1,}(?=\s|$|<)/g, " <mark></mark> ");
   review.innerHTML = headline;
   placeholders = review.querySelectorAll("mark");
 }
@@ -98,6 +101,14 @@ function syncReview(e){
   setTimeout(sync, 0.1);
 }
 
+//remove overlay
+function removeOverlay(e){
+  
+  if (this !== e.target) return;
+    placeholdersInput.innerHTML = "";
+    t1.reverse();
+    t2.reverse();
+}
 
 function switchPages (page){
   activePage.style.display = "none";
@@ -139,6 +150,7 @@ document.querySelectorAll(".headline-list__btn").forEach(
   btn => btn.addEventListener("click", showInEditor.bind(btn, t1))
 )
 document.querySelector(".add-headline__close").addEventListener("click", () =>{
+  placeholdersInput.innerHTML = "";
   playAnimation(t1);
 })
 
@@ -148,15 +160,15 @@ document.querySelector(".add-headline__btn--insert").addEventListener("click", (
   playAnimation(t2);
 })
 document.querySelector(".editor__close-btn").addEventListener("click", function(){
-  document.querySelector(".add-headline .note-editable").innerHTML = "";
-  document.querySelector(".editor .note-editable").innerHTML = "";
-  playAnimation(t2)
-}
-);
+  placeholdersInput.innerHTML = "";
+  playAnimation(t2);
+});
+
+document.querySelector(".overlay").addEventListener("click", removeOverlay);
 
 //insert headline/content into editor
 document.querySelector(".add-headline__btn--insert").addEventListener("click", () =>{
-  document.querySelector(".editor .note-editable").textContent = review.textContent;
+  document.querySelector(".editor .note-editable").innerHTML += review.innerHTML;
 })
 
 //make table header active

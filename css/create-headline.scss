@@ -187,6 +187,7 @@ $table-padding: 1rem 2rem;
 
   .note-editable{
     height: 400px;
+    mark { background-color: transparent; }
   }
 
   .note-toolbar{
