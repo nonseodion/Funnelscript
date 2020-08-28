@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>sales-script-builder</title>
+    <title>FunnelScript - Sales Script Builder</title>
     <!--css stylesheet-->
     <link rel="stylesheet" href="style.css" >
     <link rel="stylesheet" href="css/sales-script-builder.css">
@@ -176,7 +176,6 @@
                   </video>
                 </div>
                   <p class="video-caption">Play video to see how it works in action</p>
-                
               </div>
             </div>
 
@@ -187,6 +186,7 @@
               </div>
               <div class="builder-form__body">
                 <ul >
+                  <p class="warning">Complete the step before proceeding</p>
                   <li class="form-detail">
                     <label for="audience" class="form-detail__description">
                       <p class="form-detail__description form-detail__description--head">
@@ -386,9 +386,23 @@
       document.querySelector(".builder-form__heading button")
         .addEventListener("click", fillTemplate);
 
-      function checkForm(){
-        
+      //validate form
+      let stopClick = false;
+
+      function validateForm(e){
+        document.querySelectorAll(".form-detail__input").forEach(
+          input => {
+            if(!input.value) {
+              document.querySelector(".warning").style.display = "block";
+              e.preventDefault();
+              document.documentElement.scrollTop = 0;
+            }
+          }
+        )
       }
+
+      //document.querySelector(".form-btn--build").addEventListener("mousedown", validateForm);
+      document.querySelector(".form-btn--build").addEventListener("click", validateForm);
     </script>
 </body>
 </html>

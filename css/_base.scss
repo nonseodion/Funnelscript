@@ -2,11 +2,11 @@ $primary-color: #4834D4;
 $primary-text-color: #191847;
 
 @mixin root{
-    *{
-      box-sizing: border-box;
-      font-family: poppins;
-      scroll-behavior: smooth;
-    }
+  *{
+    box-sizing: border-box;
+    font-family: poppins;
+    scroll-behavior: smooth;
+  }
 }
 
 @mixin menu-item-body {
@@ -74,6 +74,12 @@ $primary-text-color: #191847;
   cursor: pointer;
 }
 
+@mixin white-btn {
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  background-color: white;
+}
+
 @mixin btn-like{
   cursor: pointer;
   min-width: 15px;
@@ -124,5 +130,17 @@ $primary-text-color: #191847;
   .note-editor.note-frame{
     border: none;
     border-radius: unset;
+  }
+}
+
+%warning{
+  color: #EB5757;
+  display: none;
+}
+
+%placeholder{
+  ::placeholder{
+    color: #4834D4;
+    opacity: 0.5;
   }
 }

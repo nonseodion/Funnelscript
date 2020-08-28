@@ -823,50 +823,6 @@ h2.menu-item-view--heading,
     transform: scale(2,2);
 }
 
-/*Video script Editor*/
-.video-script-section{
-    padding-bottom: 2rem;
-}
-.video-script-section .use-template-btn{
-    float: right;
-}
-
-.video-script-section label{
-    display: block;
-    margin-top: 1rem;
-}
-
-.video-script-section textarea{
-    width: 80%;
-    margin: 0 0 1rem;
-}
-
-.video-script-template--body{
-    padding-top: 1rem;
-    display: none;
-    right: 0;
-    padding-bottom: 1rem;
-}
-
-.video-script-template--body.open{
-    display: block;
-}
-
-.video-script-template--body p{
-    margin: 0;
-    font-size: 16px;
-}
-
-.video-script-template--body p{
-    font-size: 17px;
-    color: #000000;
-}
-.video-script-template--body span{
-    display: inline-block;
-    margin-top: rem;
-    margin-bottom: 1.5rem;
-}
-
 
 /*Offer Generator*/
 .offer-generator-section .status-create-offer{

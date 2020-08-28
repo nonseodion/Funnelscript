@@ -50,10 +50,7 @@
       @include base.add;
     }
 
-    ::placeholder{
-      color: #4834D4;
-      opacity: 0.5;
-    }
+    @extend %placeholder;
   }
 
   .email-btns{
@@ -70,4 +67,8 @@
       }
     }
   }
+}
+
+.warning{
+  @extend %warning;
 }

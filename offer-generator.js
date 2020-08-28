@@ -195,9 +195,7 @@ function fixStatus(){
     }
 
     return fix;
-}
-
-
+}          
 
 //saveStatus
 window.addEventListener("beforeunload", () => {
@@ -218,5 +216,4 @@ window.addEventListener("beforeunload", () => {
 
     Cookies.set("bonuses", `${bonuses}`);
     }
-    
 )

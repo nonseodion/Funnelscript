@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Email-copy</title>
+    <title>FunnelScript - Email Copy</title>
     <!--css stylesheet-->
     <link rel="stylesheet" href="style.css" >
     <link rel="stylesheet" href="css/email-style.css">
@@ -135,6 +135,7 @@
             </div>
             
             <div class="email-content">
+              <p class="warning">Complete the step before proceeding</p>
               <div class="email-detail">
                 <p class="email-detail__heading">&nbsp;NAME OF PROFILE</h4>
                 <p class="email-detail__heading">What name do you want to use in saving this profile?</p>
@@ -149,7 +150,9 @@
                 <p class="email-detail__heading">&nbsp;YOUR TAG LINE</p>
                 <p class="email-detail__heading">Your title, which will appear on the bottom of sender name</p>
                 <input type='text' class="email-detail__input" placeholder="CEO, mybuzzapp"></input>
-              </div>
+              </div>Complete the step before proceeding
+
+              Next
               <div class="email-detail">
                 <p class="email-detail__heading">&nbsp;YOUR EXPERIENCE LEVEL</p>
                 <p class="email-detail__heading">The sender of this email is a/an</p>
@@ -168,6 +171,7 @@
             </div>
             
             <div class="email-content">
+              <p class="warning">Complete the step before proceeding</p>
               <div class="email-detail">
                 <p class="email-detail__heading">&nbsp;NAME OF PRODUCT</h4>
                 <p class="email-detail__heading">What is the name of the product/service you want to sell?</p>
@@ -231,6 +235,7 @@
             </div>
             
             <div class="email-content">
+              <p class="warning">Complete the step before proceeding</p>
               <div class="email-detail">
                 <p class="email-detail__heading">&nbsp;FRUSTRATIONS FACED BY YOUR CUSTOMERS</h4>
                 <p class="email-detail__heading">Without using my product/service, you will find it difficult to</p>
@@ -285,6 +290,7 @@
             </div>
             
             <div class="email-content">
+              <p class="warning">Complete the step before proceeding</p>
               <div class="email-detail">
                 <p class="email-detail__heading">&nbsp;GURANTEE FOR YOUR PRODUCT</h4>
                 <p class="email-detail__heading">I am offering a gurantee on this product for </p>
@@ -314,6 +320,7 @@
             </div>
             
             <div class="email-content">
+              <p class="warning">Complete the step before proceeding</p>
               <div class="email-detail">
                 <p class="email-detail__heading">&nbsp;SCARCITY</h4>
                 <p class="email-detail__heading">The offer will expire after</p>
@@ -332,63 +339,8 @@
               </div>
             </div>
           </form>
-
-          
-
         </div>
     <script src="app.js"></script>
-    <script>
-      let activeForm = document.querySelector("#step1");
-      activeForm.style.display = "block";
-      
-      const nextBtns = document.querySelectorAll(".email-btns__btn--next");
-      const backBtns = document.querySelectorAll(".email-btns__btn--back");
-
-      document.querySelectorAll(".email-btns__btn").forEach(btn => {
-        btn.addEventListener("click", () => setTimeout(() => document.documentElement.scrollTop = 0, 10));
-      });
-
-      //add input 
-      function addInput (){
-        this.parentNode.insertAdjacentHTML("beforebegin", '<input type="text" class="email-detail__input"></input>');
-      }
-      document.querySelectorAll(".email-detail__add").forEach( add => add.addEventListener("click", addInput));
-
-      //also next
-      function validateForm(e){
-        let next = [...nextBtns].indexOf(this) + 2;
-        let stop = false;
-        document.querySelectorAll(`#step${next - 1} input[type = text]`).forEach(
-          input => {
-            debugger
-            if(!input.value){
-              e.stopImmediatePropagation();
-              stop = true;
-            }
-          }
-        )
-        if(stop) return;
-        if(next >= nextBtns.length + 1) return;
-        setActiveForm(document.querySelector(`#step${next}`));
-      }
-
-      //back
-      function goBack(){
-        let prev = [...backBtns].indexOf(this) + 1;
-        setActiveForm(document.querySelector(`#step${prev}`));
-      }
-
-      function setActiveForm(form){
-        activeForm.style.display = "none";
-        activeForm = form;
-        activeForm.style.display = "block";
-      }
-
-      document.querySelectorAll(".email-btns__btn--next").forEach(
-        btn => btn.addEventListener("click", validateForm));
-
-      document.querySelectorAll(".email-btns__btn--back").forEach(
-        btn => btn.addEventListener("click", goBack));
-    </script>
+    <script src="email-copy.js"></script>
 </body>
 </html>

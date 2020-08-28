@@ -159,9 +159,7 @@
 
   &--new{
     @include base.btn;
-    border: 1px solid base.$primary-color;
-    color: base.$primary-color;
-    background-color: white;
+    @include base.white-btn;
   }
 }
 
@@ -227,7 +225,6 @@
       font-size: 15px;
 
       &--cancel{background-color: #F29401;}
-      &--complete{background-color: base.$primary-color;}
     }
   }
 }
