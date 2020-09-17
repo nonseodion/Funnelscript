@@ -200,7 +200,7 @@
                   </li>
 
                   <li class="form-detail">
-                    <label for="writer-name">
+                    <label for="seller-name">
                       <p class="form-detail__description form-detail__description--head">
                         What is your name?:
                       </p>
@@ -208,7 +208,7 @@
                         (Ex: Jim Edwards)
                       </p>
                     </label>
-                    <input type="text" id="writer-name" class="form-detail__input">
+                    <input type="text" id="seller-name" class="form-detail__input">
                   </li>
 
                   <li class="form-detail">
@@ -223,7 +223,7 @@
                     <input type="text" id="headline" class="form-detail__input">
                   </li>
 
-                  <li class="form-detail">
+                  <li class="form-detail" id="benefits">
                     <label for="benefit" class="form-detail__description">
                       <p class="form-detail__description form-detail__description--head">
                         The #1 BIGGEST benefit to them of what you have to offer:
@@ -236,8 +236,8 @@
                     <p><button type="button" class="form-detail__add">+</button> Add another benefit of your offer. Add as much as you can.</p>
                   </li>
 
-                  <li class="form-detail">
-                    <label for="want" class="form-detail__description">
+                  <li class="form-detail" >
+                    <label class="form-detail__description">
                       <p class="form-detail__description form-detail__description--head">
                         Type of access they get:
                       </p>
@@ -245,7 +245,7 @@
                         "You get _____." (Ex: Instant Access, Instant Download, VIP Membership, etc.)
                       </p>
                     </label>
-                    <input type="text" id="want" class="form-detail__input">
+                    <input type="text" id="access" class="form-detail__input">
                   </li>
 
                   <li class="form-detail">
@@ -260,7 +260,7 @@
                     <input type="text" id="product-name" class="form-detail__input">
                   </li>
 
-                  <li class="form-detail">
+                  <li class="form-detail" id="access-list">
                     <label for="perks" class="form-detail__description">
                       <p class="form-detail__description form-detail__description--head">
                         #1 Bullet describing what they get:
@@ -271,7 +271,7 @@
                     <p><button type="button" class="form-detail__add">+</button> Add more description of what they’ll get</p>
                   </li>
 
-                  <li class="form-detail">
+                  <li class="form-detail" id="bonus-list">
                     <label for="reason" class="form-detail__description">
                       <p class="form-detail__description form-detail__description--head">
                         #1 Bonus OR Reason to act now:
@@ -298,7 +298,7 @@
                   </li>
 
                   <li class="form-detail">
-                    <label for="price-reason" class="form-detail__description">
+                    <label for="price-drop-reason" class="form-detail__description">
                       <p class="form-detail__description form-detail__description--head">
                         Reason you are giving them a price drop:
                       </p>
@@ -306,7 +306,7 @@
                         "I am giving you a special price _____." (Ex: as part of a special marketing test, as one of the next 22 Buyers, for this week only)
                       </p>
                     </label>
-                    <input type="text" id="price-reason" class="form-detail__input">
+                    <input type="text" id="price-drop-reason" class="form-detail__input">
                   </li>
 
                   <li class="form-detail">
@@ -322,7 +322,7 @@
                   </li>
 
                   <li class="form-detail">
-                    <label for="action-call" class="form-detail__description">
+                    <label for="CTA" class="form-detail__description">
                       <p class="form-detail__description form-detail__description--head">
                         Your Call to action for "Click Here Now To____________":
                       </p>
@@ -330,7 +330,7 @@
                         (Ex: Download Now, Claim Your Copy, Register Now, Get Your Priority Access, etc.)
                       </p>
                     </label>
-                    <input type="text" id="action-call" class="form-detail__input">
+                    <input type="text" id="CTA" class="form-detail__input">
                   </li>
 
                   <li>
@@ -355,54 +355,6 @@
         </div>
     </section>
     <script src="app.js"></script>
-    <script>
-      //add Input
-      function addInput (){
-        this.parentNode.insertAdjacentHTML("beforebegin", '<input class="form-detail__input"></input>');
-      }
-      document.querySelectorAll(".form-detail__add").forEach( add => add.addEventListener("click", addInput));
-
-      //autofill
-      const templates = [
-        "For Sale By Owners",
-        "Jim Edwards",
-        "How to Avoid Paying $12,913 or More in Real Estate Commissions by Selling Without an Agent!",
-        "save the commission",
-        "instant Access",
-        "Glucosamene Powder",
-        "How to get FREE and Low-Cost Advertising",
-        'Bonus "10 secrets to success"',
-        "$97",
-        "As one of the next 22 Buyers, for this week only",
-        "$47, over 50% OFF!",
-        "Download Now",
-        "Other sellers will leave you in the dust"
-      ]
-
-      function fillTemplate(){
-        document.querySelectorAll(".form-detail__input:first-of-type")
-          .forEach((input, index) => input.value = templates[index]);
-      }
-      document.querySelector(".builder-form__heading button")
-        .addEventListener("click", fillTemplate);
-
-      //validate form
-      let stopClick = false;
-
-      function validateForm(e){
-        document.querySelectorAll(".form-detail__input").forEach(
-          input => {
-            if(!input.value) {
-              document.querySelector(".warning").style.display = "block";
-              e.preventDefault();
-              document.documentElement.scrollTop = 0;
-            }
-          }
-        )
-      }
-
-      //document.querySelector(".form-btn--build").addEventListener("mousedown", validateForm);
-      document.querySelector(".form-btn--build").addEventListener("click", validateForm);
-    </script>
+    <script src="sales-script-builder.js"></script>
 </body>
 </html>
