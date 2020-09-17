@@ -14,6 +14,8 @@
     <script src="admin/js/prefixfree.min.js"></script>
     <!--Polyfill-->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js" integrity="sha512-gYUM+7JjtBqPPGOgwgOZ+NwjGl+11/EP124oB+ihjlBpLgP5LTh7R/Iwcdy//cgH+QzrjspBiJI5iUegTNww3w==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.min.js" integrity="sha512-VIF8OqBWob/wmCvrcQs27IrQWwgr3g+iA4QQ4hH/YeuYBIoAUluiwr/NX5WQAQgUaVx39hs6l05cEOIGEB+dmA==" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
@@ -42,7 +44,7 @@
                 Log out
               </div>
             </div>
-    </header>Complete the step before proceeding
+    </header>
     <section class="dashboard small-menu">
         <div class="dashboard--menu--farleft small-menu">
                         <ul>
@@ -137,7 +139,7 @@
           <div class="sales-copy">
             <div class="sales-copy__heading">Your sales copy is ready!!!</div>
             <div class="sales-copy__body">
-              <p class="sales-copy__headline">"How To Avoid Paying $6,823... $9,128... $12,913 Or More In Real Estate Commissions By Selling Without An Agent!"<p>
+              <p class="sales-copy__headline" id="headline">"How To Avoid Paying $6,823... $9,128... $12,913 Or More In Real Estate Commissions By Selling Without An Agent!"<p>
               <p class="center">Create your VSL using the PPT Video Sales Letter Script OR the VSL Wizard Software</p>
               <p class="center">"&lt;&lt;Video Sales Letter Goes Here&gt;&gt;"</p>
               <video
@@ -156,11 +158,11 @@
                 </p>
               </video>
               
-              <p class="sales-copy__bonuses"><span class="emphasis">Yes!</span> I'm ready to save the commission, keep more money in your pocket for downpayment on your next house, and keep control of the transaction and save time!</p>
+              <p class="sales-copy__bonuses"><span class="emphasis">Yes!</span> I'm ready to <span id="benefits">save the commission, keep more money in your pocket for downpayment on your next house, and keep control of the transaction and save time!</span>.</p>
               
               <div class="sales-copy__access">
-                <h5 class="access__heading">I Understand That When I Act Now, I get Instant Access to "Selling Your Home Alone", which includes:</h5>
-                <ul class="access__list">
+                <h5 class="access__heading">I Understand That When I Act Now, I get <span id="access">Instant Access</span> to "<span id="product-name">Selling Your Home</span>", which includes:</h5>
+                <ul class="access__list" id="access-list">
                   <li ><span class="pointer">*</span>How to get FREE and Low-Cost Advertising...</li>
                   <li ><span class="pointer">*</span>How to Negotiate a Win-Win Sale with nervous buyers... </li>
                   <li ><span class="pointer">*</span>The absolute best way to Use the Internet to Sell Your Home...</li>
@@ -172,7 +174,7 @@
 
               <div class="sales-copy__bonuses bonus">
                 <h5 class="bonus__heading">I Also Understand that When<br>I ACT NOW, I Also Get...</h5>
-                <ul class="bonus__list">
+                <ul class="bonus__list" id="bonus-list">
                   <li ><span class="pointer">*</span>Bonus Video: "How To Offer Owner Financing Even If You Still Owe Money On Your Property"</li>
                   <li ><span class="pointer">*</span>Bonus Report: "10 Secrets to Find A Cash Buyer This Weekend"</li>
                   <li ><span class="pointer">*</span>50% INSTANT Savings OFF The Regular Price</li>
@@ -181,36 +183,34 @@
 
               <div class="sales-copy__guarantee">
                 <h5 class="gurantee__heading">100% Guranteed</h5>
-                <p>If Selling Your Home Alone doesn't show me exactly how to save the commission... if it doesn't 
+                <p class="gurantee__body">If <span id="product-name">Selling Your Home Alone</span> doesn't show me exactly how to save the commission... if it doesn't 
                   take me by the hand, step-by-step to keep more money in your pocket for downpayment on your next house... 
                   or if it fails to help me keep control of the transaction and save time, then I understand that I will 
                   receive a full refund, No Questions Asked!
                 </p>
               </div>
 
-              <p class="sales-copy__price">I understand that the regular price for all this is $97...</p>
+              <p class="sales-copy__price">I understand that the regular price for all this is <span id="regular-price">$97</span>...</p>
               <p class="sales-copy__price">
-                But, when I act now, as part of a special marketing test, I get everything for only $47 - over 50% OFF!!
+                <span id="price-drop-reason">But, when I act now, as part of a special marketing test, I get everything for only</span> <span id="special-price">$47 - over 50% OFF!!</span>
               </p>
 
-              <ul class="sales-copy__actions">
-                <li>(Option #1) Click Here to Download Now</li>
-                <li>(Option #2) Click Here to Save The Commission</li>
-                <li>(Option #3) Click Here to get Selling Your Home Alone</li>
-              </ul>
+              <p class="sales-copy__actions" id="CTA">
+                Click Here Now to Download
+              </p>
 
               <div class="sales-copy__message message">
                 <p>To Your Success,</p>
-                <h5 class="message__recipient">Jim Edwards</h5>
+                <h5 class="message__recipient" id="seller-name">Jim Edwards</h5>
                 <p class="message__body">
-                  P.S. - Every minute you wait to get "Selling Your Home Alone" is another minute buyers will walk 
-                  right on by your house and buy from a Realtor. Put the power of "Selling Your Home Alone" to work 
-                  for you so you can quickly and easily save the commission, keep more money in your pocket for 
-                  downpayment on your next house, and keep control of the transaction and save time! 
+                  P.S. - Every minute you wait to get <span id="product-name">Selling Your Home Alone</span> is another minute <span id="negative"> buyers will walk 
+                  right on by your house and buy from a Realtor</span>. Put the power of "<span id="product-name">Selling Your Home Alone</span>" to work 
+                  for you so you can quickly and easily <span id="benefits">save the commission, keep more money in your pocket for downpayment 
+                    on your next house, and keep control of the transaction and save time!</span>
                 </p>
                 <p class="message__body">
                   P.P.S. - But don't just take my word for it... take a look at these (statistics / testimonials 
-                  / endorsements / quotes /comments / reviews) from happy For Sale By Owners just like you!
+                  / endorsements / quotes /comments / reviews) from happy <span id="audience">For Sale By Owners</span> just like you!
                 </p>
 
                 <p class="contact">
@@ -267,18 +267,6 @@
         </section>
     </section>
     <script src="app.js"></script>
-    <script>
-      //export modal animation
-      const tween = gsap.timeline({paused: true, reversed: true});
-      tween.to(".overlay", {display: "block", opacity: 1});
-
-      document.querySelector(".sales-copy__btns--export").addEventListener("click", () => { 
-        tween.reversed() ? tween.play() : tween.reverse(); 
-      })
-      document.querySelector(".export__btn--cancel").addEventListener("click", () => { 
-        tween.reversed() ? tween.play() : tween.reverse(); 
-      })
-
-    </script>
+    <script src="your-sales-copy.js"></script>
 </body>
 </html>
