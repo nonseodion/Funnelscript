@@ -26,7 +26,7 @@ document.querySelector(".export__btn--cancel").addEventListener("click", () => {
   tween.reversed() ? tween.play() : tween.reverse(); 
 })
 
-
+//export PDF
 function getPDF(){
   return {
     content: [
@@ -79,8 +79,8 @@ function getPDF(){
           style: "body",
           bold: true
       },
-      `\n\n${document.querySelector(".message__body").textContent}`,
-      `\n${document.querySelector(".message__body:nth-of-type(3)").textContent}`,
+      `${document.querySelector(".message__body").textContent}`,
+      `${document.querySelector(".message__body:nth-of-type(3)").textContent}`,
       
       {
           text: "\nYour Company Contact Information, Phone, Email, Help Desk, Legal Disclaimers, Etc. Go Here",
@@ -106,3 +106,103 @@ function downloadPDF(){
 }
 
 document.querySelector(".export__format.export__format--pdf").addEventListener("click", downloadPDF);
+
+//export DOCX
+function generate() {
+  const doc = new docx.Document();
+
+  doc.addSection({
+      properties: {},
+      children: [
+          new docx.Paragraph({
+            text: `${document.querySelector(".sales-copy__headline").textContent}`,
+            heading: docx.HeadingLevel.HEADING_1,
+            alignment: docx.AlignmentType.CENTER,
+          }),
+          new docx.Paragraph({
+            text: `${document.querySelector(".sales-copy__bonuses").textContent}`,
+          }),
+          new docx.Paragraph({
+            text: `${document.querySelector(".access__heading").textContent}`,
+            heading: docx.HeadingLevel.HEADING_3,
+            alignment: docx.AlignmentType.CENTER,
+          }),
+          
+          ...[...document.querySelectorAll(".access__list li")].map(item => new docx.Paragraph({text: item.textContent})),
+
+          new docx.Paragraph({
+            text: document.querySelector(".bonus__heading").textContent,
+            heading: docx.HeadingLevel.HEADING_3,
+            alignment: docx.AlignmentType.CENTER,
+          }),
+
+          ...[...document.querySelectorAll(".access__list li")].map(item => new docx.Paragraph({text: item.textContent})),
+
+          new docx.Paragraph({
+            text: document.querySelector(".gurantee__heading").textContent,
+            heading: docx.HeadingLevel.HEADING_3,
+            alignment: docx.AlignmentType.CENTER,
+          }),
+          new docx.Paragraph({
+            text: document.querySelector(".gurantee__body").innerText,
+          }),        
+          new docx.Paragraph({
+            spacing: {
+              before: 300,
+            },
+            text: document.querySelector(".sales-copy__price").textContent,
+          }),
+          new docx.Paragraph({
+            spacing: {
+              before: 300,
+            },
+            text: document.querySelector("#price-drop-reason").textContent,
+          }),
+          new docx.Paragraph({
+            text: document.querySelector(".sales-copy__actions").textContent,
+            heading: docx.HeadingLevel.HEADING_3,
+            alignment: docx.AlignmentType.CENTER,
+          }),
+          new docx.Paragraph({
+            spacing: {
+              before: 300,
+              after: 400,
+            },
+            text: "To Your Success,",
+          }),
+          new docx.Paragraph({
+            text: document.querySelector(".message__recipient").textContent,
+            bold: true,
+          }),
+          new docx.Paragraph({
+            spacing: {
+              before: 200,
+            },
+            text: document.querySelector(".message__body").innerText,
+          }),
+          new docx.Paragraph({
+            spacing: {
+              before: 200,
+            },
+            text: document.querySelector(".message__body:nth-of-type(3)").innerText,
+            
+          }),
+          new docx.Paragraph({
+            spacing: {
+              before: 300,
+            },
+            text:  `Your Company Contact Information, Phone, Email, Help Desk, Legal Disclaimers, Etc. Go Here `,
+            alignment: docx.AlignmentType.CENTER,
+            bold: true,
+          })
+      ],
+  });
+
+  docx.Packer.toBlob(doc).then(blob => {
+      console.log(blob);
+      saveAs(blob, "example.docx");
+      console.log("Document created successfully");
+  });
+}
+
+document.querySelector(".export__format.export__format--docx").addEventListener("click", generate);
