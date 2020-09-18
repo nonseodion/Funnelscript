@@ -71,4 +71,3 @@ function collectInput(){
   sessionStorage.setItem("userInputs", JSON.stringify(userInputs));
 }
 window.addEventListener("beforeunload", collectInput);
-
