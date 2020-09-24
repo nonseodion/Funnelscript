@@ -112,4 +112,60 @@
   background: #F29401;
 }
 
+.overlay {
+  background: rgba(25, 24, 71, 0.3);
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  display: none;
+  opacity: 0;
+}
+
+.editor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  min-height: auto;
+  border-radius: unset;
+}
+.editor__header {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.editor__close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: none;
+}
+.editor .note-toolbar {
+  background: #191847;
+  border-radius: 0;
+}
+.editor .note-toolbar button {
+  background: #191847;
+  color: white;
+  border: none;
+}
+.editor .note-editor.note-frame .note-editing-area {
+  overflow: auto;
+  height: 400px;
+  max-height: 80vh;
+}
+.editor .note-editor.note-frame .note-statusbar {
+  display: none;
+}
+.editor .note-editor.note-frame {
+  border: none;
+}
+
 /*# sourceMappingURL=email-style.css.map */

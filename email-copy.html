@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FunnelScript - Email Copy</title>
-    <!--css stylesheet-->
-    <link rel="stylesheet" href="style.css" >
-    <link rel="stylesheet" href="css/email-style.css">
+    <!--Gsap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
     <!--Prefix-->
     <script src="admin/js/prefixfree.min.js"></script>
     <!--Polyfill-->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> 
+    <!--Summernote-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+    <!--css stylesheet-->
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="css/email-style.css">
 </head>
 <body>
     <header class="header">
@@ -150,9 +157,9 @@
               <p class="email-detail__heading">&nbsp;YOUR TAG LINE</p>
               <p class="email-detail__heading">Your title, which will appear on the bottom of sender name</p>
               <input type='text' class="email-detail__input" placeholder="CEO, mybuzzapp"></input>
-            </div>Complete the step before proceeding
+            </div>
 
-            Next
+            
             <div class="email-detail">
               <p class="email-detail__heading">&nbsp;YOUR EXPERIENCE LEVEL</p>
               <p class="email-detail__heading">The sender of this email is a/an</p>
@@ -335,11 +342,27 @@
 
             <div class="email-btns">
               <button type="button" class="email-btns__btn email-btns__btn--back" >Back</button>
-              <button type="submit" class="email-btns__btn email-btns__btn--next">Generate email</button>
+              <button type="button" class="email-btns__btn email-btns__btn--next" id="generate-btn">Generate email</button>
             </div>
           </div>
         </div>
       </form>
+    </div>
+    <div class="overlay">
+      <div class="editor">
+        <div class="editor__header">
+          Editor
+          <button class="editor__close-btn">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="9" cy="9" r="9" fill="#CDC6FF"/>
+              <path d="M12.6004 5.3999L5.40039 12.5999M5.40039 5.3999L12.6004 12.5999" stroke="white" stroke-width="0.642857" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>            
+          </button>
+        </div>
+        <div id="summernote">
+          
+        </div>
+      </div>
     </div>
     <script src="app.js"></script>
     <script src="email-copy.js"></script>

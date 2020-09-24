@@ -50,3 +50,50 @@ document.querySelectorAll(".email-btns__btn--next").forEach(
 
 document.querySelectorAll(".email-btns__btn--back").forEach(
   btn => btn.addEventListener("click", goBack));
+
+  //Summernote Initialization
+summerConfig = {
+  tabsize: 2,
+  toolbar: [
+    ['style', ['style']],
+    ['font', ['bold', 'underline', 'italic',]],
+    ['insert', ['lin""k']],
+    ['para', ['ul', 'ol']],
+    ['font', [ 'superscript', 'subscript']]
+  ]
+};
+$('#summernote').summernote(summerConfig);
+$('#summernote').summernote('poppins', 'Arial');
+
+//transitions with gsap
+const timelineDefault = {defaults: {duration: 0.4 }, paused: true, reversed: true};
+const t1 = gsap.timeline(timelineDefault);
+
+t1.to('.overlay',{
+  opacity: 1,
+  display: "block"
+})
+
+function play(timeline){
+  timeline.reversed() ? timeline.play() : timeline.reverse();
+}
+
+function generate(){
+  const inputs = [...document.querySelectorAll("form input[type=text]")].map( (input) =>
+    `<p>
+      ${input.value}
+    </p>
+    `
+  ).join("");
+  
+  document.querySelector(".note-editor.note-frame .note-editable").innerHTML = inputs;
+  play(t1);
+}
+
+function close(timeline){
+  play(timeline);
+}
+
+document.querySelector("#generate-btn").addEventListener("click", generate);
+document.querySelector(".editor__close-btn").addEventListener("click", close.bind(this, t1));
+document.querySelector(".overlay").addEventListener("click", function(e) { e.target == this ? close(t1) : null });
