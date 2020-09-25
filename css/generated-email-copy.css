@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  font-family: poppins;
+  scroll-behavior: smooth;
+}
+
+.generated-email-copy {
+  background-color: #E5E5E5;
+  position: relative;
+  z-index: 10;
+  padding: 3rem;
+}
+.generated-email-copy__heading {
+  color: #4834D4;
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.editor {
+  min-height: auto;
+  border-radius: unset;
+}
+.editor__header {
+  padding: 0.5rem 1rem;
+}
+.editor .note-toolbar {
+  background: #191847;
+  border-radius: 0;
+}
+.editor .note-toolbar button {
+  background: #191847;
+  color: white;
+  border: none;
+}
+.editor .note-editor.note-frame .note-editing-area {
+  overflow: auto;
+  height: 80vh;
+}
+.editor .note-editor.note-frame .note-statusbar {
+  display: none;
+}
+.editor .note-editor.note-frame {
+  border: none;
+}
+
+/*# sourceMappingURL=generated-email-copy.css.map */

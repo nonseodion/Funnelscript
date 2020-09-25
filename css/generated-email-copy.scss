@@ -1,0 +1,42 @@
+@use 'base';
+
+@include base.root;
+
+.generated-email-copy{
+  @include base.menu-item-body;
+
+  &__heading{
+    @include base.heading;
+  }
+}
+
+.editor{
+  min-height: auto;
+  border-radius: unset;
+  
+  &__header{
+    padding: 0.5rem 1rem;
+  }
+
+  .note-toolbar{
+    background: #191847;
+    border-radius: 0;
+  }
+
+  .note-toolbar button {
+    background: #191847;
+    color: white;
+    border: none;
+  }
+  
+  .note-editor.note-frame .note-editing-area{
+    overflow: auto;
+    height: 80vh;
+  }
+  .note-editor.note-frame .note-statusbar{
+    display: none;
+  }
+  .note-editor.note-frame{
+    border: none;
+  }
+}

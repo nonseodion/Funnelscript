@@ -18,7 +18,7 @@
 
     <!--css stylesheet-->
     <link rel="stylesheet" href="style.css" >
-    <link rel="stylesheet" href="css/email-style.css">
+    <link rel="stylesheet" href="css/generated-email-copy.css">
 </head>
 <body>
     <header class="header">
@@ -132,223 +132,19 @@
               <li ><a href="settings.html">Settings</a></li>
           </ul>
       </div>
-      <form class="email-copy-content">
-        <h3 class="email-copy-content__heading">
-          Create a stunning email copy
-        </h3>
-        <div class="email-copy-content__body" id="step1">
-          <div class="email-sub-heading">
-            Get started
+      <section class="generated-email-copy">
+        <h2 class="generated-email-copy__heading">Here's your generated email copy</h2>
+        <div class="editor">
+          <div class="editor__header">
+            Editor
           </div>
-          
-          <div class="email-content">
-            <p class="warning">Complete the step before proceeding</p>
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;NAME OF PROFILE</h4>
-              <p class="email-detail__heading">What name do you want to use in saving this profile?</p>
-              <input type='text' class="email-detail__input" placeholder="Buzz email copy"></input>
-            </div>
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;YOUR NAME</p>
-              <p class="email-detail__heading">What is the name of the sender of this email</p>
-              <input type='text' class="email-detail__input" placeholder="john Doe"></input>
-            </div>
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;YOUR TAG LINE</p>
-              <p class="email-detail__heading">Your title, which will appear on the bottom of sender name</p>
-              <input type='text' class="email-detail__input" placeholder="CEO, mybuzzapp"></input>
-            </div>
-
+          <div id="summernote">
             
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;YOUR EXPERIENCE LEVEL</p>
-              <p class="email-detail__heading">The sender of this email is a/an</p>
-              <input type='text' class="email-detail__input" placeholder="Expert copywriter"></input>
-            </div>
-            
-            <div class="email-btns">
-              <button type="button" class="email-btns__btn email-btns__btn--next">Next</button>
-            </div>
           </div>
         </div>
-
-        <div class="email-copy-content__body" id="step2">
-          <div class="email-sub-heading">
-            Tell Me About Your Product
-          </div>
-          
-          <div class="email-content">
-            <p class="warning">Complete the step before proceeding</p>
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;NAME OF PRODUCT</h4>
-              <p class="email-detail__heading">What is the name of the product/service you want to sell?</p>
-              <input type='text' class="email-detail__input" placeholder="Mybuzz app"></input>
-            </div>
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;TYPE OF PRODUCT</p>
-              <p class="email-detail__heading">How can you classify this product/service?</p>
-              <input type='text' class="email-detail__input" placeholder="Software"></input>
-            </div>
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;NAME OF VENDOR</p>
-              <p class="email-detail__heading">The creator of this product or service is</p>
-              <input type='text' class="email-detail__input" placeholder="John Doe"></input>
-            </div>
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;WHAT DOES THE PRODUCT DO?</p>
-              <p class="email-detail__heading">This product will help you</p>
-              <input type='text' class="email-detail__input" placeholder="Generate funnels automatically"></input>
-            </div>
-            
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;WHO ARE YOUR TARGET AUDIENCE?</p>
-              <p class="email-detail__heading">This product is for you if you are an</p>
-              <input type='text' class="email-detail__input" placeholder="Online product vendors"></input>
-            </div>
-
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;WHAT RESULT WILL YOUR CUSTOMERS EXPECT WITH THIS PRODUCT?</p>
-              <p class="email-detail__heading">With this product they will be able to</p>
-              <input type='text' class="email-detail__input" placeholder="Write emails that gets opened"></input>
-            </div>
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;WHAT MAKES THIS PRODUCT BETTER THAN SIMILAR ONES OUT THERE?</p>
-              <p class="email-detail__heading">It is the first product that</p>
-              <input type='text' class="email-detail__input" placeholder="allows you write any type of email without copywriting skills"></input>
-            </div>
-
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;HOW LONG WILL IT TAKE YOUR CUSTOMERS TO ACHIEVE THE PROMISED RESULT?</p>
-              <p class="email-detail__heading">It takes only</p>
-              <input type='text' class="email-detail__input" placeholder="5 minutes"></input>
-            </div>
-
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;WHEN IS THIS PRODUCT LAUNCHING?</p>
-              <p class="email-detail__heading">The product or service will be on sale from</p>
-              <input type='text' class="email-detail__input" placeholder="24 august 2020"></input>
-            </div>
-
-            <div class="email-btns">
-              <button type="button" class="email-btns__btn email-btns__btn--back" >Back</button>
-              <button type="button" class="email-btns__btn email-btns__btn--next" >Next</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="email-copy-content__body" id="step3">
-          <div class="email-sub-heading">
-            Tell Me About Your Audience
-          </div>
-          
-          <div class="email-content">
-            <p class="warning">Complete the step before proceeding</p>
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;FRUSTRATIONS FACED BY YOUR CUSTOMERS</h4>
-              <p class="email-detail__heading">Without using my product/service, you will find it difficult to</p>
-              <input type='text' class="email-detail__input" placeholder="Make enough sales from the email campaign"></input>
-              
-              <p><button type="button" class="email-detail__add">+</button>Add more customer frustrations</p>
-            </div>
-
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;WHAT IS NOT WORKING FOR YOUR CUSTOMER RIGHT NOW?</p>
-              <p class="email-detail__heading">Since you do not have access to a product/service like this, your present alternative is to</p>
-              <input type='text' class="email-detail__input" placeholder="Spend lot of time thinking of what to write"></input>
-
-              <p class="email-detail__heading">And the disadvantage of this is that you will be</p>
-              <input type='text' class="email-detail__input" placeholder="Wasting lots of time you would have invested in other business"></input>
-
-              <p><button type="button" class="email-detail__add">+</button>Add more product alternatives and disadvantages</p>
-            </div>
-
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;FEATURES AND BENEFITS OF YOUR PRODUCT</p>
-              <p class="email-detail__heading">This product has</p>
-              <input type='text' class="email-detail__input" placeholder="Autoresponder integration"></input>
-
-              <p class="email-detail__heading">And so can help you</p>
-              <input type='text' class="email-detail__input" placeholder="Send out emails automatically"></input>
-
-              <p><button type="button" class="email-detail__add">+</button>Add more product features and benefits</p>
-            </div>
-
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;QUESTIONS ASKED BY YOUR CUSTOMERS</p>
-              <p class="email-detail__heading">Question 1</p>
-              <input type='text' class="email-detail__input" placeholder="Expert copywriter"></input>
-
-              <p class="email-detail__heading">ANSWER 1</p>
-              <input type='text' class="email-detail__input" placeholder="Expert copywriter"></input>
-
-              <p><button type="button" class="email-detail__add">+</button>Add more questions and answers</p>
-            </div>
-            
-            <div class="email-btns">
-              <button type="button" class="email-btns__btn email-btns__btn--back">Back</button>
-              <button type="button" class="email-btns__btn email-btns__btn--next">Next</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="email-copy-content__body" id="step4">
-          <div class="email-sub-heading">
-            Testimonials And Guarantee
-          </div>
-          
-          <div class="email-content">
-            <p class="warning">Complete the step before proceeding</p>
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;GURANTEE FOR YOUR PRODUCT</h4>
-              <p class="email-detail__heading">I am offering a gurantee on this product for </p>
-              <input type='text' class="email-detail__input" placeholder="30 days"></input>
-            </div>
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;TESTIMONIALS ABOUT YOUR PRODUCT</p>
-              <p class="email-detail__heading">Name of the person giving the testimonial</p>
-              <input type='text' class="email-detail__input" placeholder="John Doe"></input>
-
-              <p class="email-detail__heading">Enter the testimony from user</p>
-              <input type='text' class="email-detail__input" placeholder="This product is amazing and super wonderful"></input>
-
-              <p><button type="button" class="email-detail__add">+</button>Add more testimonies from users</p>
-            </div>
-            
-            <div class="email-btns">
-              <button type="button" class="email-btns__btn email-btns__btn--back">Back</button>
-              <button type="button" class="email-btns__btn email-btns__btn--next">Next</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="email-copy-content__body" id="step5">
-          <div class="email-sub-heading">
-            Let Us Round Up
-          </div>
-          
-          <div class="email-content">
-            <p class="warning">Complete the step before proceeding</p>
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;SCARCITY</h4>
-              <p class="email-detail__heading">The offer will expire after</p>
-              <input type='text' class="email-detail__input" placeholder="5 days"></input>
-            </div>
-
-            <div class="email-detail">
-              <p class="email-detail__heading">&nbsp;WHAT SHOULD YOUR CUSTOMERS DO AFTER READING YOUR EMAIL?</p>
-              <p class="email-detail__heading">After reading, they should</p>
-              <input type='text' class="email-detail__input" placeholder="Click this link to get it now"></input>
-            </div>
-
-            <div class="email-btns">
-              <button type="button" class="email-btns__btn email-btns__btn--back" >Back</button>
-              <a href="generated-email-copy.html" class="email-btns__btn email-btns__btn--next" id="generate-btn">Generate email</a>
-            </div>
-          </div>
-        </div>
-      </form>
+      </section>
     </div>
     <script src="app.js"></script>
-    <script src="email-copy.js"></script>
+    <script src="generated-email-copy.js"></script>
 </body>
 </html>
