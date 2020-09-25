@@ -28,8 +28,13 @@ function validateForm(e){
       }
     }
   )
-  if(stop) return;
-  if(next >= nextBtns.length + 1) return;
+  if(stop) {
+    return;
+  }
+  if(next >= nextBtns.length + 1) {
+    location.href = "generated-email-copy.html";
+    return;
+  }
   setActiveForm(document.querySelector(`#step${next}`));
 }
 
@@ -63,5 +68,4 @@ function generate(){
   sessionStorage.setItem("Email-copy", inputs);
 }
 
-document.querySelector("#generate-btn").addEventListener("click", generate);
 window.addEventListener("beforeunload", generate);
